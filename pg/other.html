@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8" />
+ 	<title>Other rules</title>
+	<link href="../Stylefiles/RolePlay.css" rel="stylesheet"/>
+	<link rel="icon" href="../Stylefiles/start.png">
+	<script src="../Stylefiles/data.js"></script>
+	<script src="../Stylefiles/RolePlay.js"></script>
+</head>
+<body>
+	<nav>
+		<a href="../index.html">
+			<img class="perch" src="../Stylefiles/start.png">
+ 		</a>
+		<h2>What do you want to know about?</h2> <!-- &#772; makes a macron, the dash over a japanese long o for instance -->
+		<a onclick="showrace(1)"><h3>Random shit I guess</h3></a>
+		<a onclick="showrace(2)"><h3>Gods</h3></a>
+		<a onclick="showrace(3)"><h3>Downtime</h3></a>
+		<a href="?l=PCoptions"><h3>Character Options</h3></a>
+		<a href="?l=Lycanthropy"><h4>Player Characters as Lycanthropes or Vampires</h4></a>
+		<a href="?l=DarkGifts"><h4>Dark Gifts</h4></a>
+		<a href="?l=OtherRewards"><h4>Rewards Beyond Treasure</h4></a>
+		<a href="?l=SupernaturalGifts"><h4>Supernatural Gifts</h4></a>
+		<a href="?l=EpicBoons"><h4>Epic Boons</h4></a>
+		<p>
+			Anything in straight brackets [] is a placeholder name and subject to change as I improve this page.
+		</p>
+	</nav>
+	<div class="alltherest combatrules">
+		<div id="top" style="height:0px"></div>
+		<!-- ^^^ This is just here so that the "return to top" button actually does anything -->
+		<div class="container"> <!-- The main reasons you might actually consult this page -->
+			<h2>Under Construction</h2>
+			<img loading="lazy" class="raceimg" src="../stylefiles/ohnomygrandslam.png">
+			<h4>How ability checks actually work PHB 174-175</h4>
+			<h4>Social Interaction (PHB 185-186)</h4>
+		</div>
+		<div class="container"> <!-- Gods -->
+			<details>
+				<summary>
+					<h2>Dragonsea Deities</h2>
+					<p>The world of dragonsea contains a huge variety of cultures, all with their own gods, sometimes with different interpretations for the same god depending on the region.</p>
+				</summary>
+				<p>
+					<br>
+				</p>
+				<table class="deities"> <!-- Elven -->
+					<caption><b>Elven Deities</b></caption>
+					<thead>
+						<tr>
+							<td><b>Diety</b></td>
+							<td><b>Alignment</b></td>
+							<td><b>Province</b></td>
+							<td><b>Suggested Domains</b></td>
+							<td><b>Common Symbol</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Anáre</td>
+							<td>NG</td>
+							<td>The sun, creation</td>
+							<td>Light, Nature</td>
+							<td>Sun disc</td>
+						</tr>
+						<tr>
+							<td>Arenquis</td>
+							<td>CE</td>
+							<td>Embodiment of elven mistakes, annihilation, monsters</td>
+							<td>Tempest, Death</td>
+							<td>Three dragon heads</td>
+						</tr>
+						<tr>
+							<td>Gwenloa</td>
+							<td>LG</td>
+							<td>Life, fertility, the seasons</td>
+							<td>Life, Nature, Peace</td>
+							<td>Naked elven woman with flowers in her hair</td>
+						</tr>
+						<tr>
+							<td>Isíla</td>
+							<td>NG</td>
+							<td>The moon, creation</td>
+							<td>Twilight, Nature</td>
+							<td>Crescent moon</td>
+						</tr>
+						<tr>
+							<td>Nendor</td>
+							<td>NG</td>
+							<td>Music, knowledge</td>
+							<td>Knowledge, Arcana</td>
+							<td>Lyre &amp; Quill</td>
+						</tr>
+						<tr>
+							<td>Osbón</td>
+							<td>LN</td>
+							<td>The underworld</td>
+							<td>Grave, Law</td>
+							<td>Elven man with hollow black circles for eyes</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br>[GREEK] deities are the same as the ancestral gods of Arkanos, so all of them see some amount of worship throughout the magocracy
+				</p>
+				<table class="deities"> <!-- GREEK -->
+					<caption><b>[GREEK] Deities</b></caption>
+					<thead>
+						<tr>
+							<td><b>Diety</b></td>
+							<td><b>Alignment</b></td>
+							<td><b>Province</b></td>
+							<td><b>Suggested Domains</b></td>
+							<td><b>Common Symbol</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Deyana</td>
+							<td>LN</td>
+							<td>Judgement, righteous fury, subjugation of evil</td>
+							<td>Law, War, Light</td>
+							<td>Watchful eye over a warhammer</td>
+						</tr>
+						<tr>
+							<td>Otis</td>
+							<td>CN</td>
+							<td>Martial prowess, fertility, virility</td>
+							<td>Nature, Life, War</td>
+							<td>Naked man with an erect penis and a spear</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br>While the empire recognizes a variety of other gods, it is important to remember that any and all worship must acknowledge the primacy of the emperor before all. Thus, all prayers are mandated by
+					law to be dedicated to the emperor first, and active worship of other gods is rare.
+				</p>
+				<table class="deities"> <!-- Imperial -->
+					<caption><b>Imperial Deities</b></caption>
+					<thead>
+						<tr>
+							<td><b>Diety</b></td>
+							<td><b>Alignment</b></td>
+							<td><b>Province</b></td>
+							<td><b>Suggested Domains</b></td>
+							<td><b>Common Symbol</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>The Emperor</td>
+							<td>LN</td>
+							<td>Chief god of the universe, the sun, protector of mankind from the cosmic evils beyond</td>
+							<td>Light, Law, War</td>
+							<td>Phoenix rising out of a sun</td>
+						</tr>
+						<tr>
+							<td>Airinos</td>
+							<td>CG</td>
+							<td>Roads, safe travels, martial prowess</td>
+							<td>Knowledge, War</td>
+							<td>Sword with pronged crossguard</td>
+						</tr>
+						<tr>
+							<td>Vurath</td>
+							<td>N</td>
+							<td>Magic</td>
+							<td>Arcana, Knowledge</td>
+							<td>Book, fraying at the edges</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br>
+				</p>
+				<table class="deities"> <!-- Komaatic -->
+					<caption><b>Koma&#772;tic Deities</b></caption>
+					<thead>
+						<tr>
+							<td><b>Diety</b></td>
+							<td><b>Alignment</b></td>
+							<td><b>Province</b></td>
+							<td><b>Suggested Domains</b></td>
+							<td><b>Common Symbol</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br>
+				</p>
+				<table class="deities"> <!-- Seikkish -->
+					<caption><b>Seikkish Deities</b></caption>
+					<thead>
+						<tr>
+							<td><b>Diety</b></td>
+							<td><b>Alignment</b></td>
+							<td><b>Province</b></td>
+							<td><b>Suggested Domains</b></td>
+							<td><b>Common Symbol</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+		</div>
+		<div class="container"> <!-- Downtime -->
+			<h2>Under Construction</h2>
+			<img loading="lazy" src="../stylefiles/ohnomygrandslam.png">
+			phb 187 is the start of this
+			for building a stronghold, crafting & selling magic items, and running a business refer back to the items page
+			Xanathars has a bunch of extra shit for this. such a good book
+		</div>
+		<div class="container"> <!-- Customization -->
+			<h2 id="PCoptions"></h2>
+			<img class="mtg" style="margin-top:0.5em;" src="../Stylefiles/otherimg/playerwerewolf.PNG">
+			<h2 id="Lycanthropy">Player Characters as Lycanthropes</h2>
+			<p>
+				A character cursed with lycanthropy retains their statistics except as specified by lycanthrope type. The character gains the lycanthrope's speeds in nonhumanoid form, damage immunities,
+				traits, and actions that don't involve equipment. The character is proficient with the lycanthrope's natural attacks, such as its bite or claws, which deal damage as shown in the lycanthrope's
+				statistics. The character can't speak while in animal form. Additionally, a character can choose to either embrace or reject the curse. A character that embraces their curse has their alignment
+				changed to match the natural alignment of their strain of lycanthropy (as written on their respective stat blocks), and can freely change between its humanoid, hybrid, and animal forms. A character
+				who rejects their curse must instead resist it, or risk running wild against their will.
+			</p><br><p>
+				<a class="noindent" href="../dg/monsters.html?l=Werebear"><b>Werebear:</b></a> The character gains a Strength of 19 if his or her score isn't already higher, and a +1 bonus to AC while in bear or
+				hybrid form (from natural armor). Attack and damage rolls for the natural weapons are based on Strength.<br>
+				<a href="../dg/monsters.html?l=Wereboar"><b>Wereboar:</b></a> The character gains a Strength of 17 if his or her score isn't already higher, and a +1 bonus to AC while in boar or hybrid form (from
+				natural armor). Attack and damage rolls for the tusks are based on Strength. For the Charge trait, the DC is 8 + the character's proficiency bonus + Strength modifier.<br>
+				<a href="../dg/monsters.html?l=Wererat"><b>Wererat:</b></a> The character gains a Dexterity of 15 if his or her score isn't already higher. Attack and damage rolls for the bite are based on whichever
+				is higher of the character's Strength and Dexterity.<br>
+				<a href="../dg/monsters.html?l=Wereraven"><b>Wereraven:</b></a> The character gains a Dexterity of 15 if his or her score isn't already higher. Attack and damage rolls for the bite are based on
+				whichever is higher of the character's Strength and Dexterity. The beak of a wereraven in raven form deals 1 piercing damage, regardless of any ability modifiers.<br>
+				<a href="../dg/monsters.html?l=Weretiger"><b>Weretiger:</b></a> The character gains a Strength of 17 if his or her score isn't already higher. Attack and damage rolls for the natural weapons are
+				based on Strength. For the Pounce trait, the DC is 8 + the character's proficiency bonus + Strength modifier.<br>
+				<a href="../dg/monsters.html?l=Werewolf"><b>Werewolf:</b></a> The character gains a Strength of 15 if his or her score isn't already higher, and a +1 bonus to AC while in wolf or hybrid form (from
+				natural armor). Attack and damage rolls for the natural weapons are based on Strength.
+			</p><br><p>
+				<b class="noindent">Resisting and Lifting the Curse</b><br>
+				Typical cases of lycanthropy cannot be resisted on nights with a full moon, and have to succeed on a constitution saving throw on the last couple of nights leading up to a full moon to resist their
+				curse. The DC for the saving throw is 15 on the night before a full moon, assuming the sky is clear. The DM might rule that a cloudy night, and/or the night before that one, has a lower DC than 15.
+				Failure to resist the curse results in the character being transformed into hybrid or animal form against their will, and typically in them attacking nearby humanoids that seem like suitable prey.
+				The character returns to their humanoid form only when the sun rises or when reduced to 0 hit points.<br>
+				A <a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> spell cast on a character cursed with lycanthropy in its humanoid form forces that character to make a DC17 Constitution saving throw.
+				On a successful save, the curse is broken and the character gains 3 levels of <a href="./combat.html?f=Exhaustion">exhaustion</a>. On a failed save, the lycanthrope's curse cannot be lifted in this
+				way for 1d6 days. A lycanthrope with 0 hit points automatically succeeeds on this saving throw.
+			</p>
+			<h2>Player Characters as Vampires</h2>
+			<p>
+				The game statistics of a player character transformed into a vampire spawn and then a vampire don't change, except that the character's Strength, Dexterity, and Constitution scores become 18 if they
+				aren't higher. In addition, the character gains the vampire's damage resistances, darkvision, traits, and actions. Attack and damage rolls for the vampire's attacks are based on Strength. The save DC
+				for Charm is 8 + the vampire's proficiency bonus + the vampire's Charisma modifier. The character's alignment becomes lawful evil, and the DM might take control of the character until the vampirism
+				is reversed with a <a href="./spells.html?l=Wish"><i>Wish</i></a> spell or the character is killed and brought back to life.
+			</p>
+			<h2 id="DarkGifts">Dark Gifts and Bargains</h2>
+			<p>
+				The Dark Powers influence many who struggle within their clutches, tempting both the innocent and ambitious with whispered promises. These sinister bargains are rarely spoken, coming in dreams or
+				mysterious visions, but their terms are always clear and their prices terrible. If you're looking for a Dark Gift for your character, you can pick one from the Feats Page. This supernatural gift
+				expresses both a mysterious power and insidious influence. Work with your DM to determine how your character gained this Dark Gift. Is it the manifestation of a family curse? Is it a reward for a
+				sacrifice you made at a forgotten shrine? Did you bargain with a voice whispering from a mirror, the sea, or the Mists? Does the Dark Gift compound with your other character choices to reinforce your
+				unique origin? Each Dark Gift can be expressed in various ways, their descriptions include tables exploring various manifestations to spark your imagination.
+			</p><p>
+				Characters who don't have a Dark Gift might gain one in the course of their adventures. At the DM's discretion, sinister forces might contact a character and offer them a Dark Gift in return for some 
+				service or future favor. If a character already has a Dark Gift, accepting such a bargain causes them to lose their current Dark Gift and gain a new one. A Dark Gift gained as a result of such a
+				bargain reflects the agenda of the being or beings offering the bargain, be it the Dark Powers, a Darklord, or a more mysterious force. The particulars of the Dark Gift and how it will affect a
+				character should be made clear to a player before they choose whether or not to accept. The offer of a Dark Gift might manifest in a dream, in a moment of frozen time, or when the character is alone.
+				Typically, only one character is aware of a bargain, its terms, and whether or not it was accepted. The DM might have a mysterious force intervene and offer a Dark Gift whenever a desperate or
+				thematic instance presents itself, such as in any of the following cases:
+			</p><ul>
+				<li>A Darklord will negotiate with a party only if a character seals the deal by accepting their Dark Gift.</li>
+				<li>Time stops while a character is on the brink of death. A mysterious voice offers to save the character's life, but only if they accept its Dark Gift.</li>
+				<li>An experiment or magical accident goes wrong. The DM allows a character to accept a Dark Gift or some other peril as a result.</li>
+				<li>A character breaks a vow or <a href="./adventure.html?l=Curses">suffers a curse</a>, gaining a Dark Gift as a result.</li>
+				<li>A character touches a mysterious amber sarcophagus, and a force within entreats them to accept its influence in the form of a Dark Gift.</li>
+			</ul>
+			<h2 id="OtherRewards">Rewards beyond treasure or experience</h2>
+			<p>
+				As much as adventurers desire treasure, they often appreciate other forms of reward. This section presents a variety of ways that gods, monarchs, and other beings of power might recognize the
+				characters' accomplishments, including supernatural gifts that give characters new capabilities; titles, lands, and other marks of prestige; and boons that are available only to adventurers who have
+				reached 20th level. 
+			</p>
+			<h4>Marks of Prestige</h4>
+			<p>
+				Sometimes the most memorable reward for adventurers is the prestige that they acquire throughout a realm. Their adventures often earn them fame and power, allies and enemies, and titles that they can
+				pass on to their descendants. Some lords and ladies began as commoners who ventured into the dangerous places of the world and made names for themselves through their brave deeds. This section details
+				the most common marks of prestige that adventures might acquire during a campaign. These marks are usually gained along with treasure, but sometimes they stand on their own.
+			</p>
+			<br><p><b>Letters of Recommendation</b><br>
+				When gold is in short supply, the adventurers' benefactor might provide them with a letter of recommendation instead of monetary payment. Such a letter is usually enclosed in a handsome folio, case,
+				or scroll tube for safe transport, and it usually bears the signature and seal of whoever wrote it. A letter of recommendation from a person of impeccable reputation can grant adventurers access to
+				NPCs that they would otherwise have trouble meeting on their own, such as a duke, viceroy, or queen. Moreover, carrying such a recommendation on one's person can help clear up "misunderstandings"
+				with local authorities who might not otherwise take the adventurers at their word. A letter of recommendation is worth only as much as the person who wrote it and offer no benefit in places where its
+				writer holds no sway.</p>
+			<img class="mtg" style="margin-top:0.5em;" src="https://cards.scryfall.io/art_crop/front/3/0/30e1ec49-ad4f-4623-aeeb-dba07d6e6251.jpg?1686967996">
+			<br><p><b>Medals</b><br>
+				Although they are often fashioned from gold and other precious materials, medals have an even greater symbolic value to those who award and receive them. Medals are typically awarded by powerful
+				political figures for acts of heroism, and wearing a medal is usually enough to earn the respect of those who understand its significance. Different acts of heroism can warrant different kinds of
+				medals. The King of Breland (in the Eberron campaign setting) might award a Royal Badge of Valor (shaped like a shield and made of ruby and electrum) to adventurers for defending Brelish citizens,
+				while the Golden Bear of Breland (a medal made of gold and shaped in a likeness of a bear's head, with gems for eyes) might be reserved for adventurers who prove their allegiance to the Brelish Crown
+				by uncovering and defeating a plot to end the Treaty of Thronehold and reignite the Last War. A medal doesn't offer a specific in-game benefit to one who wears it, but it can affect dealings with
+				NPCs. For example, a character who proudly displays the Golden Bear of Breland will be regarded as a hero of the people within the kingdom of Breland. Outside Breland, the medal carries far less
+				weight, except among allies of Breland's king.</p>
+			<br><p><b>Parcels of Land</b><br>
+				A parcel of land is just that, and usually comes with a royal letter affirming that the land has been granted as a reward for some service. Such land usually remains the property of the local ruler
+				or ruling body, but is leased to a character with the understanding that it can be taken away, especially if his or her loyalty is ever called into question. A parcel of land, if sufficiently large,
+				might have one or more farms or villages on it already, in which case the recipient is pronounced lord or lady of the land and is expected to collect taxes, along with any other duties. A character
+				who receives a parcel of land is free to build on it and is expected to safeguard it. He or she may yield the land as part of an inheritance, but can't sell or trade it without permission from the
+				local ruler or ruling body. Parcels of land make fine rewards for adventurers who are looking for a place to settle or who have family or some kind of personal investment in the region where the land
+				is located.</p>
+			<br><p><b>Special Favors</b><br>
+				A reward might come in the form of a favor that the characters can call on at some future date. Special favors work best when the individual granting them is trustworthy. A lawful good or lawful
+				neutral NPC will do whatever can be done to fulfill an obligation when the time comes, short of breaking laws. A lawful evil NPC does the same, but only because a deal is a deal. A neutral good or
+				neutral NPC might pay off favors to protect his or her reputation. A chaotic good NPC is more concerned about doing right by the adventurers, honoring any obligations without worrying too much 
+				about personal risk or adherence to the law.</p>
+			<br><p><b>Special Rights</b><br>
+				A politically powerful person can reward characters by giving them special rights, which are usually articulated in some sort of official document. For example, characters might be granted special
+				rights to carry weapons in public places, kill enemies of the crown, or negotiate on a duke's behalf. They might earn the right to demand free room and board from any establishment within a
+				particular community, or have the right to draft local militia to assist them as needed. Special rights last only as long as the legal document dictates, and such rights can be revoked if the
+				adventurers abuse them.</p>
+			<br><p><b>Strongholds</b><br>
+				A stronghold is a reward usually given to seasoned adventurers who demonstrate unwavering fealty to a powerful political figure or ruling body, such as a king, a knighthood, or a council of wizards.
+				A stronghold can be anything from a fortified tower in the heart of a city to a provincial keep on the borderlands. While the stronghold is for the characters to govern as they see fit, the land on
+				which it sits remains the property of the crown or local ruler. Should the characters prove disloyal or unworthy of the gift, they can be asked or forced to relinquish custody of the stronghold. As
+				an additional reward, the individual bequeathing the stronghold might offer to pay its maintenance cost for a period of one or more months, after which the characters inherit that responsibility. See
+				<a href="./items.html?l=propertyistheftman">"Property &amp; Business" on the Items page</a> for more information on stronghold maintenance.</p>
+			<br><p><b>Titles</b><br>
+				A politically powerful figure has the ability to dispense titles. A title often comes with a parcel of land (see above). For example, a character might be awarded the title Earl of Storm river or
+				Countess of Dun Fjord, along with a parcel of land that includes a settlement or region of the same name. A character can hold more than one title, and in a feudal society, those titles can be passed
+				down to (or distributed among) one's children. While a character holds a title, he or she is expected to act in a manner befitting that title. By decree, titles can be stripped away if the local
+				ruler or ruling body has reason to question the character's loyalty or competence.</p>
+			<br><p><b>Training</b><br>A character might be offered pecial training in lieu of a financial reward. This kind of training isn't widely available and thus is highly desirable. It presumes the existence
+				of a skilled trainer—perhaps a retired adventurer or champion who is willing to serve as a mentor. The trainer might be a reclusive wizard or haughty sorcerer who owes the queen a favor, the
+				knight-commander of the King's Guard, the leader of a powerful druid circle, a quirky monk who lives in a remote mountaintop pagoda, a barbarian chieftain, a warlock living among nomads as a
+				fortune-teller, or an absentminded bard whose plays and poetry are known throughout the land. A character who agrees to training as a reward must spend downtime with the trainer (see "Downtime"
+				on this page). In exchange, the character is guaranteed to receive a special benefit. Possible training benefits include the following: </p>
+			<ul>
+				<li>The character gains inspiration daily at dawn for 1d4+6 days</li>
+				<li>The character gains proficiency in a skill. </li>
+				<li>The character gains a feat.</li>
+			</ul>
+			<h4 id="SupernaturalGifts">Supernatural Gifts</h4>
+			<img class="mtg" style="margin-top:-0.5em;" src="https://cards.scryfall.io/art_crop/front/f/0/f06edd53-f3ac-44b0-a087-5670ba8f0fa5.jpg?1582021156">
+			<p>
+				A supernatural gift is a special reward granted by a being or force of great magical power. Such supernatural gifts come in two forms: <b>blessings</b> and <b>charms</b>. A blessing is usually
+				bestowed by a god or a godlike being. A charm is typically the work of a powerful spirit, a location of ancient magic, or a creature that has legendary actions. Unlike a magic item, a supernatural
+				gift isn't an object and doesn't require attunement. It gives a character an extraordinary ability, which can be used one or more times. 
+			</p>
+			<br><p>
+				A character might receive a <b>blessing</b> from a deity for doing something truly momentous—an accomplishment that catches the attention of both gods and mortals. Killing rampaging gnolls rarely warrants
+				such a blessing, but slaying the high priest of Tiamat as he attempts to summon the Dragon Queen might. A blessing is an appropriate reward for one of the following accomplishments: 
+			</p>
+			<ul>
+				<li>Restoring the most sacred shrine of a god</li>
+				<li>Foiling an earthshaking plot by the enemies of a god</li>
+				<li>Helping a god's favored servant complete a holy quest</li>
+			</ul>
+			<p>
+				An adventurer might also receive a blessing in advance of a perilous quest. For example, a paladin could receive one before setting out on a quest to slay a terrifying lich that is responsible for a
+				magical plague sweeping the land. A character should receive only a blessing that is useful to them, and some blessings come with expectations on the part of the benefactor. A god typically gives a
+				blessing for a particular purpose, such as recovering a holy person's remains or toppling a tyrannical empire. The god might revoke a blessing if a character fails to pursue that purpose or acts
+				counter to it. A character retains the benefits of a blessing forever or until it is taken away by the god who granted it. Unlike a magic item, such a blessing can't be suppressed by an
+				<a href="./spells.html?l=AntimagicField"><i>Antimagic Field</i></a> or similar effect.<br> 
+			</p><p>
+				Most adventurers go their entire lives without receiving even one of these blessings. There is no limit on the number of blessings a character can receive, but it should be rare for a character to
+				have more than one at a time. Moreover, a character can't benefit from multiple instances of a blessing at the same time. For example, a character can't benefit from two instances of the Blessing of
+				Health at once. Example blessings are provided below.
+			</p>
+			<br><p>
+				A <b>charm</b> is a more minor supernatural gift, which can be received in a large variety of ways. For example, a wizard who finds an eldritch secret in a dead archmage's spellbook might be infused
+				with the magic of a charm, as might a character who solves a <a href="../dg/monsters.html?s=sphinx"><b>sphinx's</b></a> riddle or drinks from a magic fountain. Legendary creatures, such as
+				<a href="../dg/monstersfrigg.html?s=ancient gold dragon"><b>ancient gold dragons</b></a> and <a href="../dg/monsters.html?l=Unicorn"><b>unicorns</b></a>, sometimes grace their allies with charms, and
+				some explorers find themselves bearing the magic of a charm after discovering a long-lost location that is drenched in primeval magic.
+			</p>
+			<p>
+				Some charms can be used only once, and others can be used a specific number of times before vanishing. If a charm lets you cast a spell, you are able to do so without spending a spell slot or
+				providing any components (verbal, somatic, or material). In any case, a charm can't be used in the area created by an <a href="./spells.html?l=AntimagicField"><i>Antimagic Field</i></a> or a similar
+				effect, and a charm's effects are susceptible to <a href="./spells.html?l=DispelMagic"><i>Dispel Magic</i></a> and the like. But the charm itself can't be removed from a creature by anything short of
+				divine intervention or the <a href="./spells.html?l=Wish"><i>Wish</i></a> spell. Example charms are provided below. A typical charm mimics the effects of a potion or a spell, so it is easy to create
+				more charms of your own, if you like. More powerful charms, like the charms of Agelessness or Hellish Rebuke, are bestowed by truly exceptional circumstances or beings like archdevils.
+			</p><svg height="5" width="100%" style="padding-bottom:0.1%;"><polyline points="0,0 1520,2.5 0,5" fill="#c8c8d8"></polyline></svg>
+			<h4>Example Blessings</h4>
+			<br><div>	
+				<details class="invocation">
+					<summary><b>Blessing of Farsight</b></summary>
+					You have advantage on Wisdom (Perception) checks that rely on sight.
+				</details><details class="invocation">
+					<summary><b>Blessing of Health</b></summary>
+					Your Constitution score increases by 2, up to a maximum of 22.
+				</details><details class="invocation">
+					<summary><b>Blessing of Magic Resistance</b></summary>
+					You have advantage on saving throws against spells and other magical effects.
+				</details><details class="invocation">
+					<summary><b>Blessing of Protection</b></summary>
+					You gain a +1 bonus to AC and saving throws.
+				</details><details class="invocation">
+					<summary><b>Blessing of Resilience</b></summary>
+					When you are about to take acid, cold, fire, lightning, or thunder damage, you can use your reaction to gain resistance to that damage type until the end of your next turn. Once you use this
+					blessing, you can't use it again until the next dawn. 
+				</details><details class="invocation">
+					<summary><b>Blessing of Understanding</b></summary>
+					Your Wisdom score increases by 2, up to a maximum of 22.
+				</details><details class="invocation">
+					<summary><b>Blessing of Valhalla</b></summary>
+					This blessing grants you the power to summon spirit warriors, as if you had blown a <a href="./items.html?l=SilverHornofValhalla"><i class="raremagit">Silver Horn of Valhalla</i></a>. Once you use
+					this blessing, you can't use it again until 7 days have passed. 
+				</details><details class="invocation">
+					<summary><b>Blessing of Weapon Enhancement</b></summary>
+					One nonmagical weapon in your possession becomes a +1 weapon whenever you wield it.
+				</details><details class="invocation">
+					<summary><b>Blessing of Wound Closure</b></summary>
+					This blessing grants you the benefits of a <a href="./items.html?l=PeriaptofWoundClosure"><i class="uncmmagit">Periapt of Wound Closure</i></a>.
+				</details><details class="invocation">
+					<summary><b>Eyes of Nyx</b></summary>
+					As an action, you can imbue your eyes with enhanced vision for 10 minutes. While the blessing is active, your eyes look like a starry void, and you can see invisible creatures and objects within
+					60 feet of you that are within your line of sight. Once you use this blessing, you can't use it again until the next dusk. 
+				</details><details class="invocation">
+					<summary><b>Weapon of Nyx</b></summary>
+					You can use a bonus action to cause one weapon you are holding to surge with divine power for 1 minute. On a hit, the weapon deals an extra 1d8 radiant damage. (Depending on the god that blessed
+					you, it might deal a different damage type—necrotic for a god of the grave or death domains, lightning for the storm domain, or fire for the forge domain, for example.) Once you use this blessing,
+					you can't use it again until you finish a long rest.
+				</details>
+			</div><svg height="5" width="100%" style="padding-bottom:0.1%;"><polyline points="0,0 1520,2.5 0,5" fill="#c8c8d8"></polyline></svg>
+			<h4>Example Charms</h4>
+			<br><div>
+				<details class="invocation">
+					<summary><b>Charm of the Adamant</b></summary>
+					This charm has 9 charges. You can use an action to expend 1 charge from the charm to gain 30 temporary hit points. For the next hour, your eyes become voids of utter darkness, and you can't be
+					charmed or frightened. Once all its charges have been expended, the charm vanishes from you.
+				</details><details class="invocation">
+						<summary><b>Charm of Agelessness</b></summary>
+					While you have this charm, you don't age naturally, and your skin gains the waxy complexion of a doll. Magical aging still affects you, however. This charm vanishes from you when you die.
+				</details><details class="invocation">
+					<summary><b>Charm of Animal Conjuring</b></summary>
+					This charm allows you to cast the <a href="./spells.html?l=ConjureAnimals"><i>Conjure Animals</i></a> spell (3rd-level version as an action. Once used three times, the charm vanishes from you. 
+				</details><details class="invocation">
+					<summary><b>Charm of Darkvision</b></summary>
+					This charm allows you to cast the <a href="./spells.html?l=Darkvision"><i>Darkvision</i></a> spell as an action, no components required. Once used three times, the charm goes away.
+				</details><details class="invocation">
+					<summary><b>Charm of Diabolical Inspiration</b></summary>
+					You grow a short, vestigial tail when you receive this charm unless you have a tail already. When you make an ability check, an attack roll, or a saving throw, you can use this charm to gain
+					advantage on the roll. Once used nine times, the charm vanishes from you, as does your vestigial tail.
+				</details><details class="invocation">
+					<summary><b>Charm of Feather Falling</b></summary>
+					This charm grants you benefits of a <a href="./items.html?l=RingofFeatherFalling"><i class="raremagit">Ring of Feather Falling</i></a>. These benefits last for 10 days, after which the charm
+					vanishes from you. 
+				</details><details class="invocation">
+					<summary><b>Charm of Greater Conscription</b></summary>
+					While you have this charm, you attract flies. As an action, you activate this charm to summon a <a href="../dg/monsters.html?l=HornedDevil"><b>horned devil</b></a>. This devil appears in an
+					unoccupied space within 30 feet of you, obeys your commands begrudgingly, and serves you under protest for 9 days or until it dies, whereupon it disappears. When the devil disappears, this charm
+					vanishes from you.
+				</details><details class="invocation">
+					<summary><b>Charm of Hellish Rebuke</b></summary>
+					A fiery halo appears above your head when you receive this charm. This charm allows you to cast the <a href="./spells.html?l=HellishRebuke"><i>Hellish Rebuke</i></a> spell (9th-level version) as
+					a reaction. Once used nine times, the charm vanishes from you, as does the fiery halo.
+				</details><details class="invocation">
+					<summary><b>Charm of Heroism</b></summary>
+					This charm allows you to give yourself the benefit of a <a href="./items.html?l=PotionofHeroism"><i class="raremagit">Potion of Heroism</i></a> as an action. Once you do so, the charm vanishes
+					from you.
+				</details><details class="invocation">
+					<summary><b>Charm of Lesser Conscription</b></summary>
+					While you have this charm, you attract flies. As an action, you activate this charm to summon a <a href="../dg/monsters.html?l=BarbedDevil"><b>barbed devil</b></a>, two
+					<a href="../dg/monsters.html?l=BeardedDevil"><b>bearded devils</b></a>, or three <a href="../dg/monsters.html?l=SpinedDevil"><b>spined devils</b></a>. All devils appear at once in unoccupied
+					spaces within 30 feet of you. Each devil obeys your commands and serves you eagerly for 9 days or until it dies, whereupon the devil disappears. Once all devils summoned by this charm disappear,
+					the charm vanishes from you. 
+				</details><details class="invocation">
+					<summary><b>Charm of Many Tongues</b></summary>
+					You can speak and understand all languages, you gain proficiency in the Deception and Persuasion sfillls, and you can add double your normal proficiency bonus when using those skills. This charm
+					vanishes from you when you die.
+				</details><details class="invocation">
+					<summary><b>Charm of Restoration</b></summary>
+					This charm has 6 charges. You can use an action to expend some of its charges to cast one of the following spells: <a href="./spells.html?l=GreaterRestoration"><i>Greater Restoration</i></a>
+					(4 charges) or <a href="./spells.html?l=LesserRestoration"><i>Lesser Restoration</i></a> (2 charges). Once all its charges have been expended, the charm vanishes from you. 
+				</details><details class="invocation">
+					<summary><b>Charm of the Slayer</b></summary>
+					One sword in your possession becomes a <a href="./items.html?l=DragonSlayer"><i class="raremagit">Dragon Slayer</i></a> or
+					<a href="./items.html?l=GiantSlayer"><i class="raremagit">Giant Slayer</i></a> (DM's choice) for the next 9 days. The charm then vanishes from you and the weapon returns to normal.
+				</details><details class="invocation">
+					<summary><b>Charm of Vitality</b></summary>
+					This charm allows you to give yourself the benefit of a <a href="./items.html?l=PotionofVitality"><i class="vryrmagit">Potion of Vitality</i></a> as an action. Once you do so, the charm vanishes
+					from you.
+				</details>
+			</div><svg height="5" width="100%" style="padding-bottom:0.1%;"><polyline points="0,0 1520,2.5 0,5" fill="#c8c8d8"></polyline></svg>
+			<img class="mtg" style="margin-top:r0em;" src="https://cards.scryfall.io/art_crop/front/1/c/1c3509c6-2ae7-45be-8ac9-4d14d69db32f.jpg?1736468201">
+			<h2 id="EpicBoons">Epic Boons</h2>
+			<p>
+				An epic boon is a special power available only to 20th level characters. Characters at that level gain such boons only if the DM wants them to and only when they feel it's appropriate. Epic boons are
+				best awarded after the characters complete a major quest, or accomplish something else particularly notable. A character might gain an epic boon after destroying an evil artifact, defeating an
+				ancient dragon, or halting an incursion from the Outer Planes. Epic boons can also be used as a form of advancement, a way to provide greater power to characters who have no more levels to gain. With
+				this approach, it is roughly appropriate to awared one epic boon to each character for every 30,000 XP they earn above 355,000 XP.
+			</p><p>
+				The DM determines which epic boon a character gains. Ideally, the boon they pick is something the character would put to use in future adventures. They can also allow a player to select a boon for
+				his or her character, subject to their approval. Whatever boon a character ends up with, the DM should consider its place in their story and world. Many of the boons are extraordinary and represent
+				the gradual transformation of a character into something resembling a demigod. The acquisition of a boon might visibly transform a character. For example, the eyes of a character with the Boon of
+				True sight might glow when he or she feels strong emotion, and a character who has the Boon of High Magic might have faint motes of light glimmering around his or her head. Also, decide how the boon
+				first appears. Does the boon appear spontaneously and mysteriously? Or does a being of cosmic power manifest to bestow it? The bestowal of a boon can itself be an exciting scene in an adventure.
+				Unless a boon says otherwise, a character can't gain it more than once.
+			</p>
+			<h4>Example Boons</h4>
+			<br><div>
+				<details class="invocation">
+					<summary><b>Boon of Combat Prowess</b></summary>
+					When you miss with a melee weapon attack, you can choose to hit instead. Once you use this boon, you can't use it again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Dimensional Travel</b></summary>
+					As an action, you can cast the <a href="./spells.html?l=MistyStep"><i>Misty Step</i></a> spell, without using a spell slot or any components. Once you do so, you can't use this boon again until
+					you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Fate</b></summary>
+					When another creature that you can see within 60 feet of you makes an ability check, an attack roll, or a saving throw, you can roll a d10 and apply the result as a bonus or penalty to the roll.
+					Once you use this boon, you can't use it again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of the Fire Soul</b></summary>
+					You have immunity to fire damage. You can also cast <a href="./spells.html?l=BurningHands"><i>Burning Hands</i></a> (save DC 15) at will, without using a spell slot or any components.
+				</details><details class="invocation">
+					<summary><b>Boon of Fortitude</b></summary>
+					Your hit point maximum increases by 40.
+				</details><details class="invocation">
+					<summary><b>Boon of High Magic</b></summary>
+					You gain one 9th-level spell slot, provided that you already have one.
+				</details><details class="invocation">
+					<summary><b>Boon of Immortality</b></summary>
+					You stop aging. You are immune to any effect that would age you, and you can't die from old age.
+				</details><details class="invocation">
+					<summary><b>Boon of Invincibility</b></summary>
+					When you take damage from any source, you can reduce that damage to 0. Once you use this boon, you can't use it again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Irresistible Offense</b></summary>
+					You can bypass the damage resistances of any creature.
+				</details><details class="invocation">
+					<summary><b>Boon of Luck</b></summary>
+					You can add a d10 roll to any ability check, attack roll, or saving throw you make. Once you use this boon, you can't use it again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Magic Resistance</b></summary>
+					You have advantage on saving throws against spells and other magical effects.
+				</details><details class="invocation">
+					<summary><b>Boon of the Night Spirit</b></summary>
+					While completely in an area of dim light or darkness, you can become <a href="./combat.html?f=Invisible">invisible</a> as an action. You remain invisible until you take an action or a reaction.
+				</details><details class="invocation">
+					<summary><b>Boon of Peerless Aim</b></summary>
+					You can give yourself a +20 bonus to a ranged attack roll you make. Once you use this boon, you can't use it again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Perfect Health</b></summary>
+					You are immune to all diseases and poisons, and you have advantage on Constitution saving throws.
+				</details><details class="invocation">
+					<summary><b>Boon of Planar Travel</b></summary>
+					When you gain this boon, choose a plane of existence other than the Material Plane. You can now use an action to cast the <a href="./spells.html?l=PlaneShift"><i>Plane Shift</i></a> spell (no
+					spell slot or components required), targeting yourself only, and travel to the chosen plane, or from that plane back to the Material Plane. Once you use this boon, you can't use it again until
+					you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Quick Casting</b></summary>
+					Choose one of your spells of 1st through 3rd level that has a casting time of 1 action. That spell's casting time is now 1 bonus action for you.
+				</details><details class="invocation">
+					<summary><b>Boon of Recovery</b></summary>
+					You can use a bonus action to regain a number of hit points equal to half your hit point maximum. Once you use this boon, you can't use it again until you finish a long rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Resilience</b></summary>
+					You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.
+				</details><details class="invocation">
+					<summary><b>Boon of Skill Proficiency</b></summary>
+					You gain proficiency in all skills.
+				</details><details class="invocation">
+					<summary><b>Boon of Speed</b></summary>
+					Your walking speed increases by 30 feet. In addition, you can use a bonus action to take the Dash or Disengage action. Once you do so, you can't do so again until you finish a short rest.
+				</details><details class="invocation">
+					<summary><b>Boon of Spell Mastery</b></summary>
+					Choose one 1st-level sorcerer, warlock, or wizard spell that you can cast. You can now cast that spell at its lowest level without expending a spell slot.
+				</details><details class="invocation">
+					<summary><b>Boon of Spell Recall</b></summary>
+					You can cast any spell you know or have prepared without expending a spell slot. Once you do so, you can't use this boon again until you finish a long rest.
+				</details><details class="invocation">
+					<summary><b>Boon of the Stormborn</b></summary>
+					You have immunity to lightning and thunder damage. You can also cast <a href="./spells.html?l=Thunderwave"><i>Thunderwave</i></a> (save DC 15) at will, without using a spell slot or any components.
+				</details><details class="invocation">
+					<summary><b>Boon of Truesight</b></summary>
+					You have truesight out to a range of 60 feet.
+				</details><details class="invocation">
+					<summary><b>Boon of Undetectability</b></summary>
+					You gain a +10 bonus to Dexterity (Stealth) checks, and you can't be detected or targeted by divination magic, including scrying sensors. 
+				</details><details class="invocation">
+					<summary><b>Boon of the Unfettered</b></summary>
+					You have advantage on ability checks made to resist being grappled. In addition, you can use an action to automatically escape a grapple or free yourself of restraints of any kind.
+				</details>
+			</div>
+		</div>
+		<p style="font-size:0.9em;"><i>Designed and painstakingly built by Storotso. Javascript &amp; additional help by RandomDucks &amp; Frigges.</i></p>
+	</div>
+	<footer id="footer">
+			<menuButton id="menuButton" onClick="hidetab()"> >> Hide menu </menuButton>
+			<div id="menuTab">
+				<a href="./charactercreation.html">
+					<p style="font-size:88%;">Your Character</p>
+				</a>
+				<a href="./races.html">
+					<p>Races</p>
+				</a>
+				<a href="./classes.html">
+					<p>Classes</p>
+				</a>
+				<a href="./backgrounds.html">
+					<p>Backgrounds</p>
+				</a>
+				<a href="./items.html">
+					<p>Items</p>
+				</a>
+				<a href="./spells.html">
+					<p>Spell Lists</p>
+				</a>
+				<a href="./feats.html">
+					<p>Feats</p>
+				</a>
+				<a href="./combat.html">
+					<p class="toobignav">Combat &amp; Casting</p>
+				</a>
+				<a href="./adventure.html">
+					<p>Adventuring</p>
+				</a>
+				<a href="#top">
+					<p class="returnToTop">Return to top</p>
+				</a>
+				<a href="../dg/monsters.html">
+					<p>Monsters</p>
+				</a>
+			</div>
+	</footer>
+	<div class="development">
+		<details class="invocation">
+			<summary><b></b></summary>
+			
+		</details>
+		<a href="./spells.html?l="><i></i></a>
+		<table> 
+			<thead>
+				<tr>
+					<td width=35%>Roll</td>
+					<td>Damage Type</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Acid</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Cold</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Fire</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Force</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Lightning</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Poison</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Psychic</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Thunder</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>  —  &#8226; black list dot &#8499;(mat) &#8493;(con) &#8476;(rit) </p>
+	</div>
+</body>
+<script>showrace(1)</script>
+<script>theOne()</script>
+</html>

@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8" />
+	  <title>Character Creation & Progression</title>
+	  <script src="../Stylefiles/Names.js"></script>
+	<link href="../Stylefiles/RolePlay.css" rel="stylesheet"/>
+	<link rel="icon" href="../Stylefiles/start.png">
+	<script src="../Stylefiles/data.js"></script>
+	<script src="../Stylefiles/RolePlay.js"></script>
+</head>
+<body>
+	<header >
+		<nav>
+			<a href="../index.html">
+				<img class="perch" src="../Stylefiles/start.png">
+			</a>
+			<h2>A New You, A Better You</h2>
+			<a onclick="showrace(1)" href="#top"><h3>Character Creation</h3></a>
+			<a href="?l=classpick"><h4>Pick Your Class</h4></a>
+			<a href="?l=racepick"><h4>Pick Your Race &amp; Alignment</h4></a>
+			<a href="?l=abscoregen"><h4>Generate Ability Scores</h4></a>
+			<a href="?l=backgspick"><h4>Pick Your Background</h4></a>
+			<a href="?l=itembuy"><h4>Assemble Your Gear</h4></a>
+			<a href="?l=finishtouch"><h4>Finishing Touches</h4></a>
+			<a href="?l=levelup"><h3>Leveling Up</h3></a>
+			<a href="?l=multiclass"><h4>Multiclassing</h4></a>
+			<div class="diceContainer">
+				<b><i>Dice Roller</i></b>
+				<br>Number of dice: <input id="numDie" type="number" min="1" max="20" value="1" onclick="updateNumb()" onchange="updateNumb()">
+				<br>Die type: <input id="dieType" type="number" min="2" max="1000" value="20" onclick="updateNumb()" onchange="updateNumb()">
+				<br><a id="diebutton" onclick="roll()">Roll dice</a>
+				<t id="diceResult">Result: 0</t>
+				<br><result id="resultTab">
+				</result>
+				<p class="jsRight">&copy; RandomDucks</p>
+			</div>
+		</nav>
+	</header>
+	<div class="alltherest charactercreation">
+		<div id="top" style="height:0px"></div>
+		<div class="container">
+			<h1>How to create a character - step by step</h1>
+			<p>
+				So. You want to create a character in order to play DnD with your friends, but you're not sure how to do that, or you're perhaps not feeling inspired? Do not worry, I'm here to help. I will walk you
+				through the steps, one at a time, and even provide images to help explain what I'm doing in each step.
+			</p>
+			<p>
+				The first thing you'll want to do is grab an <u><a href="../stylefiles/charsheet.pdf" target="_blank">empty character sheet.</a></u><br>
+				The next thing is coming up with a concept for what kind of character you want to play. A noble knight? An apathetic assassin? A hyperactive mage? The possibilities are endless, and the decision is
+				yours. If you can't come up with something particularly good, move on to the next step. Between your class, alignment, and race, you should start forming ideas rather quickly.
+			</p>
+			<p>
+				For my own character, I'm gonna make a robin-hood esque guy whose merry band was crushed by the army. He escaped, and is trying to lay low ever since, but has joined an adventurer's guild in order to
+				earn some money so he doesn't starve to death.
+			</p>
+			<p>
+				<b>The next four steps can be taken in any order, or jumped between at one's leisure. <i title="cimoooo.wav">However</i>, if you're new or otherwise unsure of what you're doing, you're probably best
+				off following this walktrough to the letter.</b>
+			</p>
+			<h2 id="classpick">Picking Your Class</h2>
+			<p>
+				The first order of business is to pick a class for your character. Your class broadly describes your character's vocation, what special talents they possess, and how they are likely to behave in
+				combat. Your character's class is typically the easiest place to start, as it is gonna be the most defining part of your character most of the time. Read the description of each class and pick the one
+				that sounds the most fun or otherwise compelling to you.
+			</p><br>
+			<ul>
+				<li>
+					For my robin-hood inspired character, I had two options that caught my eye: Fighter and Ranger. I selected ranger because it fits my vision of sneaking through the forest fighting a guerilla war
+					better. Obviously, it's not a perfect fit with the ranger class fantasy of protecting civilization against enemies on the fringes, but it doesn't have to be. If I want to be a ranger in a
+					relatively populated region fighting other civilized folk, I can. And so can you. The only limit is your own imagination!
+				</li>
+				<li>
+					I wrote down my guy's proficiency bonus, armour and weapon proficiencies, and filled in his saving throw proficiencies as well as the skill proficiencies I decided on. Proficiency denotes
+					something your character is particularly educated or experienced in. You can find your bonus on the class table, but it will always be +2 at level 1.
+				</li>
+				<li>
+					I decided on my favored enemies now, but as you can see under Deft Explorer, I could've come back to this later as well, if I didn't yet have a good idea of where and who my character was
+					fighting. I have made note of the things that I have yet to decide on however, (the increase to health from my constitution, the doubled skill proficiency, my equipment, and the languages I still
+					get to pick), so that I remember to add them later.
+				</li>
+				<li>
+					You may notice that I wrote an abbreviated explanation under Favored Enemy, as well as shortened my weapon and armor proficiencies. The explanation is very valuable during gameplay so that you
+					don't have to cross-reference the books or this guide constantly, and simplifying them is absolutely necessary. Otherwise the text will become illegibly small very quickly. How you do it is up t
+					you, but please make sure that your DM also understands it.
+				</li>
+				<li>
+					If you have a spellcasting trait, I don't recommend writing any part of it down other than the ability to cast spells as a ritual. I also don't recommend picking your specific spells at this
+					point, as the spell list, even with just the spells you get at level 1, is long and might overwhelm you. I recommend just writing down how many spells of each level you get, and getting back to it
+					once you have a better picture of your character.
+				</li>
+			</ul>
+			<img class="sheetImage" src="../Stylefiles/seld/stage1pg1.JPG" width=33% onclick="shrink('sheetImage',0)">
+			<img class="sheetImage" src="../Stylefiles/seld/stage1pg2.JPG" width=33% onclick="shrink('sheetImage',1)">
+			<img class="sheetImage" src="../Stylefiles/seld/stage1pg3.JPG" width=33% onclick="shrink('sheetImage',2)">
+			<h2 id="racepick">Picking Your Race</h2>
+			<p>
+				Roleplaying campaigns typically involve a large variety of different races you can pick from. However, your DM will probably not allow you to play every single race on the Races page. Ask them what
+				races are available. If you want to play one that typically isn't, you might still be able to come up with a good excuse for why your character is in the place where the campaign takes place. If your
+				DM finds your explanation sufficient, you can still play your race of choice.
+			</p>
+			<p>
+				After you pick a race, think about how it affects your character. Does your character conform to the society they grew up in, or do they rebel against it? In either case; in what way? Answering these
+				questions will help you form your character's personality. Your race description will also provide some inspiration for what your character looks like, helping you fill in the fields on the sheet that
+				describe appearance. Finally, picking your race will help you make up a name. In some distant future version, I might include a name randomizer here, but for now, a general idea of what the language
+				sounds like will suffice. <a href="https://www.fantasynamegenerators.com/" target="_blank"><b>Fantasy Name Generators</b></a> should be more than enough for most purposes.
+			</p>
+			<h4>Your Alignment</h4>
+			<p>
+				Alternatively, you can start building your personality from one of the game's nine alignments, as explained below. Your alignemnt is a guideline for how your character can be expected to behave, and
+				helps you define how you concieve of them. Your alignment is not a fetter on how you play, and you can take actions that contradict it for all sorts of reasons, including none at all. However, if your
+				DM feels that your role playing doesn't match your character's written alignment, they might ask you to change that alignment to another one that better reflects how you play.<br><br>
+				The Alignments are constructed from five elements:
+			</p>
+			<ul>
+				<li><b>Good</b> creatures enjoy helping and supporting others, and can be counted on to act selflessly when the need arises.</li>
+				<li><b>Neutral</b> creatures cannot be counted on to act heroically or selflessly, but have a conscience and aren't particularly cruel.</li>
+				<li><b>Evil</b> creatures are selfish and only in it for themselves. They are often petty and cruel, delighting in tormenting others for no particular reason.</li>
+				<li><b>Lawful</b> creatures act in accordance with law, tradition, or personal codes.</li>
+				<li><b>Chaotic</b> creatures follow their whims and actively disregard established authorities and societal structures.</li>
+			</ul>
+			<p>
+			<br>Good, Neutral, and Evil are mutually exclusive, as are Lawful and Chaotic. The five combine to create the nine alignments:
+			</p>
+			<ul style="font-weight:bold;">
+				<li>Good</li>
+				<li>Lawful Good</li>
+				<li>Chaotic Good</li>
+				<li>Neutral</li>
+				<li>Lawful Neutral</li>
+				<li>Chaotic Neutral</li>
+				<li>Evil</li>
+				<li>Lawful Evil</li>
+				<li>Chaotic Evil</li>
+			</ul>
+			<br>
+			<ul>
+				<li>
+					I knew going in that I was making a character for the Dragonsea setting (which is the default used for the Races page), specifically starting in the Western Seikki region of the Negalian Union.
+					After reading up on the available races I decided on the snow elf, since I, like everybody else, want to be Legolas. Its racial traits also fit nicely with the image I have of my guy as a former
+					leader. I named him Seldron. A nice elvish name with some oomph to it. Your DM will have informed you before this if they have a specific setting in mind, but most DnD races have a single
+					culture across all worlds and can easily be transplanted from one to the other regardless.
+				</li>
+				<li>
+					As with my class abilities, I have written simplified forms of my racial traits on my sheet. Notice that I wrote <i>Dispel Magic</i> on the spell page instead of under the feature.
+				</li>
+				<li>
+					I'm beginning to think of Seldron as someone special, so I made his appearance stand out a bit with his dark hair and eyes, and his (comparatively) short stature. I don't want Seldron to be very
+					old, but he has also gone through a lot, so I decided that he was 45 years old. I made him chaotic good as, going with his robin hood-roots, doesn't really care for authorities but does want to
+					help people.
+				</li>
+				<li>
+					You can use whatever measuring system you want for height and weight, as long as both you and your DM understand it. Since I'm not american and thus have a hard time picturing imperial units, I
+					used metric for my sheet. (Although I still put my speed down in feet since it's easier for gameplay purposes.) You also don't have to use exact measurements for height and weight if you don't
+					want to. I could just as easily have written "shorter than average" and "slim" as Seldron's height and weight respectively, and it would've conveyed the same idea just as well.
+				</li>
+				<li>
+					Seldron's four languages, two from his race and two from his class, are the languages sponek across the negalian union, as he has had little contact with people from outside it. In theory, he
+					could've spoken anything with relatively little justification, but I picked languages I expect to actually use. Ask your DM or read the relevant source book if you're unsure of what languages are
+					available.
+				</li>
+				<li>
+					Finally, you may note that there is no place to write down your character's sex. While this may seem silly, it's not a huge deal, as this is probably the most memorable part of your character. We
+					humans just tend to think that way. Your sex will be immediately noticable to anyone you interact with anyway, and if you want to do something more complex with it—such as having a different
+					gender identity, or appearing completely androgynous—you will most likely need to write a description of it somewhere on the third page, rather than just fill in a small box.
+				</li>
+			</ul>
+			<img class="sheetImage2" src="../Stylefiles/seld/stage2pg1.JPG" width=33% onclick="shrink('sheetImage2',0)">
+			<img class="sheetImage2" src="../Stylefiles/seld/stage2pg2.JPG" width=33% onclick="shrink('sheetImage2',1)">
+			<img class="sheetImage2" src="../Stylefiles/seld/stage2pg3.JPG" width=33% onclick="shrink('sheetImage2',2)">
+			<h2 id="abscoregen">Calculating Ability Scores</h2>
+			<p>
+				Now that you know how your character plays and roughly how they look, it is time to translate that into scores representing their physical and mental attributes. These are the afforementioned ability
+				scores. Below, you will find a description of what an ability score represents and what it actually does in the game, followed by a suggestion about whether you should focus on that particular stat
+				depending on what you're aiming for. The average ability score of a regular human is typically seen as 10.
+			</p>
+			<div class="abiscor">
+				<p><b>Strength (STR)</b></p>
+				<p class="abscorsub">
+					Strength measures your character's bodily power, athletic training, and the extent to which they can exert raw physical force.<br>
+					Strength also determines how much you can carry without being encumbered.
+				</p>
+				<p class="abscorsub">
+					Strength is important for the following classes and subclasses:<br>
+					<i>Classes:</i> Barbarian, Most Fighters, Paladin, Melee-focused Ranger<br>
+					<i>Subclasses:</i> College of Valor Bard, War Domain Cleric
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Intelligence (INT)</b></p>
+				<p class="abscorsub">
+					Intelligence measures your character's sharpness of mind, the accuracy of their memory, and their ability to reason.
+				</p>
+				<p class="abscorsub">
+					Intelligence is important for the following classes and subclasses:<br>
+					<i>Classes:</i> Artificer, Wizard<br>
+					<i>Subclasses:</i> Eldritch Knight &amp; Arcane Archer Fighter, Arcane Trickster Rouge
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Dexterity (DEX)</b></p>
+				<p class="abscorsub">
+					Dexterity measures your character's agility, reflexes, and balance.<br>
+					Dexterity also provides Armor Class to any character not wearing heavy armor, as well as a bonus to initiative.
+				</p>
+				<p class="abscorsub">
+					Dexterity is important for the following classes and subclasses:<br>
+					<i>Classes:</i> Finesse- or ranged weapon Fighter, Monk, Most Rangers, Rouge<br>
+					<i>Subclasses:</i> College of Swords Bard, Bladesinger Wizard
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Wisdom (WIS)</b></p>
+				<p class="abscorsub">
+					Wisdom measures your character's perceptiveness and intuition.
+				</p>
+				<p class="abscorsub">
+					Wisdom is important for the following classes and subclasses:<br>
+					<i>Classes:</i> Cleric, Druid, Monk, Ranger<br>
+					<i>Subclasses:</i> None
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Constitution (CON)</b></p>
+				<p class="abscorsub">
+					Constitution measures your character's health, stamina, and vital force.<br>
+					All classes add their constitution modifier &times; their character level to their hit point maximum.
+				</p>
+				<p class="abscorsub">
+					Constitution is important for the following classes and subclasses:<br>
+					Literally all of them. Every single class likes having more health. However, if you don't plan on fighting things up close, Constitution is less important.
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Charisma (CHA)</b></p>
+				<p class="abscorsub">
+					Charisma measures your character's ability to interact with and influence others. It includes such factors as confidence and eloquence, and can represent a charming or commanding personality.
+				</p>
+				<p class="abscorsub">
+					Charisma is important for the following classes and subclasses:<br>
+					<i>Classes:</i> Bard, Paladin, Sorcerer, Warlock<br>
+					<i>Subclasses:</i> None
+				</p>
+			</div><br><br>
+			<p>
+				<b>These last two ability scores aren't part of most campaigns, and if they are part of yours, your DM should've told you. If you're unsure whether these scores are in your campaign or not, don't
+				hesitate to ask your DM.</b>
+			</p>
+			<div class="abiscor">
+				<p><b>Sanity (SAN)</b></p>
+				<p class="abscorsub">
+					Sanity measures your character's ability to stay calm when in direct contact with another mind, or when facing down unknowable alien horrors.
+				</p>
+			</div>
+			<div class="abiscor">
+				<p><b>Honor (HON)</b></p>
+				<p class="abscorsub">
+					Honor is an extremely niche ability score that measures how well a character knows the codes of honor relevant to a given campaign. Honor doesn't operate quite like other ability scores and can't
+					be raised through normal ability score increases.
+				</p>
+			</div><br><br>
+			<p>
+				Typically, you want to distribute your ability scores using the table below. If you can't be bothered to do the math, you can use the handy calculator also provided below. The most common campaign
+				type I've been involved with has been high fantasy, but it's entirely possible that your DM wants to use another campaign type. Always ask them what campaign type they're running before distributing
+				your ability scores. If your campaign uses Sanity and/or Honor, you get 3 extra points for each of them, in addition to what your campaign type calls for. After this calculation is done, you increase
+				one ability score by 2 and another by 1. Some races get more or less bonus ability scores to distribute, which is noted in their race description.
+			</p>
+			<div id="calcContainer">
+				<b><i>Ability Score Calculator</i></b><br/>
+				<span id="remainingPoints">Remaining: 20</span>
+				<br/>
+				<div style="display: inline-table;">
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Str')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtStr">Str:<br/>10<br/><b class="abilityModifire" id="modStr">0</b></p>
+						<a class="statButton"  onclick="negative('Str')">
+							&DownArrow;
+					   </a>	
+					</div>
+					<div class="calcStat">
+						<a class="statButton"  onclick="positive('Dex')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtDex">Dex:<br/>10<br/><b class="abilityModifire" id="modDex">0</b></p>
+						<a class="statButton"  onclick="negative('Dex')">
+							&DownArrow;
+						</a>   
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Con')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtCon">Con:<br/>10<br/><b class="abilityModifire" id="modCon">0</b></p>
+						<a class="statButton"  onclick="negative('Con')">
+							&DownArrow;
+						</a>
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Int')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtInt">Int:<br/>10<br/><b class="abilityModifire" id="modInt">0</b></p>
+						<a class="statButton"  onclick="negative('Int')">
+							&DownArrow;
+						</a>
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Wis')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtWis">Wis:<br/>10<br/><b class="abilityModifire" id="modWis">0</b></p>
+						<a class="statButton"  onclick="negative('Wis')">
+							&DownArrow;
+						</a>
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Cha')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtCha">Cha:<br/>10<br/><b class="abilityModifire" id="modCha">0</b></p>
+						<a class="statButton"  onclick="negative('Cha')">
+							&DownArrow;
+						</a>
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('San')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtSan">San:<br/>10<br/><b class="abilityModifire" id="modSan">0</b></p>
+						<a class="statButton"  onclick="negative('San')">
+							&DownArrow;
+						</a>
+					</div>
+					<div class="calcStat">
+						<a class="statButton" onclick="positive('Hon')">
+							&UpArrow;
+						</a>
+						<p class="statText" id="txtHon">Hon:<br/>10<br/><b class="abilityModifire" id="modHon">0</b></p>
+						<a class="statButton"  onclick="negative('Hon')">
+							&DownArrow;
+						</a>
+					</div>
+				</div>
+				Starting points: 
+				<input type="number" id="startPoints" max="99" min="0" value="20" onchange="updateStart()" onclick="updateStart()"></input><br>
+				<p class="jsRight">&copy; RandomDucks</p>
+			</div>
+			<table class="abscotab">
+				<thead>
+					<tr>
+						<td><b>Score</b></td>
+						<td><b>Point Cost</b></td>
+						<td><b>Score</b></td>
+						<td><b>Point Cost</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>7</td>
+						<td>-4</td>
+						<td>13</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>-2</td>
+						<td>14</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>-1</td>
+						<td>15</td>
+						<td>7</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>-</td>
+						<td>16</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>1</td>
+						<td>17</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>2</td>
+						<td>18</td>
+						<td>17</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="camptype">
+				<thead>
+					<tr>
+						<td><b>Campaign Type</b></td>
+						<td><b>Points</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Low Fantasy</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>Standard Fantasy</td>
+						<td>15</td>
+					</tr>
+					<tr>
+						<td>High Fantasy</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>Epic Fantasy</td>
+						<td>25</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Rolling Ability Scores</h4>
+			<p>
+				Your DM might decide that ability scores are to be rolled instead. To roll ability scores, roll 6d6, jot down the sum of the three highest dice somewhere, then repeat this process 6 times (7 times if
+				either Sanity or Honor is used, 8 if both are). After you have all your scores noted down, assign them as you please to your ability scores, then increase one by 2 and another by 1, or otherwise as
+				per your race.
+			</p><br>
+			<ul>
+				<li>
+					I used the table to assign Seldron's scores, and distributed them the way I did because:<br>
+					<i>Strength</i> is mainly useful for a big bungus thick armor me smash guy. Seldron is more of an elegant bow and sword guy.<br>
+					<i>Dexterity</i> gives extra AC, helps him shoot things with a longbow, and helps him hack up enemies with his shortswords. It is far and away his most useful score.<br>
+					<i>Constitution</i> gives extra health, which is nice.<br>
+					<i>Intelligence</i> does relatively little for seldron, but I have an idea where he is educated and has a good memory, so I picked it up for flavor reasons.<br>
+					<i>Wisdom</i> helps with perception and saving throws, and eventually it will become his spellcasting ability modifier <a href="?l=levelup">(see "Leveling Up")</a>, so it will serve me well.<br>
+					<i>Charisma</i> helps with social events and such, but Seldron isn't supposed to be much of a talker. He leads by arrow and sword, not words.
+				</li>
+				<li>
+					I added Seldron's Constitution modifier to his hit point maximum, and his Dexterity modifier to his initiative bonus. The other modifiers should assign themselves automatically. If you have a
+					spellcasting feature and the "Spell Save DC" and "Spell Attack Bonus" fields do not fill themselves automatically, try clearing and re-filling the "Spellcasting Class" and "Spellcasting
+					Ability" fields.
+				</li>
+			</ul>
+			<img class="sheetImage3" src="../Stylefiles/seld/stage3pg1.JPG" width=33% onclick="shrink('sheetImage3',0)">
+			<img class="sheetImage3" src="../Stylefiles/seld/stage3pg2.JPG" width=33% onclick="shrink('sheetImage3',1)">
+			<img class="sheetImage3" src="../Stylefiles/seld/stage3pg3.JPG" width=33% onclick="shrink('sheetImage3',2)">
+			<h2 id="backgspick">Pick your background</h2>
+			<p>
+				Now that you have the gameplay and general concept of your character down, It's time to give them a personality and at least the slightest hint of a backstory. Take a look at the Backgrounds page and
+				pick whichever one you want. Some backgrounds might require some extra explaination as to how they became the class they are in game, which is an excellent opportunity to flex your creative muscles
+				For instance, a character with the acolyte background would typically not become a rouge. If you don't like any of the backgrounds, you can easily tweak one of them, or create a custom one from
+				scratch. The balance of that is subject to DM approval however.
+			</p>
+			<p>
+				After you've picked a background, make up a fitting personality, or roll for it using the tables provided in the background's entry. Decide two appropriate personality traits, one ideal, and one flaw.
+				Bonds aren't as necessary for playing your character in my experience, but they help your DM come up with plot hooks and such, so at least try to come up with one.
+			</p><br>
+			<ul>
+				<li>
+					For Seldron, I read the noble background, and all the pieces fell into place. I now have as complete a backstory as anyone could reasonably ask for, complete with compelling history and plot hooks
+					for the DM. Mechanically, however, I didn't use the Noble background for more than its proficiencies. I made up my own traits, took some more modest equipment, and picked up the Inheritor feature
+					from "Customizing a Background".
+				</li>
+				<li>
+					Now that I finally have all of my proficiencies, I could assign one to Deft Explorer. I decided to go with history, which fits with seldron being well-read and a huge fan of fables and other
+					stories.
+				</li>
+				<li>
+					As might be apparent from the traits, Seldron is a decently complex character, but yours certainly doesn't have to be. If you make a barbarian whose entire personality is "I know of no problem
+					that cannot be solved by drink or axe", that is just as valid as what I have done here. If you believe you will have more fun playing that character, go for it!
+				</li>
+			</ul>
+			<img class="sheetImage4" src="../Stylefiles/seld/stage4pg1.JPG" width=33% onclick="shrink('sheetImage4',0)">
+			<img class="sheetImage4" src="../Stylefiles/seld/stage4pg2.JPG" width=33% onclick="shrink('sheetImage4',1)">
+			<img class="sheetImage4" src="../Stylefiles/seld/stage4pg3.JPG" width=33% onclick="shrink('sheetImage4',2)">
+			<h2 id="itembuy">Your Character's Equipment and Money</h2>
+			<p>
+				The last part that every character needs to do is sort out their equipment. Your class and background will have provided you with certain options, and now is the time to decide which of those options
+				to pick, and the specifics of those picks. You can use your starting gold and trade in your standard equipment to purchase whatever you choose from the goods and services presented on the Items
+				page.<br>
+				Your DM might decide that you have more items, or lack some that the class or background would ordinarily give you. If so, It's their responsibility to tell you.
+			</p>
+			<p>
+				How your character came across their equipment is entirely up to you, and if you want to ascribe importance to one or more of them, you can. A sword might be a family heirloom passed down for
+				generations, or an arcane focus might've been given to you by a mentor or patron of some kind. Or maybe you just bought yuor sword att eh village blacksmith. Or found your focus in a ditch. Their
+				story is as grand as you want them to be, and they matter exactly as much to your character as you want them to.
+			</p>
+			<ul>
+				<li>
+					I rolled 2, 4, 1, 3, and 2 for Seldron's starting wealth. Combined with the 10gp his background gave him, that gave him a starting sum of 130gp.
+				</li>
+				<li>
+					I picked Leather armor fom my options out of a sense of fairness, because I was gonna trade it in and it felt wrong to have money left over. I swapped it and some gold for Studded Leather armor
+					for the extra AC. I wanted Studded Leather over Scale Mail since it will let my AC go higher if I ever gain more dexterity. (which I can, <a href="?l=levelup">see "Leveling Up"</a>) Light armor
+					is typically the objectively correct choice for characters that fight using dexterity.<br>I noted the AC of the armor in the equipment field, and wrote Seldron's total AC up top.
+				</li>
+				<li>
+					I picked the shortswords for seldron since they have the finesse property and can thus be used with dexterity. However, I don't like the idea of seldron as a dual wielder, so I traded them in,
+					along with 5gp, for a rapier. The rapier also feels more appropriate for a former noble who would've been educated in fencing.<br>
+					I wrote Seldron's weapons, along with their attack bonus (his Dex modifier + his proficiency bonus) and damage (the weapon's damage dice + his dexterity modifier) in the Attacks &amp;
+					Spellcasting field. I used shorthand for the damage type in order to avoid the text getting too small. The 20 next to the longbow is its arrow count.
+				</li>
+				<li>
+					I decided on an Explorer's pack, since it provides more amenities than the Dungeoneer's pack. Rather than just writing "Explorer's pack", I wrote out the contents of the pack. I find that this
+					helps you keep better track of what items you have during gameplay. To me, the quiver is implicitly included with the arrows, and I wrote it out for clarity's sake.
+				</li>
+				<li>
+					Finally, I some extra equipment I figured would be useful or flavorful. In order of appearance they are: A 2-person tent, a Totem Druidic Focus, and a
+					<a href="./items.html?l=PotionofHealing"><i class="comnmagit">Potion of Healing</i></a>.
+					All in all, this added up to 53 gp, leaving me with 37.
+				</li>
+			</ul>
+			<img class="sheetImage5" src="../Stylefiles/seld/stage5pg1.JPG" width=33% onclick="shrink('sheetImage5',0)">
+			<img class="sheetImage5" src="../Stylefiles/seld/stage5pg2.JPG" width=33% onclick="shrink('sheetImage5',1)">
+			<img class="sheetImage5" src="../Stylefiles/seld/stage5pg3.JPG" width=33% onclick="shrink('sheetImage5',2)">
+			<h2 id="finishtouch">Finishing Touches</h2>
+			<h4>Select Spells</h4>
+			<p>
+				If you're a spellcaster, you need to pick your spells. What spells you pick are entirely up to you, as long as they are on your class or subclass' spell list. You can decide on spells depending on
+				what seems flavorful, what seems powerful, or a combination of the two. The writing out of spells is pretty self-explanatory, but if you're unsure of how to do it, see "Leveling Up". Remember to
+				select your spellcasting ability. Doing so should fill in your spellcasting DC and spell attack bonus automatically.<br>
+				You can write out what your spells do on the fourth page, but I only recommend if if you're not gonna have access to this guide or online tools.
+			</p>
+			<br>
+			<p style="font-size:110%; margin-top:0%">
+				Now that you've completed all of the steps above, you have everything you <i>need</i> to have in order to play. However, even if you have everything you need, you might want to add small tweaks to
+				your character. Some such tweaks are presented below.
+			</p>
+			<h4 id="featpick">Feats</h4>
+			<p>
+				If you still aren't satisfied with your character yet, you may want to add a feat in order to further specialize your character or add more flavor.<br>
+				However, there's a problem.
+			</p>
+			<p>
+				Ordinarily, you cannot pick a feat at level 1. The only circumstance within the boundaries of the normal rules where you would get to do so is if you're playing a human, as noted under the human
+				traits. All hope is not lost, though. If you have a very specific character in mind, and you absolutely <i>need</i> to have a specific feat in order to make that happen, there is a chance that your DM
+				will allow you to swap some of your traits, class abilities, or ability scores for that feat. Or perhaps even give you the feat outright. Consult and negotiate with your DM, and try to make your dream
+				character happen.
+			</p>
+			<h4 id="morebstory">More Backstory</h4>
+			<p>
+				Perhaps you aren't satisfied with your backstory. You might think it's not written eloquently enough, or that critical details are missing. In that case, "Expanded Bacstories" on the Backgrounds page
+				offers inspiration and randomization of these details. If you want to write a longer backstory, feel free to use page 5 of the sheet. There is no real limit to your backstory's length—you can write
+				an entire novel if you so desire—but don't expect anyone to read more than a couple of paragraphs.<br>
+				You can also roll on the tables under "Trinkets" on the Items page. The roll will give you an item that you can plan or make up things around.
+			</p>
+			<p>
+				If you want, you can add an image to the "Character Appearance" field. How you go about getting &amp;/or making this image is entirely up to you. You can draw it from scratch or steal it from some
+				artist online. No one is gonna care in the latter case, unless they're an asshole. 
+			</p>
+			<br>
+			<ul>
+				<li>
+					My DM allowed me to have a feat outright, because they felt that a feat at level 1 helps define the character and make them a bit more fun to play. I picked the Piercer feat and added it to my
+					sheet as with my other abilities.
+				</li>
+				<li>
+					I had a friend draw seldron based on my description, and added the picture to my sheet. I'll let you figure out how exactly to do that if you want to do it yourself, since it's likely to vary
+					between PDF editors, but in my case it was fairly simple matter of copy-pasting and resizing.
+				</li>
+				<li>
+					I was pretty happy with my backstory, but I nevertheless rolled on the trinkets table for the sake of demonstration. I rolled on the <a href="./items.html?l=PolarTrinkets">Polar Trinkets table</a>,
+					and got a 58, which is "A brooch made from a small insect encased in amber". I added it to my sheet and wrote a little origin story for where it came from. It left me with a bit more history and
+					a connection that can be used for storytelling purposes by both me and the DM. 
+				</li>
+			</ul>
+			<img class="sheetImage6" src="../Stylefiles/seld/stage6pg1.JPG" width=33% onclick="shrink('sheetImage6',0)">
+			<img class="sheetImage6" src="../Stylefiles/seld/stage6pg2.JPG" width=33% onclick="shrink('sheetImage6',1)">
+			<img class="sheetImage6" src="../Stylefiles/seld/stage6pg3.JPG" width=33% onclick="shrink('sheetImage6',2)" title="Art by Gabriella Werkander">
+			<p><b><br>Congratulations! You should now have everything you could possibly want to start with. Enjoy playing your character!</b></p>
+		</div>
+		<div class="container">
+			<h1 id="levelup">-Ding!<br>-Hey, gratz mon!</h1>
+			<table style="float:right; margin-top:2em;">
+				<thead>
+					<tr>
+						<td>Experience Points</td>
+						<td style="text-align:center;">Level</td>
+						<td style="text-align:center;">Proficiency<br>Bonus</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0</td>
+						<td style="text-align:center;">1</td>
+						<td style="text-align:center;">+2</td>
+					</tr>
+					<tr>
+						<td>300</td>
+						<td style="text-align:center;">2</td>
+						<td style="text-align:center;">+2</td>
+					</tr>
+					<tr>
+						<td>900</td>
+						<td style="text-align:center;">3</td>
+						<td style="text-align:center;">+2</td>
+					</tr>
+					<tr>
+						<td>2700</td>
+						<td style="text-align:center;">4</td>
+						<td style="text-align:center;">+2</td>
+					</tr>
+					<tr>
+						<td>6500</td>
+						<td style="text-align:center;">5</td>
+						<td style="text-align:center;">+3</td>
+					</tr>
+					<tr>
+						<td>14,000</td>
+						<td style="text-align:center;">6</td>
+						<td style="text-align:center;">+3</td>
+					</tr>
+					<tr>
+						<td>23,000</td>
+						<td style="text-align:center;">7</td>
+						<td style="text-align:center;">+3</td>
+					</tr>
+					<tr>
+						<td>34,000</td>
+						<td style="text-align:center;">8</td>
+						<td style="text-align:center;">+3</td>
+					</tr>
+					<tr>
+						<td>48,000</td>
+						<td style="text-align:center;">9</td>
+						<td style="text-align:center;">+4</td>
+					</tr>
+					<tr>
+						<td>64,000</td>
+						<td style="text-align:center;">10</td>
+						<td style="text-align:center;">+4</td>
+					</tr>
+					<tr>
+						<td>85,000</td>
+						<td style="text-align:center;">11</td>
+						<td style="text-align:center;">+4</td>
+					</tr>
+					<tr>
+						<td>100,000</td>
+						<td style="text-align:center;">12</td>
+						<td style="text-align:center;">+4</td>
+					</tr>
+					<tr>
+						<td>120,000</td>
+						<td style="text-align:center;">13</td>
+						<td style="text-align:center;">+5</td>
+					</tr>
+					<tr>
+						<td>140,000</td>
+						<td style="text-align:center;">14</td>
+						<td style="text-align:center;">+5</td>
+					</tr>
+					<tr>
+						<td>165,000</td>
+						<td style="text-align:center;">15</td>
+						<td style="text-align:center;">+5</td>
+					</tr>
+					<tr>
+						<td>195,000</td>
+						<td style="text-align:center;">16</td>
+						<td style="text-align:center;">+5</td>
+					</tr>
+					<tr>
+						<td>225,000</td>
+						<td style="text-align:center;">17</td>
+						<td style="text-align:center;">+6</td>
+					</tr>
+					<tr>
+						<td>265,000</td>
+						<td style="text-align:center;">18</td>
+						<td style="text-align:center;">+6</td>
+					</tr>
+					<tr>
+						<td>305,000</td>
+						<td style="text-align:center;">19</td>
+						<td style="text-align:center;">+6</td>
+					</tr>
+					<tr>
+						<td>355,000</td>
+						<td style="text-align:center;">20</td>
+						<td style="text-align:center;">+6</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				As your character goes on adventures and overcomes challenges, they gain experience, represented by experience points. A character who reaches a specified experience point total advances in
+				capability, also known as them "leveling up" or "gaining a level". When your character gains a level, their class usually grants additional features, as detailed in the class description. In addition, every
+				character's proficiency bonus increases at certain levels, as on the table to the left. Each time you gain a level, you gain 1 additional Hit Die. Roll that Hit Die, add your Constitution modifier
+				to the roll, and add the total to your hit point maximum. Alternatively, you can use the fixed value shown in your class entry, which is the average result of the die roll (rounded up). Regardless
+				of your constitution modifier or the result of your roll, you cannot gain any less than 1 hit point when you level up.
+			</p>
+			<p>
+				When your Constitution modifier increases by 1, your hit point maximum increases by 1 for each level you have attained. For example, when Seldron reaches level 4 as a ranger, he can increase his
+				Constitution score from 14 to 16, thus increasing his Constitution modifier from +2 to +3. His hit point maximum then increases by 4.
+			</p><br>
+			<ul>
+				<li>I changed Seldron's hit point maximum and number of hit dice to the appropriate new amounts. I took the fixed HP increase as described above. I advise you to do the same. You're ulikely to gain
+					more from die rolls unless yours is weighted.</li>
+				<li>As a ranger, one of the new feratures I get from leveling up is a fighting style. I picked Archery so I would be better at hitting things with my bow. I wrote that I have it under my Features
+					&amp; Traits, but since the effect is so simple, I chose to simply write it on the attack description. Keeping track of which style I picked is good, because it can serve as a reminder if I pick
+					up another ranged weapon, and I can change it at certain level-ups if I want.</li>
+				<li>The other big thing I get at level 2 is spells. As I advised under "Pick Your Class", I haven't written the trait itself down. I have all the spells I know written anyway, and can simply reference
+					the Ranger table when I level up in the future. The Sheet also keeps track of my spell save DCs and spell attack bonuses for me.</li>
+				<li>I picked the spells I did because I expect them to have good utility in combat. They don't require my druidic focus to cast, so I don't have a use for that item yet, but it would've been useful if
+					I had picked something like <a href="./spells.html?l=Goodberry"><i>Goodberry</i></a> or <a href="./spells.html?l=Longstrider"><i>Longstrider</i></a>. Notice also that I changed the parenthesis on
+					<a href="./spells.html?l=DetectMagic"><i>Detect Magic</i></a>, to clarify that I can, in fact, use my spell slots to cast it if I want to.</li>
+			</ul>
+			<br><br>
+			<img class="sheetImage7" src="../Stylefiles/seld/stage7pg1.JPG" width=33% onclick="shrink('sheetImage7',0)">
+			<img class="sheetImage7" src="../Stylefiles/seld/stage7pg2.JPG" width=33% onclick="shrink('sheetImage7',1)">
+			<img class="sheetImage7" src="../Stylefiles/seld/stage7pg3.JPG" width=33% onclick="shrink('sheetImage7',2)" title="Art by Gabriella Werkander">
+			<h2 id="multiclass">Multiclassing</h2>
+			<p>
+				Multiclassing refers to taking levels in multiple classes. Doing so lets you mix the abilities of those classes to realize a character concept that might not be reflected in one of the standard
+				class options. You have the option of gaining a level in a new class whenever you advance in level, instead of gaining a level in your current class. Your levels in all your classes are added together
+				to determine your character level. For example, if you have three levels in wizard and two in fighter, you're a 5<sup>th</sup>-level character. As you advance in levels, you might primarily remain a
+				member of your original class with just a few levels in another class, or you might change course entirely, never looking back at the class you left behind. You might even start progressing in a third
+				or fourth class. Compared to a single-class character of the same level, you'll sacrifice some focus in exchange for versatility.
+			</p>
+			<table style="float:right;">
+				<caption>Multiclassing Prerequisites</caption>
+				<thead>
+					<tr>
+						<td>Class</td>
+						<td>Ability Score Minimum</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Apothecary</td>
+						<td>Intelligence 13</td>
+					</tr>
+					<tr>
+						<td>Artificer</td>
+						<td>Intelligence 13</td>
+					</tr>
+					<tr>
+						<td>Barbarian</td>
+						<td>Strength 13</td>
+					</tr>
+					<tr>
+						<td>Bard</td>
+						<td>Charisma 13</td>
+					</tr>
+					<tr>
+						<td>Cleric</td>
+						<td>Wisdom 13</td>
+					</tr>
+					<tr>
+						<td>Druid</td>
+						<td>Wisdom 13</td>
+					</tr>
+					<tr>
+						<td>Fighter</td>
+						<td>Strength 13 or Dexterity 13</td>
+					</tr>
+					<tr>
+						<td>Monk</td>
+						<td>Dexterity 13 and Wisdom 13</td>
+					</tr>
+					<tr>
+						<td>Paladin</td>
+						<td>Strength 13 and Charisma 13</td>
+					</tr>
+					<tr>
+						<td>Ranger</td>
+						<td>Dexterity 13 and Wisdom 13</td>
+					</tr>
+					<tr>
+						<td>Rogue</td>
+						<td>Dexterity 13</td>
+					</tr>
+					<tr>
+						<td>Sorcerer</td>
+						<td>Charisma 13</td>
+					</tr>
+					<tr>
+						<td>Warlock</td>
+						<td>Charisma 13</td>
+					</tr>
+					<tr>
+						<td>Wizard</td>
+						<td>Intelligence 13</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Multiclassing Example</h4>
+			<p>
+				Seldron is a 2<sup>nd</sup>-level ranger. When he earns enough experience points to reach 3<sup>rd</sup> level, I decide that he will multiclass instead of continuing to progress as a ranger. Seldron
+				has been spending a lot of time with my friend's rogue, and has been watching the way he fights with great interest. I decide that Seldron takes a level in the rogue class, and thus he becomes a
+				2<sup>nd</sup>-level ranger and 1<sup>st</sup>-level rogue.
+			</p>
+			<p>
+				When Seldron earns enough experience to reach 4<sup>th</sup> level, I can decide whether to add another ranger level (becoming a ranger 3/rogue 1), another rogue level (becoming a ranger 2/rogue 2),
+				or a level in a third class, perhaps dabbling in fighter thanks to the specialized training I recieved from the blademaster in my guild (becoming a ranger 2/rogue 1/fighter 1).
+			</p>
+			<h4>Prerequisites</h4>
+			<p>
+				To qualify for a new class, you must meet the ability score prerequisites for both your current class and your new one, as shown in the Multiclassing Prerequisites table. For example, a barbarian who
+				decides to multiclass into the druid class must have both Strength and Wisdom scores of 13 or higher. Without the full training that a beginning character receives, you must be a quick study in your
+				new class, having a natural aptitude that is reflected by higher-than-average ability scores.
+			</p>
+			<h4>Proficiencies</h4>
+			<p>
+				When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies, as shown in the Multiclassing Proficiencies table.
+			</p>
+			<h4>Leveling Up Multiple Classes</h4>
+			<table style="float:right; width:30%;">
+				<caption>Multiclassing Proficiencies</caption>
+				<thead>
+					<tr>
+						<td>Class</td>
+						<td>Proficiencies Gained</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Apothecary</td>
+						<td>Light armor, one type of artisan's tools of your choice</td>
+					</tr>
+					<tr>
+						<td>Artificer</td>
+						<td>Light armor, medium armor, shields, thieves' tools, tinker's tools</td>
+					</tr>
+					<tr>
+						<td>Barbarian</td>
+						<td>Shields, simple weapons, martial weapons</td>
+					</tr>
+					<tr>
+						<td>Bard</td>
+						<td>Light armor, one skill of your choice, one musical instrument of your choice</td>
+					</tr>
+					<tr>
+						<td>Cleric</td>
+						<td>Light armor, medium armor, shields</td>
+					</tr>
+					<tr>
+						<td>Druid</td>
+						<td>Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)</td>
+					</tr>
+					<tr>
+						<td>Fighter</td>
+						<td>Light armor, medium armor, shields, simple weapons, martial weapons</td>
+					</tr>
+					<tr>
+						<td>Monk</td>
+						<td>Simple weapons, shortswords</td>
+					</tr>
+					<tr>
+						<td>Paladin</td>
+						<td>Light armor, medium armor, shields, simple weapons, martial weapons</td>
+					</tr>
+					<tr>
+						<td>Ranger</td>
+						<td>Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class's skill list</td>
+					</tr>
+					<tr>
+						<td>Rogue</td>
+						<td>Light armor, one skill from the class's skill list, thieves' tools</td>
+					</tr>
+					<tr>
+						<td>Sorcerer</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td>Warlock</td>
+						<td>Light armor, simple weapons</td>
+					</tr>
+					<tr>
+						<td>Wizard</td>
+						<td>—</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				The experience point cost to gain a level is always based on your total character level, not your level in a particular class. So, if you are a cleric 6/fighter 1, you must gain enough XP to reach
+				8<sup>th</sup> level before you can take your second level as a fighter or your seventh level as a cleric.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Proficiency Bonus</b><br>
+				Contrary to what the class tables would have you believe, your proficiency bonus is always based on your total character level, not your level in a particular class. For example, if you are a fighter
+				3/rogue 2, you have the proficiency bonus of a 5<sup>th</sup>-level character, which is +3.
+			</p>
+			<h4>Hit Dice</h4>
+			<p>
+				You gain the hit points from your new class as described for levels after 1<sup>st</sup>. You gain the 1<sup>st</sup>-level hit points for a class only when you are a 1st-level character. You add
+				together the Hit Dice granted by all your classes to form your pool of Hit Dice. If the Hit Dice are the same die type, you can simply pool them together. For example, both the fighter and the
+				paladin have a d10, so if you are a paladin 5/fighter 5, you have ten d10 Hit Dice. If your classes give you Hit Dice of different types, keep track of them separately. If you are a paladin 5/cleric
+				5, for example, you have five d10 Hit Dice and five d8 Hit Dice.
+			</p>
+			<h4>Class Features</h4>
+			<p>
+				When you gain a new level in a class, you get its features for that level. A few features, however, have additional rules when you're multiclassing: Channel Divinity, Extra Attack, and Unarmored
+				Defense.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Channel Divinity</b><br>
+				If you already have the Channel Divinity feature and gain a level in a class that also grants the feature, you gain the Channel Divinity effects granted by that class, but getting the feature again
+				doesn't give you an additional use of it. You gain additional uses only when you reach a class level that explicitly grants them to you. For example, if you are a cleric 6/paladin 4, you can use
+				Channel Divinity twice between rests because you are high enough level in the cleric class to have more uses. Whenever you use the feature, you can choose any of the Channel Divinity effects
+				available to you from your two classes.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Extra Attack</b><br>
+				If you gain the Extra Attack class feature from more than one class, the features don't add together. You can't make more than two attacks with this feature unless it says you do (as the fighter's
+				version of Extra Attack does). Similarly, the warlock's eldritch invocation Thirsting Blade doesn't give you additional attacks if you also have Extra Attack and vice versa.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Unarmored Defense</b><br>
+				If you already have an Unarmored Defense feature, you can't gain another variant from another class.
+			</p>
+			<h4 id="MulticlassedSpellcasters">Multiclassed Spellcasters</h4>
+			<p>
+				Your capacity for spellcasting, depends partly on your combined levels in all your spellcasting classes (called your spellcaster level) and partly on your individual levels in those classes. Once you
+				have the Spellcasting feature from more than one class, use the rules below to determine your spellcaster level. If you multiclass but have the Spellcasting feature from only one class, you follow
+				the rules as described in that class. Some cantrips, such as <a href="./spells.html?l=FireBolt"><i>Fire Bolt</i></a>, increase in power as you gain levels. In those cases, use your character level,
+				not your spellcaster or class level, to determine the damage it deals.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Spells Known and Prepared</b><br>
+				You determine what spells you know and can prepare for each class individually, as if you were a single-classed member of that class. If you are a ranger 4/wizard 3, for example, you know three
+				1<sup>st</sup>-level ranger spells based on your levels in the ranger class. As a 3<sup>rd</sup>-level wizard, you know three wizard cantrips, and your spellbook contains at least ten wizard spells,
+				none of which can be higher than 2nd-level. If your Intelligence is 16, you can prepare six wizard spells from your spellbook. Each spell you know and prepare is associated with one of your classes,
+				and you use the spellcasting ability of that class when you cast the spell. Similarly, a spellcasting focus, such as a holy symbol, can be used only for the spells from the class associated with that
+				focus.<br><br>
+			</p>
+			<p>
+				<b class="noindent">Spellcaster Level and Spell Slots</b><br>
+				Your spell slots are determined by your spellcaster level, as shown on the table below. You determine your spellcaster level by:
+			</p>
+			<ol class="noindent">
+				<li>Adding together all your levels in the bard, cleric, druid, sorcerer, and wizard classes</li>
+				<li>Adding half your levels (rounded down) in the artificer, paladin, and ranger classes</li>
+				<li>Adding a third of your fighter, monk or rogue levels (rounded down), if you have the Eldritch Knight, Way of the Arcane Hand, or Arcane Trickster subclasses respectively</li>
+			</ol>
+			<p>
+			<br>The total of the above calculation is your spellcaster level. Your spellcaster level might give you spell slots of a level that is higher than the spells you know or can prepare. You can use those
+				slots, but only to upcast your lower-level spells. For example, if you are the aforementioned ranger 4/wizard 3, your spellcaster level is 5: you have four 1st-level slots, three 2nd-level slots, and
+				two 3rd-level slots. However, you don't know any 3rd-level spells, nor do you know any 2nd-level ranger spells. You can use the spell slots of those levels to cast the spells you do know—and
+				potentially enhance their effects. For example, if you know the 1st-level ranger spell <a href="./spells.html?l=ZephyrStrike"><i>Zephyr Strike</i></a>, you can cast it using one of your 3rd-level
+				slots, increasing the damage it deals to 3d8.<br><br>
+			</p>
+			<p>
+				<b class="noindent">The Apothecary and Warlock</b><br>
+				Your apothecary or warlock levels aren't counted towards your spellcaster level, but if you, for example, are a multiclassed warlock, such as a warlock 5/sorcerer 2, you can use your warlock spell
+				slots to cast your sorcerer spells and vice versa, as long as the slot is of a high enough level.
+			</p>
+			<table class="classtable">
+				<caption><b>Multiclassed Spellcaster Spell Slots</b></caption>
+				<thead>
+					<tr>
+						<td><b>Spellcaster<br>Level</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>1<sup>st</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.3em;"><b>2<sup>nd</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>3<sup>rd</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>4<sup>th</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>5<sup>th</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>6<sup>th</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>7<sup>th</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>8<sup>th</sup> Level Slots</b></td>
+						<td class="splslt" style="max-width:4.2em;"><b>9<sup>th</sup> Level Slots</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1<sup>st</sup></td>
+						<td class="splslt">2</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>2<sup>nd</sup></td>
+						<td class="splslt">3</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>3<sup>rd</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">2</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>4<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>5<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>6<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>7<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>8<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>9<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>10<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>11<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>12<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>13<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>14<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>15<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>16<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">—</td>
+					</tr>
+					<tr>
+						<td>17<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+					</tr>
+					<tr>
+						<td>18<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+					</tr>
+					<tr>
+						<td>19<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+					</tr>
+					<tr>
+						<td>20<sup>th</sup></td>
+						<td class="splslt">4</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">3</td>
+						<td class="splslt">2</td>
+						<td class="splslt">2</td>
+						<td class="splslt">1</td>
+						<td class="splslt">1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p style="font-size:0.9em;"><i>Designed and painstakingly built by Storotso. Javascript &amp; additional help by RandomDucks &amp; Frigges.</i></p>
+	</div>
+	<div class="development">
+			<!-- Name generator that I'm not quite ready to delete just in case
+			&DownArrow;NAME GENERATOR BETA VERSION&DownArrow; TABLES ARE UNFINISHED UNTIL THE RACES PAGE IS DONE<br>
+			<div class="dropdown namegen" data-value="firstnames">
+				<p id="dropdownValue0" style="margin:2% 1%">Generate a first name!</p>
+				<t id="namegenText0" class="nameGenButton dropdownText">Select Culture</t>
+				<t onclick="generate('dropdownValue0',0)" class="nameGenButton">Generate</t>
+				<div class="dropdown-content" id="namegenContent0">
+				</div>
+				<p class="jsRight">&copy; RandomDucks</p>
+			</div>
+			<div class="dropdown namegen" data-value="lastnames">
+				<p id="dropdownValue1" style="margin:2% 1%">Generate a last name!</p>
+				<t id="namegenText1" class="nameGenButton dropdownText">Select Culture</t>
+				<t onclick="generate('dropdownValue1',1)" class="nameGenButton">Generate</t>
+				<div class="dropdown-content" id="namegenContent1">
+				</div>
+				<p class="jsRight">&copy; RandomDucks</p>
+			</div>
+			<div class="dropdown namegen" data-value="animals">
+				<p id="dropdownValue2" style="margin:2% 1%">Generate a animal name!</p>
+				<t id="namegenText2" class="nameGenButton dropdownText">Select Creature</t>
+				<t onclick="generate('dropdownValue2',2)" class="nameGenButton">Generate</t>
+				<div class="dropdown-content" id="namegenContent2">
+				</div>
+				<p class="jsRight">&copy; RandomDucks</p>
+			</div>
+			-->
+			<!-- race height/weight randomizer table that i might want to bring back
+				<table class="fattable" width=350px> 
+				<thead>
+					<tr>
+						<td width=20%>Race</td>
+						<td width=19%>Base Height</td>
+						<td width=19%>Height Modifier</td>
+						<td width=18%>Base Weight</td>
+						<td width=24%>Weight Modifier</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Sweat Goblin</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>ogre</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>net troll</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>swan bowl</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>mormon</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>trap</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>nyan cat</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+					<tr>
+						<td>lol cat</td>
+						<td>20'29"</td>
+						<td>+2d22 "</td>
+						<td>999 lb.</td>
+						<td >&times;(2d20) lb.</td>
+					</tr>
+				</tbody>
+			</table>-->
+	</div>
+	<footer id="footer">
+			<menuButton id="menuButton" onClick="hidetab()"> >> Hide menu </menuButton>
+			<div id="menuTab">
+				<a href="#top">
+					<p class="returnToTop">Return to top</p>
+				</a>
+				<a href="./races.html">
+					<p>Races</p>
+				</a>
+				<a href="./classes.html">
+					<p>Classes</p>
+				</a>
+				<a href="./backgrounds.html">
+					<p>Backgrounds</p>
+				</a>
+				<a href="./items.html">
+					<p>Items</p>
+				</a>
+				<a href="./spells.html">
+					<p>Spell Lists</p>
+				</a>
+				<a href="./feats.html">
+					<p>Feats</p>
+				</a>
+				<a href="./combat.html">
+					<p class="toobignav">Combat &amp; Casting</p>
+				</a>
+				<a href="./adventure.html">
+					<p>Adventuring</p>
+				</a>
+				<a href="./other.html">
+					<p>Other Rules</p>
+				</a>
+				<a href="../dg/monsters.html">
+					<p>Monsters</p>
+				</a>
+			</div>
+	</footer>
+</body>
+<script>showrace(1)</script>
+<script>theOne()</script>
+</html>

@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8" />
+ 	<title>Adventures</title>
+	<link href="../Stylefiles/RolePlay.css" rel="stylesheet"/>
+	<link rel="icon" href="../Stylefiles/start.png">
+	<script src="../Stylefiles/data.js"></script>
+	<script src="../Stylefiles/RolePlay.js"></script>
+</head>
+<body>
+	<header id="top">
+		<nav>
+			<a href="../index.html">
+				<img class="perch" src="../Stylefiles/start.png">
+			  </a>
+			<h2>Boldly going where no man has gone before</h2>
+			<a onclick="showrace(1)" href="#top"><h3>The Basics</h3></a>
+			<a href="?l=lightandsight"><h4>Light &amp; Sight</h4></a>
+			<a href="?l=carryingcapacity"><h4>Carrying Capacity</h4></a>
+			<a href="?l=fooddrink"><h4>Food &amp; Water</h4></a>
+			<a href="?l=resting"><h4>Resting</h4></a>
+			<a href="?l=travel"><h3>Travel</h3></a>
+			<a href="?l=movement"><h4>Movement</h4></a>
+			<a href="?l=travelpace"><h4>Travel Pace</h4></a>
+			<a href="?l=onthemarch"><h4>On the March</h4></a>
+			<a href="?l=environmenttop"><h3>Environment &amp; Hazards</h3></a>
+			<a href="?l=hazards"><h4>Hazards</h4></a>
+			<a href="?l=nautichaz"><h4>Nautical Troubles</h4></a>
+			<a href="?l=diseases"><h4>Diseases</h4></a>
+			<a href="?l=curses"><h4>Curses</h4></a>
+			<a href="?l=insane"><h4>Madness</h4></a>
+		</nav>
+	</header>
+	<div class="alltherest combatrules">
+		<div class="container"><!-- Vision & Visibility, Resting, Carrying Capacity -->
+			<img src="https://cards.scryfall.io/art_crop/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg" id="lightandsight">
+			<h2>Visibility &amp; Senses</h2>
+		  	<p>
+				The most fundamental tasks of adventuring—noticing danger, finding hidden objects, hitting an enemy in combat, and targeting a spell, to name just a few—rely heavily on a character's ability to see.
+				Darkness and other effects that obscure vision can prove a significant hindrance. 
+			</p>
+			<p>
+				A given area might be lightly or heavily obscured. In a <b>lightly obscured</b> area, such as dim light, patchy fog, or moderate foliage, creatures have disadvantage on Wisdom (Perception) checks that
+				rely on sight. A <b>heavily obscured</b> area—such as darkness, opaque fog, or dense foliage—blocks vision entirely. A creature in a heavily obscured area is effectively <a href="./combat.html?f=Blinded">blinded</a> when trying to
+				percieve anything obsucred by the area.<br><br>
+			</p>
+			<p>
+				<b>Bright light</b> lets most creatures see normally. Even gloomy days provide bright light, as do torches, lanterns, fires, and other sources of illumination within a specific radius. 
+			</p>
+			<p>
+				<b>Dim light</b> creates a lightly obscured area. An area of dim light is usually a boundary between a source of bright light, such as a torch, and surrounding darkness. The soft light of twilight and
+				dawn also counts as dim light. A particularly brilliant full moon might bathe the land in dim light.
+			</p>
+			<p>
+				<b>Darkness</b> creates a heavily obscured area. Characters face darkness outdoors at night (even most moonlit nights), within the confines of an unlit dungeon or a subterranean vault, or in an area
+				of magical darkness.
+			</p>
+			<h4>Visibility Outdoors</h4>
+			<p>
+				When traveling outdoors, characters can see about 2 miles in any direction on a clear day, or until the point where trees, hills, or other obstructions block their view. Rain normally cuts maximum
+				visibility down to 1 mile, and fog can cut it down to between 100 and 300 feet. On a clear day, the characters can see 40 miles if they are atop a mountain or a tall hill, or are otherwise able to
+				look down on the area around them from a height.
+			</p>
+			<table style="float:right;margin-top:-0.5em;">
+				<caption>Underwater Encounter Distance</caption>
+				<thead>
+					<tr>
+						<td>Conditions</td>
+						<td style="text-align:center;">Encounter<br>Distance</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Bright Light</td>
+						<td style="text-align:center;">60ft</td>
+					</tr>
+					<tr>
+						<td>Dim Light</td>
+						<td style="text-align:center;">30ft</td>
+					</tr>
+					<tr>
+						<td>Clear water</td>
+						<td style="text-align:center;">&times;2</td>
+					</tr>
+					<tr>
+						<td>Murky water</td>
+						<td style="text-align:center;">&divide;3</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				A relatively calm sea offers great visibility. From a crow's nest, a lookout can spot another ship or a coastline up to 10 miles away, assuming clear skies. Overcast skies reduce that distance by
+				half. Rain and fog reduce visibility just as they do on land. 
+			</p>
+			<h4>Visibility Underwater</h4>
+			<p>
+				Visibility underwater depends on water clarity and the available light. The table on the right offers suggestions for the distance at which characters underwater become aware of a possible encounter
+				under given conditions. Most water is not particularly clear or murky. Clear water occurs naturally at springs or in the tropics, such as over coral reefs. The light levels below water are determined
+				by the light level above water, and the water's depth, divided into the folowing three zones.
+			</p>
+			<ul>
+				<li><b>Sunlight Zone:</b> The sunlight zone extends from the water's surface to a depth of 200 meters. This area of the sea has the same natural illumination conditions as above the water.</li>
+				<li><b>Twilight Zone:</b> The twilight zone is between the depths of 200 and 300 meters. When the sunlight zone above is bathed in natural bright light, the twilight zone is filled with dim light. If
+					the sunlight zone is filled with dim light or darkness, the twilight zone is dark.</li>
+				<li><b>Midnight Zone:</b> Any depth below 300 meters is considered the midnight zone. since no natural light from the surface penetrates this deep. The temperature of the water at this depth is
+					always frigid, as described under "Hazards" on the Environment &amp; Hazards tab.</li>
+			</ul>
+			<h4>Senses</h4>
+			<p>
+				Some creatures have special senses that let them percieve the world beyond that which is possible through normal sight alone.<br><br>
+			</p>
+			<p class="sidebyside">
+				<b class="noindent">Blindsight:</b><br>
+				A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened
+				senses, such as bats and true dragons, have this sense. 
+			</p>
+			<p class="sidebyside">
+				<b class="noindent">Darkvision:</b><br>
+				By far the most common kind of special sense, a creature with darkvision can see in the dark within a specific radius. Creatures with darkvision include subterranean and nocturnal ones, as well as
+				pretty much anything supernatural. A creature with darkvision can, within the radius, see in dim light as if it were bright light, and in darkness as if it were dim light. The creature can't discern
+				color in darkness, only shades of gray.
+			</p>
+			<p class="sidebyside">
+				<b class="noindent"><br>Tremorsense:</b><br>
+				A creature with tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that the creature and the source of the vibrations are in contact with the same ground
+				or substance. Tremorsense can't be used to detect flying or incorporeal creatures. Many burrowing creatures, such as ankhegs and umber hulks, have this special sense. 
+			</p>
+			<p class="sidebyside">
+				<b class="noindent"><br>Truesight:</b><br>
+				A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws
+				against them, and perceives the original form of a shapechanger or a creature that is transformed by magic, Furthermore, the creature can see into the Ethereal Plane.
+			</p>
+			<h2 id="carryingcapacity">Carrying Capacity</h2>
+			<table style="float:right;margin-top:-2em;">
+				<thead>
+					<tr>
+						<td>Container</td>
+						<td>Capacity</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Backpack</td>
+						<td>1 cubic foot/30 pounds of gear</td>
+					</tr>
+					<tr>
+						<td>Barrel</td>
+						<td>40 gallons liquid, 4 cubic feet solid</td>
+					</tr>
+					<tr>
+						<td>Basket</td>
+						<td>2 cubic feet/40 pounds of gear</td>
+					</tr>
+					<tr>
+						<td>Bottle</td>
+						<td>1&#189; pints liquid</td>
+					</tr>
+					<tr>
+						<td>Bucket</td>
+						<td>3 gallons liquid, &#189; cubic foot solid</td>
+					</tr>
+					<tr>
+						<td>Chest</td>
+						<td>12 cubic feet/300 pounds of gear</td>
+					</tr>
+					<tr>
+						<td>Flask or Tankard</td>
+						<td>1 pint liquid</td>
+					</tr>
+					<tr>
+						<td>Jug or Pitcher</td>
+						<td>1 gallon liquid</td>
+					</tr>
+					<tr>
+						<td>Pot, iron</td>
+						<td>1 gallon liquid</td>
+					</tr>
+					<tr>
+						<td>Pouch</td>
+						<td>&#8533; cubic foot/6 pounds of gear</td>
+					</tr>
+					<tr>
+						<td>Sack</td>
+						<td>1 cubic foot/30 pounds of gear</td>
+					</tr>
+					<tr>
+						<td>Vial</td>
+						<td>4 ounces liquid</td>
+					</tr>
+					<tr>
+						<td>Waterskin</td>
+						<td>4 pints liquid</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				Your Strength score determines the amount of weight you can bear. Your carrying capacity is your Strength score multiplied by 15. This is the weight (in pounds) that you can carry, which is high
+				enough that most characters don't usually have to worry about it. Larger creatures can bear more weight, whereas Tiny creatures can carry less. For each size category above Medium, a creature's
+				carrying capacity is doubled. For a Tiny creature, it is halved.
+			</p>
+			<p>
+				Your containers are also not bottomless. Consult the table to the right to see how much room they have. You might however also, within reason, be able to strap items to the outside of something like
+				a backpack, for instance a bedroll or a coil of rope.
+			</p>
+			<h4>Variant: Encumbrance</h4>
+			<p>
+				The rules for lifting and carrying are intentionally simple, but your DM might want more detailed rules for determining how a character is hindered by the weight of equipment. When you use this
+				variant, ignore the Strength column of the Armor table in chapter 5.
+			</p>
+			<p>
+				If you carry weight in excess of 5 times your Strength score, you are <b>encumbered</b>, which means your speed drops by 10 feet.
+			</p>
+			<p>
+				If you carry weight in excess of 10 times your Strength score, up to your maximum carrying capacity, you are instead heavily encumbered, which means your speed drops by 20 feet and you have
+				disadvantage on ability checks, attack rolls, and saving throws that use Strength, Dexterity, or Constitution.
+			</p>
+			<h2 id="fooddrink">Food &amp; Water</h2>
+			<img style="margin-top:-3em;width:40%;" src="https://cards.scryfall.io/art_crop/front/9/6/965bef73-eb93-4512-91b4-bf2ce7d27d42.jpg">
+			<p>
+				Creatures who don't eat or drink suffer<a href="./combat.html?f=Exhaustion"> the effects of <b>exhaustion</b></a>. Exhaustion caused by lack of food or water can't be removed until the creature eats
+				and drinks the full required amount. A creture's food and water needs are explained by the table below. The needs of tiny and gargantuan creatures are a bit loose and can be modified by the DM to
+				reflect the creature's actual size.
+			</p>
+			<table>
+				<caption>Sustenance Requirements</caption>
+				<thead>
+					<tr>
+						<td>Creature Size</td>
+						<td>Food per Day</td>
+						<td>Water per Day</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tiny</td>
+						<td>&#188; pound</td>
+						<td>&#188; gallon</td>
+					</tr>
+					<tr>
+						<td>Small</td>
+						<td>&#189; pound</td>
+						<td>&#189; gallon</td>
+					</tr>
+					<tr>
+						<td>Medium</td>
+						<td>1 pound</td>
+						<td>1 gallon</td>
+					</tr>
+					<tr>
+						<td>Large</td>
+						<td>4 pounds</td>
+						<td>4 gallons</td>
+					</tr>
+					<tr>
+						<td>Huge</td>
+						<td>16 pounds</td>
+						<td>16 gallons</td>
+					</tr>
+					<tr>
+						<td>Gargantuan</td>
+						<td>64 pounds</td>
+						<td>64 gallons</td>
+					</tr>
+				</tbody>
+			</table>
+			<p><br>
+				A creature can make food last longer by subsisting on half rations. Eating half the requred amount of food in a day counts as half a day without food. A creature can go without food for a number of
+				days equal to 3 + its Constitution modifier (minimum 1). At the end of each day beyond that limit, it automatically suffers one level of exhaustion. A normal day of eating resets the count of days
+				without food to zero. 
+			</p>
+			<p>
+				Creatures needs twice the normal amount of water per day if the weather is hot. A creature that drinks only half the required amount of water must succeed on a DC15 Constitution saving throw or suffer
+				one level of exhaustion at the end of the day. A creature that drinks even less water automatically suffers one level of exhaustion at the end of the day. If the creature already has one or more
+				levels of exhaustion, the character takes two levels of exhaustion instead of one in either case.
+			</p>
+			<h2 id="resting">Resting</h2>
+			<p>
+				Heroic though they might be, adventurers can't spend every hour of the day in the thick of exploration, social interaction, and combat. They need rest—time to sleep and eat, tend their wounds, refresh
+				their minds and spirits for spellcasting, and brace themselves for further adventure. Any creature can take a rest following the rules below, not just adventurers. A monster with a spell or ability
+				that has a certain amount of uses per day regains those uses after finishing a long rest.
+			</p>
+			<h4>Short Rest</h4>
+			<p>
+				A short rest is a period of downtime, at least 1 hour long, during which a character does nothing more strenuous than eating, drinking, reading, and tending to wounds. A character can spend one or
+				more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is determined by the character's class levels (a monster has as many hit dice as noted next to it's HP
+				in its stat block). For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total (minimum 0).
+				The player can decide to spend an additional Hit Die after each roll. A character regains some spent Hit Dice upon finishing a long rest, as explained below. 
+			</p>
+			<h4>Long Rest</h4>
+			<p>
+				A long rest is a period of extended downtime, at least 8 hours long, during which a character sleeps or performs light activity: reading, talking, eating, or standing watch for no more than 2 hours.
+				if the rest is interrupted by a period of strenuous activity—at least 1 hour of walking, fighting, casting spells, or similar adventuring activity—the characters must begin the rest again to gain any
+				benefit from it. At the end of a long rest, a character regains all lost hit points. The character also regains spent Hit Dice, up to a number of dice equal to half of the character's total number of
+				them. For example, if a character has eight Hit Dice, they can regain four spent Hit Dice upon finishing a long rest. A character can't benefit from more than one long rest in a 24-hour period,
+				and a character must have at least 1 hit point at the start of the rest to gain its benefits.
+			</p>
+		</div>
+		<div class="container"> <!-- Travel & Movement -->
+			<h1 id="travel">The Journey of a Thousand Miles Begins With a Single Step</h1>
+			<img class="raceimg" style="width:50%;margin-top:-1em;" src="../stylefiles/otherimg/loghorep3.JPG">
+			<p>
+				Swimming across a rushing river, sneaking down a dungeon corridor. scaling a treacherous mountain slope—all sorts of movement play a key role in D&amp;D adventures. The DM can summarize the
+				adventurers' movement without calculating exact distances or travel times: "You travel through the forest and find the dungeon entrance late in the evening of the third day." Even in a dungeon,
+				particularly a large dungeon or a cave network, the DM can summarize movement between encounters: "After killing the guardian at the entrance to the ancient dwarven stronghold, you consult your map,
+				which leads you through miles of echoing corridors to a chasm bridged by a narrow stone arch." Sometimes it's important, though, to know how long it takes to get from one spot to another, whether the
+				answer is in days, hours, or minutes. The rules for determining travel time depend on two factors: the speed and travel pace of the creatures moving and the terrain they're moving over.
+			</p>
+			<h4>Time</h4>
+			<p>
+				In situations where keeping track of the passage of time is important, the DM determines the time a task requires. The DM might use a different time scale depending on the context of the situation at
+				hand. In a dungeon environment, the adventurers' movement happens on a scale of minutes. it takes them about a minute to creep down a long hallway, another minute to check for traps on the door at the
+				end of the hall, and a good ten minutes to search the chamber beyond for anything interesting or valuable.
+			</p>
+			<p>
+				In a city or wilderness, a scale of hours is often more appropriate. Adventurers eager to reach the lonely tower at the heart of the forest hurry across those fifteen miles in just under four hours'
+				time. For long journeys, a scale of days works best. Following the road from Baldur's Gate to Waterdeep, the adventurers spend four uneventful days before a goblin ambush interrupts their journey. In
+				combat and other fast-paced situations, the game relies on rounds, a 6-second span of time described on the "Combat &amp; Casting" page.
+			</p>
+			<h2 id="movement">Movement</h2>
+			<p>
+				Every creature has a speed, which is the distance in feet that the creature can walk in 1 round, reflecting short bursts of energetic movement in the midst of a lifethreatening situation. All
+				creatures have a walking speed, usually just called the creature's speed. Creatures that have no form of groundbased locomotion have a walking speed of 0 feet. Some creatures have other modes of
+				movement as well, such as fying or climbing.
+			</p>
+			<p>
+				Movement through dangerous dungeons or wilderness areas often involves more than simple running. Adventurers might have to climb, crawl. swim, or jump to get where they need to go. While climbing or
+				swimming, each foot of movement costs 1 extra foot (2 extra feet in difficult terrain), unless a creature has a climbing or swimming speed. At the DM's option, climbing a slippery vertical surface or
+				one with few handholds requires a successful Strength (Athletics) check. Similarly, gaining any distance in rough water might also require a successful Strength (Athletics) check.
+			</p>
+			<div class="invocation">
+				<b>Burrow</b><br>
+				A creature that has a burrowing speed can use that speed to move through sand, earth, mud, or ice. It can't burrow through solid rock unless it has a special trait that allows it to do so.
+			</div>
+			<div class="invocation">
+				<b>Climb</b><br>
+				A creature that has a climbing speed can use all or part of its movement to move on vertical surfaces. It doesn't need to spend extra movement to climb. 
+			</div>
+			<div class="invocation">
+				<b>Fly</b><br>
+				A creature that has a flying speed can use all or part of its movement to fly. A creature without the ability to hover (as noted next to the flying speed) must spend move at least half of its flying
+				speed each turn to stay aloft. At the end of every turn moves less, it descends 60ft straight down, landing safely if it hits the groud during its descent. If a flying, nonhovering creature is knocked
+				prone, has its speed reduced to 0, is otherwise deprived of the ability to move, or moves 0 feet in a turn by its own volition, <a href="?l=hazards">it falls as described under "Hazards" on the
+					"Environment &amp; Hazards" tab</a>.
+			</div>
+			<div class="invocation">
+				<b>Swim</b><br>
+				A creature that has a swimming speed doesn't need to spend extra movement to swim. It is also unaffected by some environmental effects of being underwater, such as the rules for swimming at depths
+				greater than 100 feet. 
+			</div>
+			<h4>Jumping</h4>
+			<p>
+				<span class="noindent">Y</span>our Strength determines how far you can jump.<br>
+				<i>Long Jump</i>: When you make a long jump, you cover a number of feet up to your Strength score if you move at least 10 feet on foot immedialely before the jump. When you make a standing long jump,
+				you can leap only half that distance. Either way, each foot you clear on the jump costs a foot of movement. This rule assumes that the height of your jump doesn't matter. such as a jump across a
+				stream or chasm. At your DM's option, you must succeed on a DC 10 Strength (Athletics) check to clear a low obstacle (no taller than a quarter of the jump's distance), such as a hedge or low wall.
+				Otherwise, you hit it. When you land in difficult terrain. you must succeed on a DC 10 Dexterity (Acrobatics) check to land on your feet. Otherwise. you land <a href="../pg/combat.html?f=Prone">prone</a>.<br>
+				<i>High Jump</i>: When you make a high jump. you leap into the air a number of feet equal to 3 + your Strength modifier if you move at least 10 feet on foot immediately before the jump. When you make
+				a standing high jump, you can jump only half that distance. Either way, each foot you clear on the jump costs a foot of movement. In some circumstances, your DM might allow you to make a Strength
+				(Athletics) check to jump higher than you normally can. You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the
+				jump plus 1&#189; times your height.
+			</p>
+			<h4>Squeezing</h4>
+			<p>
+				A creature can squeeze through a space that is large enough for a creature one size smaller than it. Thus, a Large creature can squeeze through a passage that's only 5 feet wide. While squeezing
+				through a space, a creature must spend 1 extra foot for every foot it moves there, and it has disadvantage on attack rolls and Dexterity saving throws. Attack rolls against the creature have advantage
+				while it's in the smaller space.
+			</p>
+			<h2 id="travelpace">Travel Pace</h2>
+			<table title="fucking imperial units one of these days somebody should convert this to metric so humans can understand it" style="float:right;margin-top:-1em;">
+				<caption>Distance travled per unit of time</caption>
+				<thead>
+					<tr>
+						<td>Pace</td>
+						<td>Minute</td>
+						<td>Hour</td>
+						<td>Day</td>
+						<td>Effect</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fast</td>
+						<td>400ft</td>
+						<td>4 miles</td>
+						<td>30 miles</td>
+						<td>-5 to passive perception, no foraging</td>
+					</tr>
+					<tr>
+						<td>Normal</td>
+						<td>300ft</td>
+						<td>3 miles</td>
+						<td>24 miles</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td>Slow</td>
+						<td>200ft</td>
+						<td>2 miles</td>
+						<td>18 miles</td>
+						<td>Able to use stealth</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				While traveling, a group of adventurers can move at a normal, fast, or slow pace, as shown on the table on the right. The table states how far the party can move in a period of time and whether the
+				pace has any effect. A fast pace makes characters less perceptive, while a slow pace makes it possible to sneak around and to search an area more carefully (see "Activity While Traveling" for more
+				information). Travelling through difficult terrain takes twice as long as normal.
+			</p>
+			<p>
+				Traveling at altitudes of 10,000 feet or higher above sea level is taxing for a creature that needs to breathe, because of the reduced amount of oxygen in the air. Each hour such a creature spends
+				traveling at high altitude counts as 2 hours for the purpose of determining how long that creature can travel. Breathing creatures can become acclimated to a high altitude by spending 30 days or more
+				at this elevation. Breathing creatures can't become acclimated to elevations above 20,000 feet unless they are native to such environments.
+			</p>
+			<p>
+				The table assumes a speed of 30 feet, as determined by the slowest member of the party. If the party has another lowest speed, divide it by 30 and multiply the result with the appropriate number on
+				the table to see how fast the party can travel at a slow, normal, and fast pace. For example, a party where the slowest member has a speed of 40 can travel 32 miles in a day at a normal pace
+				((40/30)&times;24).
+			</p>
+			<h4>Swimming or Climbing</h4>
+			<p>
+				Unless aided by magic, a creature without a swimming speed can't swim for a full 8 hours per day. After each hour of swimming, a creature must succeed on a DC10 Constitution saving throw or
+				<a href="./combat.html?f=Exhaustion">gain one level of exhaustion</a>. The same is true for climbing. Unless a creature without a climbing speed has and takes the oppurtuinty to sit down and
+				rest every so often, it must make a DC10 Constitution saving throw at the end of each hour of climbing or gain a level of exhaustion. If a creature has a swimming or climbing speed, they can travel using those modes of movement as by the rules above.
+			</p>
+			<p>
+				Swimming through deep water is similar to traveling at high altitudes, because of the water's pressure and cold temperature. For a creature without a swimming speed, each hour spent swimming at a
+				depth greater than 100 feet counts as 2 hours for the purpose of determining exhaustion. Swimming for an hour at a depth greater than 200 feet counts as 4 hours.
+			</p>
+			<h4>Forced March</h4>
+			<p>
+				The Travel Pace table assumes that characters travel for 8 hours in day. They can push on beyond that limit, at the risk of <a href="./combat.html?f=Exhaustion">exhaustion</a>. For each
+				additional hour of travel beyond 8 hours, the characters cover the distance shown in the Hour column for their pace, and each character must make a Constitution saving throw at the end of the hour.
+				The DC is 10 + 1 for each hour past 8 hours. On a failed saving throw, a character suffers one level of exhaustion. 
+			</p>
+			<h4>Mounts and Vehicles</h4>
+			<p>
+				For short spans of time (up to an hour), many animals move much faster than humanoids. A mounted character can ride at a gallop for about an hour, covering twice the usual distance for a fast pace. If
+				fresh mounts arc available every 8 to 10 miles, characters can cover larger distances at this pace, but this is very rare except in densely populated areas.
+			</p>
+			<p>
+				Characters in wagons, carriages, or other land vehicles choose a pace as normal. Characters in a waterborne vessel are limited to the travel pace of the vessel, and they don't suffer penalties for a
+				fast pace or gain benefits from a slow pace. In a dead calm (no wind), ships can't move under sail and must be rowed. A ship sailing against a strong wind moves at half speed. Depending on the vessel
+				and the size of the crew, ships might be able to travel for up to 24 hours per day. If a ship's mode of movement takes damage, it might be slowed, as described in its statblock. For every decrease of
+				10 feet in speed, reduce the ship's travel pace by 1 mile per hour and 24 miles per day. 
+			</p>
+			<p>
+				Certain special mounts, such as a <a href="../dg/monsters.html?l=pegasus"><b>pegasus</b></a> or <a href="../dg/monsters.html?l=griffin"><b>griffin</b></a>, or special vehicles, such as a
+				<a href="./items.html?l=CarpetofFlying"><i class="vryrmagit">Carpet of Flying</i></a>, allow you to travel more swiftly. A creature that serves as a flying mount must rest 1 hour for every 3 hours it
+				flies, and it can't fly for more than 9 hours per day. Thus, characters mounted on griffins (which have a flying speed of 80 feet) can travel at 8 miles per hour, covering 72 miles over 9 hours with
+				two 1-hour-long rests over the course of the day. Mounts that don't tire (such as a flying construct) aren't subject to this limitation. 
+			</p>
+			<h2 id="onthemarch">On the March</h2>
+			<img class="raceimg" style="width:45%;margin-top:-1em;" src="../stylefiles/otherimg/invswear3.JPG">
+			<p>
+				The adventurers should establish a marching order. A marching order makes it easier to determine which characters are affected by traps, which ones can spot hidden enemies, and which ones are the
+				closest to those enemies when a fight breaks out. A character might occupy the front rank, one or more middle ranks, or the back rank. Characters in the front and back ranks need enough room to travel
+				side by side with others in their rank. When space is too tight, the marching order must change, usually by moving characters to a middle rank. 
+			</p>
+			<p>
+				If an adventuring party arranges its marching order with only two ranks, they are a front rank and a back rank. If there's only one rank, it's considered a front rank. 
+			</p>
+			<p>
+				While traveling at a slow pace, the characters can move stealthily. As long as they're not in the open, they can try to surprise or sneak by other creatures they encounter.
+				<a href="./combat.html?f=Hide">See the rules for hiding on the Combat &amp; Casting page</a>.
+			</p>
+			<p>
+				Sometimes, it makes sense to split an adventuring party, especially if you want one or more characters to scout ahead. You can form multiple parties, each moving at a different speed. Each group has
+				its own front, middle, and back ranks. The drawback to this approach is that the party will be split into several smaller groups in the event of an attack. The advantage is that a small group of
+				stealthy characters moving slowly might be able to sneak past enemies that clumsier characters would alert. A rogue and a monk moving at a slow pace are much harder to detect when they leave their
+				paladin friend behind.
+			</p>
+			<h4>Noticing Threats</h4>
+			<p>
+				Use the passive Wisdom (Perception) scores of the characters to determine whether anyone in the group notices a hidden threat. The DM might decide that a threat can be noticed only by characters in a
+				particular rank. For example, as the characters are exploring a maze of tunnels, the DM might decide that only those characters in the back rank have a chance to hear or spot a stealthy creature
+				following the group, while characters in the front and middle ranks cannot. While traveling at a fast pace, characters take a -5 penalty to their passive Wisdom (Perception) scores to notice hidden
+				threats, as noted on the travel pace table. For travel by ship, the DM can use either the player characters or the crew' passive perception to determine whether anyone on the ship notices a hidden
+				threat. The crew has a passive Perception score equal to 10 + the crew's quality score. The DM might decide that a threat can be noticed only by characters in a specific area of the ship. For example,
+				only characters below deck might have a chance to hear or spot a creature hiding on board. 
+			</p>
+			<p>
+				If the DM determines that the adventurers encounter other creatures while they're traveling, it's up to both groups to decide what happens next. Either group might decide to attack, initiate a
+				conversation, run away, or wait to see what the other group does. If the adventurers encounter a hostile creature or group, the DM determines whether the adventurers or their foes might be surprised
+				when combat erupts.
+			</p>
+			<h4>Becoming Lost</h4>
+			<table style="float:right;margin-top:-1.5em;">
+				<caption>Navigation Difficulty</caption>
+				<thead>
+					<tr>
+						<td>Terrain</td>
+						<td style="text-align:center;">DC</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Forest, jungle, swamp, mountains, or open sea with overcast skies and no land in sight</td>
+						<td style="text-align:center;">15</td>
+					</tr>
+					<tr>
+						<td>Arctic, desert, hills, or open sea with clear skies and no land in sight</td>
+						<td style="text-align:center;">10</td>
+					</tr>
+					<tr>
+						<td>Grassland, meadow, farmland</td>
+						<td style="text-align:center;">5</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				Unless they are following a path, or something like it, adventurers traveling in the wilderness run the risk of becoming lost. Periodically—at times determined by the DM—the party's navigator needs to
+				make a Wisdom (Survival) check against a DC determined by the prevailing terrain, as shown on the table on the right. If no party member is engaging in navigation as described under "Activity While
+				Traveling", the front rank is treated as the party's navigator and makes the check as a <a href="./other.html?groupchecks">group check</a> with disadvantage.
+			</p>
+			<p>
+				If the Wisdom (Survival) check succeeds, the party travels in the desired direction without becoming lost. If the check fails, the party inadvertently travels in the wrong direction and becomes lost.
+				The party's navigator can repeat the check after the party spends 1d6 hours trying to get back on course. 
+			</p>
+			<p>
+				If the party is moving at a slow pace, the navigator gains a +5 bonus to the check, and a fast pace imposes a -5 penalty. If the party has an accurate map of the region or can see the sun or stars,
+				the navigator has advantage on the check. Seagoing vessels stay close to shore when they can, because navigation is easier when landmarks are visible. As long as a ship is within sight of land, there
+				is no chance of the vessel becoming lost.
+			</p>
+			<h4>Activitity While Traveling</h4>
+			<p>
+				Characters who turn their attention to other tasks as the group travels are not focused on watching for danger. These characters don't contribute their passive Wisdom (Perception) scores to the
+				group's chance of noticing hidden threats. However, a character not watching for danger can do one of the following activities instead, or some other activity with the DM's permission. Some of these
+				activities are intended for specific officers aboard a ship, as noted in their description, but other characters might undertake them depending on the situation. 
+			</p>
+			<details class="cmbtactn">
+				<summary>Draw a Map</summary>
+				<p>
+					The character can draw a map that records the group's progress and helps the characters get back on course if they get lost. No ability check is required. 
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Forage</summary>
+				<p>
+					Characters can gather food and water as the party travels at a normal or slow pace. A foraging character makes a Wisdom (Survival) check whenever the DM calls for it, with the DC determined by
+					the abundance of food and water in the region. 
+				</p>
+				<table>
+					<caption>Foraging DCs</caption>
+					<thead>
+						<tr>
+							<td>Food and Water Availability</td>
+							<td style="text-align:center;">DC</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Abundant food and water sources</td>
+							<td style="text-align:center;">10</td>
+						</tr>
+						<tr>
+							<td>Limited food and water sources</td>
+							<td style="text-align:center;">15</td>
+						</tr>
+						<tr>
+							<td>Very few, if any, food and water sources</td>
+							<td style="text-align:center;">20</td>
+						</tr>
+					</tbody>
+				</table>
+				<p><br>
+					If multiple characters forage, each character makes a separate check. A foraging character finds nothing on a failed check. On a successful check, roll 1d6 + the character's Wisdom modifier to
+					determine how much food (in pounds) the character finds, then repeat the roll for water (in gallons). Characters on a ship can forage by casting fishing lines or spearing passing sealife, but
+					cannot find drinkable water.
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Navigate</summary>
+				<p>
+					A navigating character is attempting to prevent the group from becoming lost. Navigating at sea is normally the quartermaster's job and requires proficiency with Navigator's Tools. A crew caught
+					in a storm loses sight of all landmarks (unless there's a lighthouse or other bright feature), and ability checks made to navigate during the storm have disadvantage.
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Raise Morale (Ship)</summary>
+				<p>
+					The first mate can manage the crew's time to grant extended breaks, provide instruction, and generally improve the quality of life on the ship. Once every 24 hours, if the crew's quality score is
+					3 or lower, the first mate can make a DC15 Charisma (Persuasion) check. On a successful check, the crew's quality score increases by 1. 
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Repair Vessel (Ship)</summary>
+				<p>
+					At the end of the day, the ship's bosun can make a Strength check using carpenter's tools. On a 15 or higher, each damaged component regains hit points equal to 1d6 + the crew's quality score
+					(minimum of 1 hit point). A component other than the hull that had 0 hit points becomes functional again.
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Stealth (Ship)</summary>
+				<p>
+					The ship's captain can engage in this activity only if the weather conditions restrict visibility, such as in heavy fog. The ship makes a Dexterity check with a bonus equal to the crew's quality
+					score to determine if it can hide. 
+				</p>
+			</details>
+			<details class="cmbtactn">
+				<summary>Track</summary>
+				<p>
+					Adventurers sometimes choose their path by following the tracks of other creatures—or other creatures might track the adventurers! To track, one or more creatures must succeed on a Wisdom
+					(Survival) check. Trackers might need to make a new check in any of the following circumstances: 
+				</p>
+				<ul>
+					<li>They stop tracking and resume after finishing a short or long rest.</li>
+					<li>The trail crosses an obstacle, such as a river, that shows no tracks.</li>
+					<li>The weather conditions or terrain changes in a way that makes tracking harder.</li>
+				</ul>
+				<p>
+					The DC for the check depends on how well the ground shows signs of a creature's passage. No roll is necessary in situations where the tracks are obvious. For example, no check is needed to track
+					an army advancing along a muddy road. Spotting tracks on a bare stone floor is more challenging, unless the creature being tracked leaves a distinct trail. Additionally, the passage of time often
+					makes tracks harder to follow. In a situation where there is no trail to follow, the DM might rule that tracking is impossible. 
+				</p>
+				<p>
+					On a failed check, the tracker loses the trail but can attempt to find it again by making a careful search of the area. It takes 10 minutes to find a trail in a confined area such as a dungeon, or
+					1 hour outdoors. 
+				</p>
+				<p>
+					The Tracking DCs table offers the DM suggestions for setting the DC for a particular instance of tracking. A creature might have advantage on its check if there's more than one set of tracks to
+					follow, or disadvantage if the trail being followed passes through a well-trafficked area. 
+				</p>
+				<table>
+					<caption>Tracking DCs</caption>
+					<thead>
+						<tr>
+							<td>Ground Surface</td>
+							<td style="text-align:center;">DC</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Soft surface such as snow</td>
+							<td style="text-align:center;">10</td>
+						</tr>
+						<tr>
+							<td>Dirt or grass</td>
+							<td style="text-align:center;">15</td>
+						</tr>
+						<tr>
+							<td>Bare stone</td>
+							<td style="text-align:center;">20</td>
+						</tr>
+						<tr>
+							<td>Each day since the creature passed</td>
+							<td style="text-align:center;">+5</td>
+						</tr>
+						<tr>
+							<td>Creature left a trail such as blood</td>
+							<td style="text-align:center;">-5</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+		</div>
+		<div class="container"><!-- Evironment & Hazards -->
+			<h1 id=environmenttop>Your DM Doesn't Need Monsters to Kill You</h1>
+			<p>
+				The dangers an adventuring party might face aren't limited to hungry wolves or covetous dragons. Sometimes, the weather can weigh the party down, forcing the characters to seek shelter. A fall can
+				kill a character that misjudged whether they could make a jump or not. Or a horrible disease can render a character feeble or kill them outright over the course of days.
+			</p>
+			<h4>Tough Weather Conditions</h4>
+			<div class="invocation">
+				<b>Extreme Cold</b><br>
+				Whenever the temperature is at or below 0 degrees Celsius, a creature exposed to the cold must succeed on a Constitution saving throw at the end of each hour or
+				<a href="./combat.html?f=Exhaustion">gain one level of exhaustion</a>. The DC for this save is 10 + 1 for every degree below 0. Creatures with resistance to cold damage have advantage on the saving
+				throw. Creatures with immunity to cold damage automatically succeed on the saving throw, as do creatures naturally adapted to cold climates. Exhaustion caused by extreme cold cannot be removed until
+				the creature is no longer exposed to extreme cold.
+			</div>
+			<div class="invocation">
+				<b>Extreme Heat</b><br>
+				When the temperature is at or above 40 degrees Celsius, a creature exposed to the heat that doesn't drink regularly must succeed on a Constitution saving throw at the end of each hour or
+				<a href="./combat.html?f=Exhaustion">gain one level of exhaustion</a>. The DC is 5 for the first hour and increases by 1 for each additional hour. Creatures traveling at a fast pace take a -5 penalty
+				to this saving throw. Creatures wearing medium or heavy armor, or who are clad in heavy clothing, have disadvantage on the saving throw. Creatures with resistance to fire damage have advantage on
+				the saving throw. Creatures with immunity to fire damage automatically succeed on the saving throw, as do creatures naturally adapted to hot climates, or that don't need to drink. Exhaustion caused
+				by extreme heat cannot be removed until the creature is no longer exposed to extreme heat.
+			</div>
+			<div class="invocation">
+				<b>Strong Wind</b><br>
+				A strong wind imposes disadvantage on ranged weapon attack rolls and Wisdom (Perception) checks that rely on hearing. A strong wind also extinguishes open flames, disperses fog, and makes flying by
+				nonmagical means nearly impossible. A flying creature in a strong wind must land at the end of its turn or fall. A strong wind in a desert can create a sandstorm that imposes disadvantage on Wisdom
+				(Perception) checks that rely on sight, and a strong wind in a place with loose snow can do the same with snow. 
+			</div>
+			<div class="invocation">
+				<b>Heavy Precipitation</b><br>
+				Everything within an area of heavy rain or heavy snowfall is lightly obscured, and creatures in the area have disadvantage on Wisdom (Perception) checks that rely on sight. Heavy rain also
+				extinguishes open flames and imposes disadvantage on Wisdom (Perception) checks that rely on hearing. 
+			</div>
+			<img class="mtg" style="margin-top:2em;" src="https://cards.scryfall.io/art_crop/front/5/4/5427d8a6-ac9e-4e50-bd39-81713b2ade25.jpg">
+			<h2 id="hazards">Dangers of Adventuring</h2>
+			<p>
+				Hazards of all kinds can make travel and combat more difficult. The most likely dangers to do a creature in, except another creature, are falling and suffocating, which can be caused by all kinds of
+				events, too numerous to count here.
+			</p>
+			<h4>Falling</h4>
+			<p>
+				A falling creature descends 500 feet each turn. At the end of a fall, a creature takes 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6. The creature lands <a href="../pg/combat.html?f=Prone">prone</a>, unless it
+				avoids taking damage from the fall. A creature that falls into water or another liquid can use its reaction to make a DC15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head
+				or feet first. On a successful check, any damage resulting from the fall is halved.
+			</p>
+			<p>
+				A flying creature that is knocked prone, but still has a flying speed of more than 0ft and is conscious, is normally able to soften its fall using the means that gives it a flying speed in the first
+				place. In such cases, subtract its flying speed from the distance it fell before calculating falling damage. In addition, such a creature can end the prone condition on itself in midair by spending
+				half of its flying speed at the start of its turn, halting its fall in the process.
+			</p>
+			<p>
+				If a creature falls into the space of a second creature and neither of them is Tiny, the second creature must succeed on a DC15 Dexterity saving throw or be impacted by the falling creature, and any
+				damage resulting from the fall is divided evenly between them. The impacted creature is also knocked prone, unless it is two or more sizes larger than the falling creature. This rule assumes both
+				creatures are of similar hardness and size. The DM may chose to have the falling creature take some or all of the damage, or vice versa, if one of the creatures reasonably is much harder then the
+				other, such as a human falling on a stone golem.
+			</p>
+			<h4>Suffocating</h4>
+			<p>
+				A creature can hold its breath for a number of minutes equal to 1 + its Constitution modifier (minimum of 30 seconds). When a creature runs out of breath, it can survive for a number of rounds equal
+				to its Constitution modifier (minimum 1 round). At the start of its next turn, it drops to 0 hit points and is dying. A creature that is dying from suffocation can't regain hit points or be stabilized
+				unless it can breathe again.
+			</p>
+			<h4>Environmental Hazards</h4>
+			<p>
+				This section describes a few examples of hazards that adventurers might encounter in the wilderness. Some hazards, such as slippery ice and razorvine, require no ability check to spot. Others, such as
+				defiled ground, are undetectable by normal senses. Identifying a hidden or not obvious hazard such as thin ice or quicksand requires a successful Intelligence (Nature) check. The DC is set by the DM
+				on a case by case basis.
+			</p>
+			<details class="invocation">
+				<summary>
+					<b>Avalanches</b>
+				</summary>
+				A typical avalanche (or rockslide) is 300 feet wide, 150 feet long, and 30 feet thick. Creatures in the path of an avalanche can avoid it or escape it if they're close to its edge, but outrunning one
+				is almost impossible. When an avalanche occurs, all nearby creatures must roll initiative. Twice each round, on initiative counts 10 and 0, the avalanche travels 300 feet until it can travel no more.
+				When an avalanche moves, any creature in its space moves along with it and falls prone, and the creature must make a DC15 Strength saving throw, taking 1d10 bludgeoning damage on a failed save, or
+				half as much damage on a successful one.<br>
+				When an avalanche stops, the snow and other debris settle and bury creatures. A creature buried in this way is <a href="./combat.html?f=Blinded">blinded</a> and <a href="../pg/combat.html?f=Restrained">restrained</a>, and it has total cover. The creature gains 1 level of exhaustion
+				for every 5 minutes it spends buried. It can try to dig itself free as an action, breaking the surface and ending the blinded and restrained conditions on itself with a successful DC15 Strength
+				(Athletics) check. A creature that fails this check three times can't attempt to dig itself out again. A creature that is not restrained or incapacitated can spend 1 minute freeing a buried creature.
+				Once free, that creature is no longer blinded or restrained by the avalanche.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Coral Reefs</b>
+				</summary>
+				Uneven and sharp, coral reefs can harm those forced into them. A creature forcibly moved on the reef—without using the creature's action. bonus action. or reaction—takes 1d6 slashing damage per 5
+				feet of reef that it is pushed over. 
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Desecrated Ground</b>
+				</summary>
+				Some cemeteries and catacombs are imbued with the unseen traces of ancient evil. An area of desecrated ground can be any size, and a
+				<a href="./spells.html?l=DetectEvilandGood"><i>Detect Evil and Good</i></a> spell cast within range reveals its presence. Undead standing on desecrated ground have advantage on all saving throws. A
+				vial of <a href="./items.html?f=HolyWater">holy water</a> purifies a 10-foot-square area of desecrated ground when sprinkled on it, and a <a href="./spells.html?l=Hallow"><i>Hallow</i></a> spell
+				purifies desecrated ground within its area.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Fog</b>
+				</summary>
+				While fog is primarily a danger while traveling on water, it still affects visibility, and can have other detrimental effects depending on its nature. To subject a party to fog, refer to Nautical
+				Hazards and adapt the verbage as necessary to apply to creatures traveling overland.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Frigid Water</b>
+				</summary>
+				A creature can be immersed in frigid water for a number of minutes equal to its Constitution modifier (min 1) before suffering any ill effects. Each additional minute spent in frigid water requires
+				the creature to succeed on a DC10 Constitution saving throw or <a href="./combat.html?f=Exhaustion">gain one level of exhaustion</a>. Creatures with resistance or immunity to cold damage
+				automatically succeed on the saving throw, as do creatures that are naturally adapted to living in ice-cold water.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Kelp Forest</b>
+				</summary>
+				A kelp forest is so dense that anything within it is heavily obscured to an observer more than 10 feet away, and the whole area is difficult terrain. 
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Kraken's Grave</b>
+				</summary>
+				When <a href="../dg/monsters.html?l=Kraken"><b>krakens</b></a> die, their bodies often rot on the seafloor. In such cases, the ground absorbs the decaying kraken's supernatural energy, marking the
+				area with a dark stain in the shape of the kraken's body. This stain is called a kraken's grave.<br>
+				When a creature moves within 30 feet of a kraken's grave or starts its turn there. that creature must succeed on a DC 14 Dexterity (Stealth) check or it disturbs the grave. If a creature disturbs the
+				grave, a tendril made of lightning stretches from the ground and attacks the creature with a +7 bonus to hit. On a hit, the target takes 3d6 lightning damage. and it must succeed on a DC14
+				Constitution saving throw or become <a href="./combat.html?f=Blinded">blinded</a> for the next 2d4 hours. 
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Lure Lights</b>
+				</summary>
+				When aboleths die, their souls sometimes gather in clusters called lure lights. These 100-foot-diameter collections of pale, yellow lights arc found in the deep ocean below depths of 300 meters. They
+				glow with bright light in a 100-foot radius and dim light for another 100 feet.<br>
+				Any creature that can see the lure lights must succeed on a DC 14 Wisdom saving throw or be <a href="./combat.html?f=Charmed">charmed</a> by the lights for 24 hours or until the lights are destroyed.
+				A creature that succeeds on the saving throw is immune to the effect of the lure lights for 24 hours. While charmed by the lights. a creature can't willingly move out of line of sight of them and
+				defends them to the death. If forcibly moved away from the lights, the creature tries to find its way back to them. The creature can't take a short or long rest while under this effect. After 24
+				hours, the charmed creature <a href="./combat.html?f=Exhaustion">gains one level of exhaustion</a> and must repeat the saving throw if it is within line of sight of the lights. ending the effect on itself on a success. If the lights aren't
+				within line of sight at this time, the creature succeeds automatically.<br>
+				Each cluster of lure lights has AC 17, 100 hit points. and immunity to necrotic and poison damage. 
+			</details>
+			<details class="invocation" id="Quicksand">
+				<summary>
+					<b>Quicksand</b>
+				</summary>
+				A quicksand pit covers the ground in roughly a 10-foot square area and is usually 10 feet deep. When a creature enters the area, it sinks 1d4 + 1 feet into the quicksand and becomes <a href="../pg/combat.html?f=Restrained">restrained</a>. At
+				the start of each of the creature's turns, it sinks another 1d4 feet. As long as the creature isn't completely submerged in quicksand, it can escape by using its action and succeeding on a Strength
+				check. The DC is 10 plus the number of feet the creature has sunk into the quicksand. A creature that is completely submerged in quicksand can't breathe. A creature can pull another creature within
+				its reach out of a quicksand pit by using its action and succeeding on a Strength check. The DC is 5 plus the number of feet the target creature has sunk into the quicksand. 
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Razorvine</b>
+				</summary>
+				Razorvine is a plant that grows in wild tangles and hedges. It also clings to the sides of buildings and other surfaces as ivy does. A 10-foot-high, 10-foot-wide, 5-foot-thick wall or hedge of
+				razorvine has AC 11, 25 hit points, and immunity to bludgeoning, piercing, and psychic damage. When a creature comes into direct contact with razorvine for the first time on a turn, the creature must
+				succeed on a DC10 Dexterity saving throw or take 1d10 slashing damage from the razorvine's bladelike thorns.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Sapping Snow</b>
+				</summary>
+				Sapping snow—that's what aquatic explorers call the powdery remains of dead organisms that cover the ocean floor. When this substance is imbued with necromantic magic, it becomes a life-leeching
+				detritus.<br>
+				Whenever a creature starts its turn touching sapping snow, that creature must succeed on a DC15 Constitution saving throw or take 3d6 necrotic damage. The creature's hit point maximum decreases by
+				an amount equal to the necrotic damage taken. This reduction lasts until the creature finishes a long rest. If this effect reduces the creature's bit point maximum to 0, the creature dies, and its
+				body immediately crumbles into sapping snow. 
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Slippery Ice</b>
+				</summary>
+				Slippery ice is difficult terrain. When a creature moves onto slippery ice for the first time on a turn, it must succeed on a DC 10 Dexterity (Acrobatics) check or fall <a href="../pg/combat.html?f=Prone">prone</a>.
+			</details>
+			<details class="invocation">
+				<summary>
+					<b>Thin Ice</b>
+				</summary>
+				Thin ice has a weight tolerance of 3d10 &times; 10 pounds per 10-foot-square area. Whenever the total weight on an area of thin ice exceeds its tolerance, the ice in that area breaks. All creatures on
+				broken ice fall through.
+			</details>
+			<h4>Spells as Natural Hazards</h4>
+			<p>
+				Numerous spells emulate the wrath of nature, and you can use spell effects to represent a variety of natural hazards. The Spells as Natural Hazards table presents some common environmental dangers and
+				the spells you may use to approximate them.
+			</p>
+			<table class="tripletable"> 
+				<thead>
+					<tr>
+						<td>Natural Hazard</td>
+						<td>Approximate Spell</td>
+						<td>Natural Hazard</td>
+						<td>Approximate Spell</td>
+						<td>Natural Hazard</td>
+						<td>Approximate Spell</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Ball Lightning</td>
+						<td><a href="./spells.html?l=ChromaticOrb"><i>Chromatic Orb</i></a></td>
+						<td>Meteor</td>
+						<td><a href="./spells.html?l=Fireball"><i>Fireball</i></a>, <a href="./spells.html?l=MeterorSwarm"><i>Meteor Swarm</i></a></td>
+						<td>Toxic Eruption</td>
+						<td><a href="./spells.html?l=AcidSplash"><i>Acid Splash</i></a></td>
+					</tr>
+					<tr>
+						<td>Blizzard</td>
+						<td><a href="./spells.html?l=ConeofCold"><i>Cone of Cold</i></a>, <a href="./spells.html?l=IceStorm"><i>Ice Storm</i></a>, <a href="./spells.html?l=SleetStorm"><i>Sleet Storm</i></a></td>
+						<td>Mirage</td>
+						<td><a href="./spells.html?l=HallucinatoryTerrain"><i>Hallucinatory Terrain</i></a></td>
+						<td>Toxic Gas</td>
+						<td><a href="./spells.html?l=Cloudkill"><i>Cloudkill</i></a>, <a href="./spells.html?l=StinkingCloud"><i>Stinking Cloud</i></a></td>
+					</tr>
+					<tr>
+						<td>Earthquake</td>
+						<td><a href="./spells.html?l=Earthquake"><i>Earthquake</i></a></td>
+						<td>Pyroclastic Flow</td>
+						<td><a href="./spells.html?l=IncendiaryCloud"><i>Incendiary Cloud</i></a></td>
+						<td>Thunder</td>
+						<td><a href="./spells.html?l=Thunderwave"><i>Thunderwave</i></a></td>
+					</tr>
+					<tr>
+						<td>Falling Debris</td>
+						<td><a href="./spells.html?l=ConjureBarrage"><i>Conjure Barrage</i></a>, <a href="./spells.html?l=ConjureVolley"><i>Conjure Volley</i></a></td>
+						<td>Radiation</td>
+						<td><a href="./spells.html?l=Blight"><i>Blight</i></a>, <a href="./spells.html?l=CircleofDeath"><i>Circle of Death</i></a></td>
+						<td>Volcanic Lightning</td>
+						<td><a href="./spells.html?l=StormofVengeance"><i>Storm of Vengeance</i></a></td>
+					</tr>
+					<tr>
+						<td>Flood</td>
+						<td><a href="./spells.html?l=ControlWater"><i>Control Water</i></a>, <a href="./spells.html?l=Tsunami"><i>Tsunami</i></a></td>
+						<td>Smoke</td>
+						<td><a href="./spells.html?l=FogCloud"><i>Fog Cloud</i></a></td>
+						<td title="for larger whirlpools, see Nautical Hazards below">Smaller Whirlpool</td>
+						<td title="for larger whirlpools, see Nautical Hazards below"><a href="./spells.html?l=ControlWater"><i>Control Water</i></a></td>
+					</tr>
+					<tr>
+						<td>Fog</td>
+						<td><a href="./spells.html?l=FogCloud"><i>Fog Cloud</i></a></td>
+						<td>St. Elmo's Fire</td>
+						<td><a href="./spells.html?l=FaerieFire"><i>Faerie Fire</i></a></td>
+						<td>Wildfire</td>
+						<td><a href="./spells.html?l=FireStorm"><i>Fire Storm</i></a>, <a href="./spells.html?l=WallofFire"><i>Wall of Fire</i></a></td>
+					</tr>
+					<tr>
+						<td>Lava Bomb</td>
+						<td><a href="./spells.html?l=Fireball"><i>Fireball</i></a>, <a href="./spells.html?l=ProduceFlame"><i>Produce Flame</i></a></td>
+						<td>Swamp Gas</td>
+						<td><a href="./spells.html?l=DancingLights"><i>Dancing Lights</i></a></td>
+						<td>Windstorm</td>
+						<td><a href="./spells.html?l=GustofWind"><i>Gust of Wind</i></a></td>
+					</tr>
+					<tr>
+						<td>Lightning</td>
+						<td><a href="./spells.html?l=CallLightning"><i>Call Lightning</i></a>, <a href="./spells.html?l=LightningBolt"><i>Lightning Bolt</i></a></td>
+						<td>Tidal Wave</td>
+						<td><a href="./spells.html?l=Tsunami"><i>Tsunami</i></a></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 id="nautichaz">Nautical Hazards</h2>
+			<table class="dietable" style="float:right;margin-top:-0.5em;"> 
+				<thead>
+					<tr>
+						<td>d20</td>
+						<td>Hazard Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1-3</td>
+						<td>Crew Conflict</td>
+					</tr>
+					<tr>
+						<td>4-6</td>
+						<td>Fire</td>
+					</tr>
+					<tr>
+						<td>7-9</td>
+						<td>Fog</td>
+					</tr>
+					<tr>
+						<td>10-12</td>
+						<td>Infestation</td>
+					</tr>
+					<tr>
+						<td>13-20</td>
+						<td>Storm</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				Sea travel is an innately dangerous proposition. A storm on land might bog down a caravan, delaying its trip by a few days, while at sea a storm can split a ship in two and send everyone aboard to
+				their doom. The close quarters of life aboard a ship leads to short tempers and brawls, while a few rats that sneak aboard can spread disease and spoil supplies. This section presents a variety of
+				common hazards sailors might face on the sea. 
+			</p>
+			<p>
+				What hazards are encountered and their DC is entirely the purview of the DM. A DM who can't decide on a hazard or its specifics can use the tables to the right as a crutch. The first table in the
+				description of a hazard has suggestions for the nature of a hazard at a given DC. To determine how a ship fares against these hazards, each threat requires the ship's officers and crew to make a
+				group check (see the Other Rules page). The second table in the description of a hazard specifies which officers can roll to contribute to the group check. That description also states what ability
+				check an officer makes. Even if the officers make different ability checks, their successes and failures contribute to the one group check. If no one makes the ability check for a particular officer,
+				a failure is contributed toward the group check. Additionally, all the non-officer members of the crew make a single check, a d20 roll modified by the crew's quality. The success or failure of all
+				these checks—both the officers and the crew—determines the result of the group check.
+			</p>
+			<table class="dietable" style="float:right;margin-top:-2.5em;"> 
+				<thead>
+					<tr>
+						<td>d20</td>
+						<td style="text-align:center;">Hazard<br>DC</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1-9</td>
+						<td style="text-align:center;">10</td>
+					</tr>
+					<tr>
+						<td>10-17</td>
+						<td style="text-align:center;">15</td>
+					</tr>
+					<tr>
+						<td>18-19</td>
+						<td style="text-align:center;">20</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td style="text-align:center;">25</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				While each hazard lists the officers assigned to participate in a group check, anyone can attempt an officer's check in a pinch, with two exceptions: First, only the captain can make checks
+				associated with the captain's role; no one else can take the captain's place. Second, only one character can attempt an officer's check; they can't receive help. Once all the checks related to the
+				group check have been rolled, the ship's success or failure is determined. Hazards offer four levels of success or failure determined by the results of the ship's group check, as explained on the
+				third table in the hazard's description. A total success or a total failure occurs when every roll in the group check is a success or a failure, respectively. 
+			</p>
+			<details><!--crew conflict-->
+				<summary>
+					<h4>Crew Conflict</h4>
+				</summary>
+				<p>
+					Sailors can be a rough-and-tumble bunch. and cramming them into a ship's confined quarters leads to inevitable rivalries, feuds, and petty crimes. If resentments among the crew grow too strong,
+					the officers must step in and set things right, lest they risk mutiny or worse. Each day a ship spends dealing with a crew conflict requires those aboard to make a group check.
+				</p>
+				<p>
+					The captain, first mate, and cook each make their own ability checks, as shown on the second table. This check takes the place of any other activities that the officer might undertake that day,
+					representing their contribution to placating the crew. Even though the crew is causing trouble, some members help the officers, and thus the crew still contributes a roll to the group check.
+				</p>
+				<table class="tritblrow dietable">
+					<thead>
+						<tr>
+							<td>DC</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>Minor scuffle or petty theft</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>Brawl involving several people, theft of a valuable item</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Large brawl resulting in several injuries, theft of a prized item</td>
+						</tr>
+						<tr>
+							<td>25</td>
+							<td>Murder, serious brawl involving most of the crew</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Charisma (Intimidation) </td>
+						</tr>
+						<tr>
+							<td>First Mate</td>
+							<td>Charisma (Intimidation) </td>
+						</tr>
+						<tr>
+							<td>Cook</td>
+							<td>Intelligence (Brewer's Supplies)</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:6.1em;">Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The crew's quality score increases by 1 for 1d4 days and the hazard ends.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The hazard ends.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The crew's quality score decreases by 1.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>The crew's quality score decreases by 1, and the crew immediately mutinies.</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+			<details><!--fire-->
+				<summary>
+					<h4>Fire</h4>
+				</summary>
+				<p>
+					A fire at sea can turn a ship into a burned-out hulk, its crew slain or forced overboard. If a fire erupts aboard a ship, its officers and crew must make a group check to coordinate efforts to
+					extinguish it. The group check represents 5 minutes of work. The captain, first mate, bosun, and surgeon each make their own ability checks, as shown on the second table.
+				</p>
+				<table class="tritblrow dietable">
+					<thead>
+						<tr>
+							<td>DC</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>Small, contained fire, equivalent to an oil lantern </td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>Dangerous flame, equivalent to a large campfire, or multiple, smaller fires ignited at once</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Intense fire with significant chance to spread, equivalent to a bonfire</td>
+						</tr>
+						<tr>
+							<td>25</td>
+							<td>Sudden, pervasive flames, such as from igniting a hold filled with flammable cargo </td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Intelligence (Water Vehicles) </td>
+						</tr>
+						<tr>
+							<td>First Mate</td>
+							<td>Charisma (Intimidation)</td>
+						</tr>
+						<tr>
+							<td>Bosun</td>
+							<td>Strength (Carpenter's Tools)</td>
+						</tr>
+						<tr>
+							<td>Surgeon</td>
+							<td>Intelligence (Medicine)</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:6.1em;">Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The fire is extinguished with nothing beyond cosmetic damage.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The fire is extinguished, but the hull and 1d3 other random components take 6d6 fire damage.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The hull and 1d3 other random components take 6d6 fire damage, and the fire continues. Make another set of checks.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>The crew's quality score decreases by 1 due to injuries, while the hull and 1d3 other random components take 6d6 fire damage. The fire continues. Make another set of checks.</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+			<details><!--fog-->
+				<summary>
+					<h4>Fog</h4>
+				</summary>
+				<p>
+					Fog on land is usually an inconvenience, but at sea it can prove disastrous. Decreased visibility makes navigation more difficult and can cause a vessel to crash. A group check determines how the
+					officers and crew manage through one day of fog. The captain and quartermaster each make their own ability checks, as shown on the Fog Navigation and Navigation Results tables.
+				</p>
+				<p>
+					Fog lightly obscures the area it fills. Depending on its density, it heavily obscures an area beyond a certain distance from creatures within. The Fog Obfuscation table notes how far a creature
+					in mist can see before the area beyond is heavily obscured, as well as how difficult it is to navigate.
+				</p>
+				<table class="dietable" style="vertical-align:top;display:inline-block;">
+					<caption>Fog Types</caption>
+					<thead>
+						<tr>
+							<td>d20</td>
+							<td>Fog Type</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-19</td>
+							<td>Normal Fog</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Eldritch Mist (roll a d6)</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(1-2)</b> Ghost Fog</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(3-4)</b> Shadowfell Fog</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(5-6)</b> Wild Magic Fog</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="dietable" style="vertical-align:top;display:inline-block;">
+					<caption>Fog Thickness</caption>
+					<thead>
+						<tr>
+							<td>d10</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-3</td>
+							<td>Light</td>
+						</tr>
+						<tr>
+							<td>4-7</td>
+							<td>Moderate</td>
+						</tr>
+						<tr>
+							<td>8-9</td>
+							<td>Heavy</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Very Heavy</td>
+						</tr>
+					</tbody>
+				</table>
+				<table style="vertical-align:top;display:inline-block;">
+					<caption>Fog Obfuscation</caption>
+					<thead>
+						<tr>
+							<td>Thickness</td>
+							<td style="font-size:85%;">Heavily<br>Obscured<br>Distance</td>
+							<td>Navigation DC</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Light</td>
+							<td>30ft</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>Moderate</td>
+							<td>20ft</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<td>Heavy</td>
+							<td>10ft</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Very Heavy</td>
+							<td>5ft</td>
+							<td>25</td>
+						</tr>
+					</tbody>
+				</table>
+				<table style="vertical-align:top;display:inline-block;">
+					<caption>Fog Navigation</caption>
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Intelligence (Water Vehicles)</td>
+						</tr>
+						<tr>
+							<td>Quartermaster</td>
+							<td>Wisdom (Nature)</td>
+						</tr>
+					</tbody>
+				</table><br><br>
+				<table style="vertical-align:top;display:inline-block;width:40%;">
+					<caption>Navigation Results</caption>
+					<thead>
+						<tr>
+							<td style="min-width:6.1em;">Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The fog has no effect on navigation, and the crew's quality increases by 1 for 1d3 days.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The fog has no effect on navigation.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The fog slows the ship, reducing its travel pace and speed by half for the day.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>The fog slows the ship and disorients the crew, reducing the vessel's travel pace and speed by half for the day and causing it to move in a random direction.</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br><br><b>Eldritch Mist</b><br>
+					While natural fog on the ocean can be a nuisance to ship crews, eldritch mist strikes fear into sailors everywhere. These rare, mysterious mists are almost indistinguishable from the naturally
+					occurring variety until it's too late. When determining that a vessel faces Eldritch Mist, the DM can pick its parameters from the options detailed below or roll on the tables. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Ghost Fog</b><br>
+					Ghost fog contains the souls of murder victims whose bodies were thrown into the sea. A DC15 Intelligence (Arcana) check reveals that this mist is ghost fog. The souls of the dead want the
+					living to join them. Every hour a ship is immersed in ghost fog, roll any die. On an even number, 2d4 hostile <a href="../dg/monsters.html?l=Specter"><b style="font-size:100%;">specters</b></a>
+					appear and attack those on the ship. If a humanoid creature dies in ghost fog, its spirit rises as a <a href="../dg/monsters.html?l=Specter"><b style="font-size:100%;">specter</b></a> that is
+					hostile toward all creatures that aren't undead. All non-undead creatures immersed in ghost fog are vulnerable to necrotic damage. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Shadowfell Fog</b><br>
+					Shadowfell fog seeps into the Material Plane at thin points in the boundary between the two planes. A DC15 Intelligence (Arcana) check reveals that this mist is Shadowfell fog. When a vessel
+					travels through this oppressive, shadow-haunted miasma, its crew and passengers feel despair. Each hour a vessel is immersed in the fog, the crew must make a quality score check by rolling a d20
+					and adding their quality score to the number. The DC for this check is 10 + the number of hours the ship has been immersed in the Shadowfell fog. If the crew fails this check, their quality
+					score decreases by 1 while within the Shadowfell fog and for 1 day afterward. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Wild Magic Fog</b><br>
+					Few know the origins of wild magic fog, with some claiming it is the creation of capricious gods while others believe it is the result of magical experimentation gone wrong. A DC15 Intelligence
+					(Arcana) check reveals that this mist is wild magic fog. Whenever a creature in wild magic fog casts a spell of 1st level or higher, roll on the
+					<a href="./classes.html?l=WildMagicSurgeTable">Wild Magic Surge table</a> to create a magical effect. 
+				</p>
+			</details>
+			<details><!--infestation-->
+				<summary>
+					<h4>Infestation</h4>
+				</summary>
+				<p>
+					Provisioning a sea journey is challenging, particularly when allocating what to pack for the voyage. A rat infestation or an outbreak of even a minor illness can spell disaster at sea. This type
+					of hazard covers illnesses, infestations, spoiled supplies, and other troubles that wear away a crew's health.
+				</p>
+				<p>
+					Each day a ship spends dealing with an infestation requires those aboard to make a group check. The captain, first mate, surgeon, and cook each make their own ability checks, as shown on the
+					second table. This check takes the place of any other activities that the officer might undertake that day.
+				</p>
+				<table class="tritblrow dietable">
+					<thead>
+						<tr>
+							<td>DC</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>Minor bug or rat infestation, common cold</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>Persistent bug or rat infestation, stomach ailment or typical flu</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Serious bug or rat infestation, contagious flu or spoiled food</td>
+						</tr>
+						<tr>
+							<td>25</td>
+							<td>Overwhelming bug or rat infestation, lethal plague</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Intelligence (Water Vehicles) </td>
+						</tr>
+						<tr>
+							<td>First Mate</td>
+							<td>Charisma (Persuasion)</td>
+						</tr>
+						<tr>
+							<td>Surgeon</td>
+							<td>Intelligence (Medicine)</td>
+						</tr>
+						<tr>
+							<td>Cook</td>
+							<td>Constitution (Cook's Utensils)</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:6.1em;">Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The crew's quality score increases by 1 for 1d4 days, and the hazard ends.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The hazard ends.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The crew's quality score decreases by 1.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>The crew's quality score decreases by 1, and the distraction caused by the crisis forces the ship to move at half speed that day.</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+			<details><!--storm-->
+				<summary>
+					<h4>Storm</h4>
+				</summary>
+				<p>
+					Winds and towering waves toss ships like bath toys. Snowstorms batter vessels venturing too far north. Hurricanes consume whole armadas. More common and deadlier than most sea monsters, storms
+					claim more ships than any other threat on the high seas. 
+				</p>
+				<p>
+					Each day a ship spends involved in a storm requires those aboard to make a group check. The captain, first mate, bosun, and quartermaster each make their own ability checks, as shown on the
+					second table. This check takes the place of any other activities that the officer might undertake that day. representing their contribution to keeping the ship afloat. If no one makes the check
+					for a particular officer, a failure is contributed toward the group check.
+				</p>
+				<table class="dietable" style="vertical-align:top;display:inline-block;">
+					<caption>Storm Types</caption>
+					<thead>
+						<tr>
+							<td>d20</td>
+							<td>Storm Type</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-19</td>
+							<td>Ordinary Storm</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Magical Storm (roll a d8)</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(1)</b> Abjuration</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(2)</b> Conjuration</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(3)</b> Divination</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(4)</b> Enchantment</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(5)</b> Evocation</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(6)</b> Illusion</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(7)</b> Necromancy</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><b>(8)</b> Transmutation</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="dietable" style="vertical-align:top;display:inline-block;">
+					<caption>Storm Intensity</caption>
+					<thead>
+						<tr>
+							<td>d4</td>
+							<td>Description</td>
+							<td>DC</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Heavy Gale</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Strong storm</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Typical hurricane</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Overwhelming Hurricane</td>
+							<td>25</td>
+						</tr>
+					</tbody>
+				</table>
+				<table style="vertical-align:top;display:inline-block;">
+					<caption>Storm Navigation</caption>
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Intelligence (Water Vehicles)</td>
+						</tr>
+						<tr>
+							<td>First Mate</td>
+							<td>Charisma (Intimidation)</td>
+						</tr>
+						<tr>
+							<td>Bosun</td>
+							<td>Strength (Carpenter's Tools) </td>
+						</tr>
+						<tr>
+							<td>Quartermaster</td>
+							<td>Wisdom (Nature)</td>
+						</tr>
+					</tbody>
+				</table>
+				<table style="vertical-align:top;display:inline-block;width:34%;">
+					<caption>Navigation Results</caption>
+					<thead>
+						<tr>
+							<td>Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The ship survives unscathed. The crew's quality score increases by 1 for 1d4 days.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The ship survives unscathed.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The ship's components each take 4d10 bludgeoning damage. The crew's quality score decreases by 1. The ship struggles, moving at half speed that day.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>The ship's components each take 10d10 bludgeoning damage. The crew's quality score decreases by 2, and 10 percent of the crew is washed overboard and lost. The ship is blown off
+								course and struggles to recover its bearings, moving in a random direction.</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<br><br><b>Magical Storms</b><br>
+					Even worse than the threat of storms is the menace of weather imbued with magic.<br><br>
+				</p>
+				<p class="invocation">
+					<b class="noindent">Abjuration</b><br>
+					A storm infused with abjuration magic repels ships, as if protecting something in the sea. Right before the storm ends, a ship within it is teleported 5d20 miles in a random direction. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Conjuration</b><br>
+					When conjuration magic churns within a storm's heart, creatures of wind and rain emerge from distant realms to attack anything they encounter. The ship encounters 1d3 hostile
+					<a href="../dg/monsters.html?l=AirElemental"><b style="font-size:100%;">air elementals</b></a>. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Divination</b><br>
+					When divination magic seeps into a storm. howling winds and residual whispers temporarily scramble the knowledge of a ship's crew; for 1d3 days, the ship's crew suffers disadvantage on all
+					quality checks. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Enchantment</b><br>
+					Storms infused with enchantment magic disarm a creature's sense of danger, enthralling mariners and causing them to speed into danger. During the storm, any checks made to resolve hazards or
+					manage the ship are made with disadvantage. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Evocation</b><br>
+					These ferocious storms are wracked with thunderbolts, driving sheets of acid rain, exploding meteors, and other dangers. After each day of the storm, every component aboard the ship takes
+					3d10 fire. 1d10 acid. and 1d10 lightning damage. In addition, roll a d20 and add the crew's quality. On a 10 or less, the crew's quality decreases by 1, and 1d6 members of the crew are killed.
+				</p>
+				<p class="invocation">
+					<b class="noindent">Illusion</b><br>
+					A storm brimming with illusions poses little direct harm to a ship, but experienced navigators know it poses an insidious threat. During the storm, the ship travels in a random direction that
+					isn't its intended course. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Necromancy</b><br>
+					Ghosts howl and whirl in this storm's wind, while the remains of long-dead mariners stir in their watery graves. During the storm, 1d4
+					<a href="../dg/monsters.html?l=Specter"><b style="font-size:100%;">specters</b></a>, 2d4 <a href="../dg/monsters.html?l=Ghoul"><b style="font-size:100%;">ghouls</b></a>, and 4d6 
+					<a href="../dg/monsters.html?l=Zombie"><b style="font-size:100%;">zombies</b></a> emerge from the waves to attack the ship. 
+				</p>
+				<p class="invocation">
+					<b class="noindent">Transmutation</b><br>
+					These violently unpredictable storms cause the waves to warp and twist. The storm transforms the water around the ship into an amalgamation of ice, stone. and stranger materials, making travel
+					difficult and damaging the ship. The ship's hull takes 4d10 bludgeoning damage, and the ship's speed decreases by half during the storm. 
+				</p>
+			</details>
+			<details><!--whirlpool-->
+				<summary>
+					<h4>Whirlpool</h4>
+				</summary>
+				<p>
+					In areas where storms or opposed currents drive powerful waters together, violent maelstroms might form. Whirlpools are difficult terrain. Each whirlpool has a rank, which determines its size and
+					strength, as shown on the first table. A whirlpool's depth equals half its diameter.
+				</p>
+				<p>
+					If a vessel starts its turn in a whirlpool with a diameter greater than the vessel's length, the ship's officers and crew must make a group check to escape. The group check represents 5 minutes
+					of work.The group check represents 5 minutes of work. The captain. first mate, bosun. and quartermaster each make their own ability checks, as shown on the second table.
+				</p>
+				<table class="tritblrow" style="text-align:center;">
+					<thead>
+						<tr>
+							<td>Rank</td>
+							<td style="text-align:left;">Diameter</td>
+							<td>Velocity</td>
+							<td>DC</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td style="text-align:left;">22 (4d10) ft</td>
+							<td>5ft</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td style="text-align:left;">55 (10d10) ft</td>
+							<td>15ft</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td style="text-align:left;">110 (20d10) ft</td>
+							<td>25ft</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td style="text-align:left;">165 (30dl0) ft</td>
+							<td>35ft</td>
+							<td>20</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:4.5em;">Officer</td>
+							<td>Check</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Captain</td>
+							<td>Intelligence (Water Vehicles)</td>
+						</tr>
+						<tr>
+							<td>First Mate</td>
+							<td>Charisma (Intimidation)</td>
+						</tr>
+						<tr>
+							<td>Bosun</td>
+							<td>Strength (Carpenter's Tools) </td>
+						</tr>
+						<tr>
+							<td>Quartermaster</td>
+							<td>Wisdom (Nature)</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tritblrow">
+					<thead>
+						<tr>
+							<td style="min-width:6.1em;">Result</td>
+							<td>Effect</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Total Success</td>
+							<td>The vessel uses the whirlpool to its advantage and increases its speed by 20ft during its current turn.</td>
+						</tr>
+						<tr>
+							<td>Success</td>
+							<td>The vessel can move normally on its turn.</td>
+						</tr>
+						<tr>
+							<td>Failure</td>
+							<td>The vessel is immediately moved toward the vortex's center at the whirlpool's velocity, and the vessel is <a href="../pg/combat.html?f=Restrained">restrained</a> by the whirlpool until the start of its next turn.</td>
+						</tr>
+						<tr>
+							<td>Total Failure</td>
+							<td>As a failure. Additionally, if the vessel is in the whirlpool at the start of its next turn, all checks the vessel makes to determine the whirlpool's effects are made with
+								disadvantage on that turn.</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<b>Creatures in Whirlpools</b><br>
+					When a creature moves into a whirlpool or starts its turn there, it must make a Strength (Athletics) check with a DC determined by the whirlpool's rank. On a success, the creature can move
+					normally. On a failure. the creature is immediately moved toward the vortex's center at the whirlpool's velocity. and the creature is <a href="../pg/combat.html?f=Restrained">restrained</a> by the whirlpool until the start of its next turn.
+					If the creature reaches the whirlpool's center. the creature is pulled under the surface and either appears at a special location (see "Whirlpool Destinations" below) or plunges a number of feet
+					underwater equal to the whirlpool's velocity.
+				</p>
+				<p>
+					<b>Whirlpools Destinations</b><br>
+					While a whirlpool might be a short-lived hazard that drags things into the depths, they might also serve as a violent passage to another realm. In such cases, things dragged into a whirlpool are
+					deposited elsewhere, be it through a crack in the seafloor leading to an Underdark ocean or a portal to a different plane of existence. Use the Whirlpool Destinations table to choose or randomly
+					determine where a whirlpool leads, usually to a body of water in that destination.
+				</p>
+				<table class="dietable"> 
+					<thead>
+						<tr>
+							<td>d10</td>
+							<td>Destination</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-3</td>
+							<td>Underdark</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Elemental Plane of Water</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Elemental Plane of Earth</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Feywild</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Shadowfell</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>Astral Plane</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>Outlands</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Outer plane of the DM's Choice</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+			<h4>Currents</h4>
+			<p>
+				Ocean water is moved by wind and tides to create constant river-like flows called currents. Tidal currents are typically the strongest. They're usually found within 50 miles of shore and at depths of
+				less than 300 feet. These currents have a speed of 1d6 miles per hour that changes daily. Currents become weaker farther out to sea and deeper in the ocean. These currents have a speed of 1d4-1 miles
+				per hour that changes daily. 
+			</p>
+			<p>
+				<b>Currents and Travel</b><br>
+				When a vessel or creature travels in the same direction as a current, that current's speed is added to the vessel or creature's travel pace. A creature or vessel traveling against a current has that
+				currenfs speed subtracted from the vessel or creature's travel pace. If this results in a negative travel pace, the vessel or creature can let the current carry it. Alternatively, the crew of the
+				vessel or the creature can fight against the current by rowing or swimming hard, moving at half the vessel or creature's normal pace. Vessels and creatures fighting against a current must make a
+				Constitution saving throw at the end of every hour traveled. with a bonus equal to the crew's quality (if they have crew). Vessels that fail have their crew's quality score decreased by 1. Creatures
+				that fail <a href="./combat.html?f=Exhaustion">gain one level of exhaustion</a>. The DC for this saving throw is 10 + 1 for every consecutive hour spent fighting the current.
+			</p>
+			<p>
+				<b>Submerged Creatures</b><br>
+				When a creature without a swimming speed is submerged in a current. the creature must succeed on a Strength (Athletics) check at the end of its turn or get pulled 1d4&times;5 feet in the direction of
+				the current. The DC for this check equals 10 + the number of miles per hour the current is moving.
+			</p>
+			<h4>Sandbars</h4>
+			<table class="dietable" style="float:right;margin-top:-1em;">
+				<thead>
+					<tr>
+						<td>DC</td>
+						<td>Description</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>10</td>
+						<td>Deep Sandbar</td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td>Moderate sandbar</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td>Shallow sandbar</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				Waves and currents deposit sand in shallow water near the shoreline. These sandbars form a line that can be between 10 feet and 3 miles in length and width. During high tide, sandbars are below the
+				ocean's surface, while they peek above the water during low tide. 
+			</p>
+			<p>
+				Sandbars make dangerous obstacles for vessels. particularly at high tide when they are less noticeable. The crew of a ship moving toward a sandbar beneath the waves must have a passive Wisdom
+				(Perception) score of 12 or higher or fail to see the sandbar in the way. When a ship passes over a submerged sandbar, the sandbar counts as difficult terrain, and the ship must succeed on a
+				Dexterity saving throw. The DC of this save corresponds with the depth of the sandbar. as listed on the table to the right. If the ship fails this save, it gets stuck on the sandbar. A ship can
+				become unstuck by using an action to make a Strength check, with a bonus equal to the crew's quality, against the sandbar's DC. 
+			</p>
+			<h2 id="diseases">Diseases</h2>
+			<p>
+				A plague ravages the kingdom, setting the adventurers on a quest to find a cure. An adventurer emerges from an ancient tomb, unopened for centuries, and soon finds herself suffering from a wasting
+				illness. A warlock offends some dark power and contracts a strange affliction that spreads whenever he casts spells. A simple outbreak might amount to little more than a small drain on party
+				resources, curable by a casting of <a href="./spells.html?l=LesserRestoration"><i>Lesser Restoration</i></a>. A more complicated outbreak can form the basis of one or more adventures as characters
+				search for a cure, stop the spread of the disease, and deal with the consequences. 
+			</p>
+			<p>
+				A disease that does more than infect a few party members is primarily a plot device. The rules help describe the effects of the disease and how it can be cured, but the specifics of how a disease
+				works aren't bound by a common set of rules. Diseases can affect any creature, and a given illness might or might not pass from one race or kind of creature to another. A plague might affect only
+				constructs or undead, or sweep through a halfling neighborhood but leave other races untouched. The diseases listed here have no listed host race or virulence. Such factors are entirely up to the
+				DM, being mostly dependent on the story they want to tell. A listed cure might not always be appropriate either—for instance, a construct is probably not cured by drinking a root extract it cannot
+				process. Your DM will tell you if and when they want you to know how to treat the disease, perhaps by asking you to make an <span title="Yes, Intelligence. It is the appropriate ability score to consult when recalling something. Wisdom could work too, but is more about intuition than memory or extrapolation.">
+				Intelligence (Medicine)</span> check. A disease with a herbal remeby as a cure has that cure prepared by a creature with proficiency with a Herbalist's Kit unless otherwise noted.
+			</p>
+			<input id="searchbar" style="width:10%; margin-bottom:0.5em;" onkeyup="searchSpell()" type="text" name="search" placeholder="Search Diseases...">
+			<section class="package">
+				<details id="BlackSerpentsKiss" class="spell disease">
+					<summary>
+						<h3 class="spellname">Black Serpent's Kiss</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Open wound infection (DC12).<br>
+						<b>Incubation Time:</b> 1d3 days<br>
+					</p>
+					<p>
+						This disease grows a large sickly black and purple lump covered in yellow-ish tendrils. The skin around the infection becomes sensitive, and cutting the lump causes severe bleeding. When the
+						infected creature takes damage, it takes an additional 1d6 damage of the damage type, and must succeed on a DC10 Constitution saving throw or be <a href="./combat.html?f=Stunned">stunned</a> until the end of its next turn, as
+						blinding pain shoots throughout its body. 
+					</p>
+					<p>
+						<b>Cure:</b> Trimming the tendrils and applying fairy salve to the infected area, then binding it with bandages cures the disease after a long rest. Fairy salve is a medicine that effectively
+						fights many kinds of infections. It is made from fairy mold, which grows in dark damp places like underneath rocks or fallen trees. Both the salve and mold glow a faint green in the dark. The
+						salve is made by mixing the mold with vegetable oil and letting it rest for three days, then mixing it with melted bee's wax for substance, at a ratio of 1/3/2.
+					</p>
+				</details><details id="BloodRot" class="spell disease">
+					<summary>
+						<h3 class="spellname">Blood Rot</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Bites from carrier creatures or other open wound infection (DC15).<br>
+						<b>Incubation Time:</b> 1d3 days<br>
+					</p>
+					<p>
+						Blood rot, or blood poisoning, is a terrible disease that attacks the entire body, ripping it apart and causing it to shut down all at once. The infected creature is <a href="../pg/combat.html?f=Poisoned">poisoned</a>. At the end of
+						each long rest after the disease takes hold, the infected creature must make a DC15 constitution saving throw. On a failure, its hit point maximum by 1d10. The target dies if the disease
+						reduces its hit point maximum to 0. This reduction to the target's hit point maximum lasts until the disease is cured.
+					</p>
+					<p>
+						<b>Cure:</b> Making a saving throw against blood rot while in extreme heat for at least the 10th consecutive hour makes the creature <a href="./combat.html?f=Exhaustion">suffer a level of exhaustion</a>, but cures the disease after
+						applying the hit point reduction, if any. Applying fairy salve to a wound while the disease is incubating also cures it immediately. Fairy salve is a medicine that effectively fights many
+						kinds of infections. It is made from fairy mold, which grows in dark damp places like underneath rocks or fallen trees. Both the salve and mold glow a faint green in the dark. The salve is
+						made by mixing the mold with vegetable oil and letting it rest for three days, then mixing it with melted bee's wax for substance, at a ratio of 1/3/2.
+					</p>
+				</details><details id="Bluerot" class="spell disease">
+					<summary>
+						<h3 class="spellname">Bluerot</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Open wound contact (such as from attacks) by contaminated creatures or weapons (DC12).<br>
+						<b>Incubation Time:</b> 4d6 hours<br>
+					</p>
+					<p>
+						The victim's Constitution and Charisma scores to decrease by 1d4 each, to a minimum of 3. This is quickly followed by a fever and tingling in the extremities. The infected creature has
+						vulnerability to radiant damage and gains the ability to breathe underwater. At the end of each long rest, the infected creature makes a DC12 Constitution saving throw. On a success, the
+						victim regains 1 point of Constitution and 1 point of Charisma lost to the disease. If the infected creature regains all the points lost to the disease, it is cured. Other effects that raise
+						the victim's ability scores do not cure the disease. On a failed saving throw, the victim takes 4d8 necrotic damage as the boils burst and spread. A creature reduced to 0 hit points by this
+						damage cannot regain hit points until the disease is cured, though it can be stabilized as normal.
+					</p>
+					<p>
+						<b>Cure:</b> Draining the boils and applying fairy salve to the wounds cures the disease after a long rest, restoring all ability points lost ot the disease in the process. Fairy salve is a
+						medicine that effectively fights many kinds of infections. It is made from fairy mold, which grows in dark damp places like underneath rocks or fallen trees. Both the salve and mold glow a
+						faint green in the dark. The salve is made by mixing the mold with vegetable oil and letting it rest for three days, then mixing it with melted bee's wax for substance, at a ratio of 1/3/2.
+					</p>
+				</details><details id="CackleFever" class="spell disease">
+					<summary>
+						<h3 class="spellname">Cackle Fever</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Being within 10 feet of a creature in the throes of laughter caused by the disease* (DC10).<br>
+						<b>Incubation Time:</b> 1d4 hours<br>
+					</p>
+					<p>
+						*<i>The saving throw is made at the start of a creature's turn if it is in combat. A creature is immune to contracting Cackle Fever for 24 hours after succeeding on a saving throw against it.</i>
+					</p>
+					<p>
+						While in the grips of this disease, victims frequently succumb to fits of mad laughter, giving the disease its common name and its morbid nickname: "the shrieks." Symptoms include fever and
+						disorientation. The infected creature <a href="./combat.html?f=Exhaustion">gains one level of exhaustion</a> that can't be removed until the disease is cured. Any event that causes the infected creature great stress — including
+						entering combat, taking damage, experiencing fear, or having a nightmare — forces the creature to make a DC13 Constitution saving throw. On a failed save, the creature takes 1d10 psychic
+						damage and becomes <a href="../pg/combat.html?f=Incapacitated">incapacitated</a> with mad laughter or 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the mad laughter and the incapacitated
+						condition on a success.
+					</p>
+					<p>
+						At the end of each long rest, an infected creature can make a DC13 Constitution saving throw. On a successful save, the DC for this save and for the save to avoid an attack of mad laughter
+						drops by 1d6. When the saving throw DC drops to 0, the creature recovers from the disease. A creature that fails three of these saving throws gains a randomly determined form of indefinite
+						madness, as described below.
+					</p>
+					<p>
+						<b>Cure:</b> None
+					</p>
+				</details><details id="GroutWorms" class="spell disease">
+					<summary>
+						<h3 class="spellname">Grout Worms</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Eating old food (DC14).<br>
+						<b>Incubation Time:</b> 1d3 days<br>
+					</p>
+					<p>
+						Grout worms attach themselves to a creature's gut, causing nausea and fatigue. The victim is <a href="../pg/combat.html?f=Poisoned">poisoned</a> and needs twice as much food and water as normal each day. At the end of each long rest,
+						the infected creature must make a DC15 Constitution saving throw. On a success, the DC for the saving throw is reduced by 1d6. When the DC reaches 0, the creature recovers from the disease.
+						On a fail, the creature loses one hit die, which cannot be regained until the disease is cured.
+					</p>
+					<p>
+						<b>Cure:</b> Drinking large amounts of alchohol and staying drunk for an entire day kills the worms, curing the disease.
+					</p>
+				</details><details id="RedFever" class="spell disease">
+					<summary>
+						<h3 class="spellname">Red Fever</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Contact with infected blood or inhaling tainted air* (DC11).<br>
+						<b>Incubation Time:</b> 1d4+1 days<br>
+					</p>
+					<p>
+						*<i>The pathogen quickly aerosolizes and spreads through the air, forming infectious patches up to 10ft from the source in an area where the air is still.</i>
+					</p>
+					<p>
+						The victim suffers from a fever, followed by red patches of dry skin that crack and bleed. The blood of an infected creature doesn't coagulate well, making treating the victim a difficult
+						task. Advanced stages of the disease cause violent muscle spasms that crack the victim's dried-out skin even further.
+					</p>
+					<p>
+						The infected creature has disadvantage on Constitution checks and saving throws, and gains one failed Death Saving Trow. Results of Death Saving Throws caused by Red Fever cannot be removed
+						by any means except recovering from the disease. The infected creature can only use its hit dice to regain health during a long rest, and regains no hit points or spent hit dice for
+						finishing a long rest. Every 72 hours after symptoms start, the infected creature must make another Death Saving Throw, which cannot critically fail or succeed. A creature that succeeds on 3
+						Death Saving Trows against red fever recovers from the disease.
+					</p>
+					<p>
+						<b>Cure:</b> Distilling Ringroot using Alchemist's Supplies and mixing it with alcohol, then letting it settle for an hour produces a medicine which, when ingested, grants a successful Death
+						Saving Throw against Red Fever. Ringroot can be found at the bottom of rivers, sprawling across the riverbed.
+					</p>
+				</details><details id="SewerPlague" class="spell disease">
+					<summary>
+						<h3 class="spellname">Sewer Plague</h3>
+					</summary>
+					<p class="searchterms">food poisoning</p>
+					<p>
+						<b>Mode of Infection:</b> Ingestion of, or wound contact with, rotting organic matter; Bites from sewer or swamp creatures (DC11).<br>
+						<b>Incubation Time:</b> 1d4 days<br>
+					</p>
+					<p>
+						Sewer plague is a generic term for a broad category of illnesses that incubate in sewers, refuse heaps, and stagnant swamps. Symptoms include fatigue, fever, cramps, and diarrhea and vomiting
+						in cases where the source was ingested. The infected creature <a href="./combat.html?f=Exhaustion">suffers one level of exhaustion</a>, and it regains only half the normal number of hit points from spending Hit Dice and no hit
+						points from finishing a long rest. At the end of each long rest, an infected creature must make a DC11 Constitution saving throw. On a failed save, the character gains one level of
+						exhaustion. On a successful save, the character's exhaustion level decreases by one level. If a successful saving throw reduces the infected creature's level of exhaustion below 1, the
+						creature recovers from the disease.
+					</p>
+					<p>
+						<b>Cure:</b> Ranger's Bush berries boiled, mashed, and mixed in alchohol makes a potent medicine and laxative that cures most kinds of sewer plague after a long rest. Ranger's Bushes grow
+						along the shorelines of rivers and lakes.
+					</p>
+				</details><details id="SightRot" class="spell disease">
+					<summary>
+						<h3 class="spellname">Sight Rot</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Drinking contaminated water (DC15).<br>
+						<b>Incubation Time:</b> 1 day<br>
+					</p>
+					<p>
+						This painful infection causes bleeding from the eyes and eventually blinds the victim. The infected creature takes a -1 penalty to attack rolls and ability checks that rely on sight. At the
+						end of each day after the symptoms appear, the penalty worsens by 1. When it reaches -5, the victim is <a href="./combat.html?f=Blinded">blinded</a>.
+					</p>
+					<p>
+						<b>Cure:</b> Crushed Eyebright, boiled and reduced into an ointment and applied to the eyes prevents the disease from worsening that day. Three such treatments applied on days in a row cures
+						the disease entirely after a short or long rest. Eyebright is a large flower the grows on hills and mountainsides that get plenty of sunlight.
+					</p>
+				</details><details id="TheHaunting" class="spell disease">
+					<summary>
+						<h3 class="spellname">The Haunting</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Inhaling cursed mist* (DC14).<br>
+						<b>Incubation Time:</b> 1 hour<br>
+					</p>
+					<p>
+						*<i>The haunting is spread by a thin, blue, odorless mist found in cemeteries, tombs, swamps, and other places saturated with death. An encounter with this mist typically covers
+						1d6&times;400 square feet. A <a href="./spells.html?l=DispelMagic"><i>Dispel Magic</i></a> spell destroys the mist in a 20-foot square starting at a point chosen by the caster within the
+						spell's range.</i>
+					</p>
+					<p>
+						This illness is a form of living curse that causes hallucinations, paranoia, and decreased cognitive ability. The infected creature has disadvantage on Intelligence and Wisdom ability checks
+						and saving throws. When it takes damage, it must make a DC12 Intelligence saving throw or suffer the effects of the <a href="./spells.html?l=EnemiesAbound"><i>Enemies Abound</i></a> spell. This
+						effect cannot be ended by succeeding on a saving throw — Rather, the creature can take an action to make a DC14 Intelligence (Investigation) check, ending the effect on itself as a success.
+						The effect otherwise lasts for 1 minute as per the spell.
+					</p>
+					<p>
+						At the end of every long rest after symptoms first appear, the creature must make a DC12 Constitution saving throw. On a success, the DC for the investigation check is reduced by 1d6. When
+						the DC reaches 0, the creature recovers from the disease. On a failure, the creature suffers a bout of long-term madness that lasts for 24 hours.
+					</p>
+					<p>
+						<b>Cure:</b> The haunting is both a disease and a curse, and can be cured by the <a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> spell.
+					</p>
+				</details><details id="TheShivers" class="spell disease">
+					<summary>
+						<h3 class="spellname">The Shivers</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Contact with an infected creature (DC11).<br>
+						<b>Incubation Time:</b> 2 days<br>
+					</p>
+					<p class="searchterms">common cold</p>
+					<p>
+						Symptoms include blurred vision, disorientation, and a fever. The infected creature regains only half the normal number of hit points from spending Hit Dice and no hit points from a long
+						rest. The infected creature also has disadvantage on ability checks and attack rolls. At the end of a long rest, an infected creature makes a DC11 Constitution saving throw, shaking off the
+						disease on a successful save. A creature that has recovered from the shivers is immune to the disease for 30 days.
+					</p>
+					<p>
+						<b>Cure:</b> None, although any effect that removes exhaustion alleviates the disadvantage-causing symptoms for 1d4 hours.
+					</p>
+				</details><details id="ThroatLeeches" class="spell disease">
+					<summary>
+						<h3 class="spellname">Throat Leeches</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Drinking infested water (DC12).<br>
+						<b>Incubation Time:</b> 1d6+6 hours<br>
+					</p>
+					<p>
+						Throat leeches are miniscule parasites that attach themselves to the inside of their victim's throat, causing inflammation and shortness of breath. The disease initially causes a horrible
+						itch on the inside of the infected creature's throat. After 12 hours, the itching transitions into a dull pain as the victims throat swells up. The victim becomes <a href="../pg/combat.html?f=Poisoned">poisoned</a> and unable to
+						speak, and has disadvantage on all saving throws against gaining exhaustion.
+					</p>
+					<p>
+						<b>Cure:</b> The host taking more than 14 poison damage in one hit kills the leeches. A creature with a breath weapon kills the leeches if it uses that breath weapon. A creature can also
+						kill the leeches by burning the inside of its throat with fire or acid, although such methods are usually inadvisible. Once the leeches are dead, the symptoms disappear after a long rest.
+					</p>
+				</details><details id="WitherWorm" class="spell disease">
+					<summary>
+						<h3 class="spellname">Wither Worm</h3>
+					</summary>
+					<p>
+						<b>Mode of Infection:</b> Eating infected meat (DC12).<br>
+						<b>Incubation Time:</b> 1 day<br>
+					</p>
+					<p>
+						A Wither Worm grows inside its victim's body until it can wrap itself around the spine and and become inseparable from it. The parasite's growth causes the folowing stacking effects until
+						the growth period is complete:
+					</p>
+					<p>
+						Day 1-3: The creature requires twice as much food and water as normal.<br>
+						Day 4-6: The creature's maximum hit points are deuced by 1d8+2. If this reduces the creature's maximum hit points to 0, it becomes <a href="./combat.html?f=Unconscious">unconscious</a> and falls into a coma.<br>
+						Day 7-8: The creature's speeds are all reduced by 10 ft each.<br>
+						Day 9-10: The creature has disadvantage on Constitution checks and saving throws.
+					</p>
+					<p>
+						On the eleventh day the worm's growth is complete and it wraps itself around the creature's spine. All other effects of the disease disappear, and the creature's life expectancy is reduced by
+						20%. The illness is now incurable by nonmagical means, and the creature is immune to further wither worm infections.
+					</p>
+					<p>
+						<b>Cure:</b> Drinking Assassin's Blood (see "Poison" on the Items page) with every breakfast, lunch, and dinner, for three days straight.
+					</p>
+				</details>
+			</section>
+			<h2 id="curses">Curses</h2>
+			<img class="mtg" style="margin-top:0.5em;" src="https://cards.scryfall.io/art_crop/front/f/6/f6ef4c59-ab84-4d84-b795-015b21ae3fe0.jpg?1543675434">
+			<p><i><span class="noindent">N</span>OTE: Curses are, first and foremost, tool for the DM, meant to be plot points, or problems for the players to solve. A player could concieavbly inflict a proper
+				curse as well, such as with an upcast </i><a href="./spells.html?l=BestowCurse" style="color:#c8c8d8;">Bestow Curse</a><i> spell, but if you're not currently DM-ing or gearing up to do so, you're
+				probably best off not reading this section as to not spoil any plot points of a campaign you're playing.</i><br><br></p>
+			<p>
+				An ancient warning echoes in a tomb robber's mind. A lost treasure bears a magical affliction, assuring it remains lost. A dying priest's last breath carries a portent of doom. Curses come in myriad
+				forms, presaging terrifying tales and distinctive dooms. This section provides guidance for creating dramatic curses, either distinct from or as part of curses resulting from magic, monsters'
+				actions, or other effects. These curses provide ominously poetic responses to fateful choices and afflictions that last until they're alleviated by specific remedies. Spells at the characters'
+				disposal might relieve these curses' effects temporarily but can't lift them completely. The price must be paid. 
+			</p>
+			<p>
+				Curses aren't something to throw around lightly. They should be dramatically appropriate responses to meaningful choices characters make. If every goblin or bandit coughs out a dying curse, the
+				narrative impact fades. There should always be a way to avoid a curse, and a curse's effects should clearly arise from wrongdoing. Here are some examples of actions that warrant a curse: 
+			</p>
+			<ul>
+				<li>Defiling a sealed tomb</li>
+				<li>Desecrating a temple</li>
+				<li>Slaying a villain who is backed by a powerful entity such as a demon lord or a deity</li>
+				<li>Murdering or grievously harming an innocent</li>
+				<li>Stealing a treasure that is meaningful to an entire culture</li>
+			</ul>
+			<p>
+				<span class="noindent">I</span>n cases where the curse arises from a creature, such as a dying villain's last breath, the pronouncement of the curse is clear. When there is no wronged party present
+				to lay the curse directly, the curse should be obvious in some way, such as a warning of dire consequences carved into the wall of an ancient crypt or relayed by a spell such as
+				<a href="./spells.html?l=MagicMouth"><i>Magic Mouth</i></a>. 
+			</p>
+			<h4>Components of a Curse</h4>
+			<p>
+				Most curses have three distinct components: pronouncement, burden, and resolution. Whatever form these take, at least one of them, especially the burden or resolution, should have an ironic
+				connection to the action that triggered the curse. 
+			</p>
+			<div class="bgfeature"><p>
+				<br><b>Pronouncement:</b><br>
+				The first component of a curse is the pronouncement, which amounts to a threat. It promises suffering to those who dare to perform or have already performed a specific offensive act. The
+				pronouncement can be a standing warning against taking some action, or it could be a declaration in the moment. The following examples suggest just a few possible pronouncements: 
+			</p>
+			<ul>
+				<li>A widely spread story explaining that a particular action tempts terrible punishment</li>
+				<li>A warning spoken on the cusp of a deadly battle, assuring dire consequences for the victorious</li>
+				<li>A poem, rhyme, or song foretelling doom</li>
+				<li>A carved epitaph on a gravestone discouraging robbers</li>
+				<li>The last words of a dying person—either a powerful villain or a wrongly slain innocent</li>
+				<li>Swearing a vow to refrain from or undertake some action on pain of great suffering</li>
+			</ul></div>
+			<div class="bgfeature"><p>
+				<br><b>Burden:</b><br>
+				A curse's burden is the effect that causes hardship and suffering to the curse's victim. A burden is often reflective of what caused the curse in the first place, twisting the transgressor's action
+				against them. The burden takes effect immediately, along with a vague sense of foreboding—such as a chill down the spine or a wave of nausea. The victim might not notice the curse's effect until a
+				situation arises to make it obvious. For example, a character cursed with clumsiness that manifests as disadvantage on Dexterity checks might not notice anything until they make such a check. Burdens
+				can take many forms, such as the following: 
+			</p>
+			<ul>
+				<li>The victim has disadvantage on attack rolls, ability checks, saving throws, or some combination of the three. This can be tied to a single ability score or applied generally.</li>
+				<li>The victim can't communicate using language, whether through speaking, sign language, writing, telepathy, or any other means.</li>
+				<li>The victim gains 3 levels of <a href="./combat.html?f=Exhaustion">exhaustion</a> that can't be removed while the curse endures.</li>
+				<li>When the victim finishes a long rest, they must succeed on a DC 15 Constitution saving throw, or their hit point maximum is reduced by 1d10. If this reduces their hit point maximum to 0, the
+					victim dies, and their body crumbles to dust.</li>
+				<li>When the victim takes damage, they take an extra 1d10 necrotic damage. This effect can't happen again until the start of the victim's next turn.</li>
+				<li>The victim gains a Dark Gift (see the Feats page) appropriate to the circumstances surrounding the curse.</li>
+				<li>The victim gains vulnerability to one damage type.</li>
+				<li>The victim's Strength, Dexterity, or Constitution score is reduced to 3, and the victim can't be raised from the dead while the curse lasts.</li>
+				<li>A monster hunts the victim relentlessly. Even if  the monster dies, it rises again or a new one takes its place 24 hours later.</li>
+			</ul></div>
+			<div class="bgfeature"><p>
+				<br><b>Resolution:</b><br>
+				Sometimes a curse can be ended by making restitution to a wronged party (or their closest kin in the case of a death) or reparation if something was stolen or destroyed. The resolution might be
+				declared as part of the pronouncement, or it may be left to those who suffer the curse to make amends on their own. Research and divination can offer clues or even reveal the exact steps needed to
+				resolve the curse. While more general curses can lifted by a <a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> spell, more specific or dramatic curses can't be permanently lifted through
+				spells. Magic can offer temporary respite, though. A <a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> spell cast on the victim of such a curse suppresses the burden for 1 hour. A
+				<a href="./spells.html?l=GreaterRestoration"><i>Greater Restoration</i></a> spell suppresses the burden until the victim finishes a long rest. Death usually ends a curse, but the curse returns in
+				full force if the cursed character returns to life without resolving the curse.<br>
+				When a curse is resolved, its effects usually end immediately. Some more insidious curses might linger beyond the resolution but can then be removed by a
+				<a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> spell or similar magic if the victim succeeds on a DC15 Charisma saving throw when the spell is cast. If the save fails, it can be
+				repeated after a specific interval passes, usually 1 month, with the curse ending on a successful save. Adjust the DC of a particularly weak curse to 10 or that of a stronger one to 20. Here are
+				some examples of curse resolutions: 
+			</p>
+			<ul>
+				<li>Protecting a loved one dear to the person who laid the curse from some dire threat </li>
+				<li>Returning every piece of a stolen treasure hoard, down to the last copper coin, to the place where it once rested</li>
+				<li>Slaying the head of a dynasty that has long held power in the region</li>
+				<li>Accomplishing a seemingly impossible task, such as raising a castle above the clouds or making the sun cross the sky in a different direction</li>
+			</ul></div>
+			<h4>Sample Curses</h4>
+			<p>Provided here are several example curses and the circumstances surrounding them. Change the details of any of these examples to customize them to your adventures.</p>
+			<div class="sidebyside curse">
+				<h5>Ancient Seal</h5>				
+			<p>This curse protects the resting place of a long-dead ruler and punishes any who disturb the ruler's remains or plunder the treasures.</p>
+			<p><b>Pronouncement:</b> Carved into the stone of the crypt door are the words "Relentless death follows those who disturb the sovereign's rest."</p>
+			<p><b>Burden:</b> Each character that gains the curse is hunted by a <a href="../dg/monsters.html?l=Wraith"><b>wraith</b></a> that appears at sunset and vanishes at dawn, pursuing the single-minded goal 
+				of slaying the cursed individual. The <a href="../dg/monsters.html?l=Wraith"><b>wraith</b></a> manifests in an unoccupied space within 30 feet of its victim. Destroying the
+				<a href="../dg/monsters.html?l=Wraith"><b>wraith</b></a> grants a temporary reprieve; it doesn't reform for 10 days. You can scale this curse for lower- and higher-level characters by choosing
+				another kind of creature.
+			</p><p><b>Resolution:</b> The cursed character sets right what they disturbed; stolen treasure must be returned, and if the ruler's body was disturbed, it must be reinterred with proper observances.</p>
+			</div>
+			<div class="sidebyside curse">
+				<h5>Broken Vow</h5>				
+			<p>A character breaks a solemn vow. The consequences stem from the powers that observed the oath's swearing.</p>
+			<p><b>Pronouncement:</b> Whatever vow the character made, it came with an implied warning that guilt and restlessness would beset anyone who broke the oath.</p>
+			<p><b>Burden:</b> The character is plagued by restless sleep and recurring nightmares featuring those the character swore to protect. The character gains 3 levels of
+				<a href="./combat.html?f=Exhaustion">exhaustion</a> that can't be removed until the curse ends.
+			</p><p><b>Resolution:</b> The curse lasts until the character upholds the broken oath. That might require the character to wait until the circumstances arise again or, more questionably, to engineer the
+				circumstances.</p>
+			</div>
+			<div class="sidebyside curse">
+				<h5>Final Breath</h5>				
+			<p>A deity's favored servant lies dying and calls down divine wrath.</p>
+			<p><b>Pronouncement:</b> The dying creature declares to the killer, "May your mind grow dim in battle until the sun sets forever."</p>
+			<p><b>Burden:</b> The character has disadvantage on attack rolls brought on by brief, sporadic bouts of confusion.</p>
+			<p><b>Resolution:</b> To lift the curse, the character must cause a symbolic setting of the sun or an empowering of the night to appease the slain creature's deity. The character might prevent a
+				festival dedicated to a sun god or perform a ritual that shrouds an entire settlement in magical night for 24 hours, thus ending the curse. </p>
+			</div>
+			<div class="sidebyside curse">
+				<h5>Innocent Blood</h5>				
+			<p>The tragic situation came to pass where a character killed an undeserving person, who laid a vengeful curse in punishment.</p>
+			<p><b>Pronouncement:</b> The dying victim spits final words: "You shall spill innocent blood until laid low by the moon's bite!"</p>
+			<p><b>Burden:</b> The character is cursed with <a href="./other.html?l=Lycanthropy"><b>werewolf</b> lycanthropy</a>.</p>
+			<p><b>Resolution:</b> This curse can't be broken until the character is reduced to 0 hit points by a silvered weapon. If the character survives, the curse can be broken as described on the Other Rules
+				page.</p>
+			</div>
+			<h2 id="insane">Becoming Insane</h2>
+			<img class="mtg" style="margin-top:-3em;width:43%;" src="https://cards.scryfall.io/art_crop/front/8/9/89a62145-8dad-4385-9c6d-8cf8bfdad681.jpg?1547517306">
+			<p>
+				In a typical campaign, characters aren't driven mad by the horrors they face and the carnage they inflict day after day, but sometimes the stress of being an adventurer can be too much to bear.
+				Madness is a mechanic normally used to sell a horror theme, or as a consequence for glimpsing some eldritch truth man was not meant to know, but it can be used for any kind of mental break, for
+				example in a character that experiences truly intense social pressure. It is otherwise used when specific effects call for it, such as the
+				<a href="./spells.html?l=ContactOtherPlane"><i>Contact Other Plane</i></a> spell or the <a href="?f=CackleFever">Cackle Fever</a> disease.
+			</p>
+			<p>
+				Madness can be short-term, long-term, or indefinite. Most relatively mundane effects impose short-term madness, which lasts for just a few minutes. More horrific effects or cumulative effects can
+				result in long-term or indefinite madness. Resisting a madness-inducing effect usually requires a Wisdom or Charisma saving throw, but if the campaign includes the Sanity score, it is the approprate
+				ability score for saving throws against madness instead. The DM rolls on the madness tables to determine the form the madness takes, unless otherwise noted.
+			</p>
+			<h4>Becoming Sane</h4>
+			<p>
+				A <a href="./spells.html?l=CalmEmotions"><i>Calm Emotions</i></a> spell can suppress the effects of madness, while a <a href="./spells.html?l=LesserRestoration"><i>Lesser Restoration</i></a> spell
+				can rid a character of a short-term or long-term madness. Depending on the source of the madness, <a href="./spells.html?l=RemoveCurse"><i>Remove Curse</i></a> or
+				<a href="./spells.html?l=DispelEvilandGood"><i>Dispel Evil and Good</i></a> might also prove effective. A <a href="./spells.html?l=GreaterRestoration"><i>Greater Restoration</i></a> spell or more
+				powerful magic is required to rid a character of indefinite madness. 
+			</p>
+			<h4>Madness Tables</h4>
+			<table class="dietable tritblrow">
+				<caption>Short-term Madness</caption>
+				<thead>
+					<tr>
+						<td style="width:2.6em;">d100</td>
+						<td>Effect (lasts 1d10 minutes)</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>01-20</td>
+						<td>The character retreats into their mind and becomes <a href="../pg/combat.html?f=Paralyzed">paralyzed</a>. The effect ends if the character takes any damage.</td>
+					</tr>
+					<tr>
+						<td>21-30</td>
+						<td>The character becomes <a href="../pg/combat.html?f=Incapacitated">incapacitated</a> and spends the duration screaming, laughing, or weeping.</td>
+					</tr>
+					<tr>
+						<td>31-40</td>
+						<td>The character becomes <a href="../pg/combat.html?f=Frightened">frightened</a> and must use their action and movement each round to flee from the source of the fear.</td>
+					</tr>
+					<tr>
+						<td>41-50</td>
+						<td>The character begins babbling and is incapable of normal speech or spellcasting.</td>
+					</tr>
+					<tr>
+						<td>51-60</td>
+						<td>The character must use their action each round to attack the nearest creature.</td>
+					</tr>
+					<tr>
+						<td>61-70</td>
+						<td>The character experiences vivid hallucinations and has disadvantage on ability checks.</td>
+					</tr>
+					<tr>
+						<td>71-75</td>
+						<td>The character does whatever anyone tells them to do that isn't obviously self-destructive.</td>
+					</tr>
+					<tr>
+						<td>76-80</td>
+						<td>The character experiences an overpowering urge to eat something strange such as dirt, slime, or offal. </td>
+					</tr>
+					<tr>
+						<td>81-90</td>
+						<td>The character is <a href="./combat.html?f=Stunned">stunned</a>.</td>
+					</tr>
+					<tr>
+						<td>91-00</td>
+						<td>The character falls <a href="./combat.html?f=Unconscious">unconscious</a>.</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="dietable tritblrow">
+				<caption>Long-term Madness</caption>
+				<thead>
+					<tr>
+						<td style="width:2.6em;">d100</td>
+						<td>Effect (lasts 1d10&times;10 hours)</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>01-10</td>
+						<td>The character feels compelled to repeat a specific activity over and over, such as washing hands, touching things, praying, or counting coins.</td>
+					</tr>
+					<tr>
+						<td>11-20</td>
+						<td>The character experiences vivid hallucinations and has disadvantage on ability checks.</td>
+					</tr>
+					<tr>
+						<td>21-30</td>
+						<td>The character suffers extreme paranoia. The character has disadvantage on Wisdom and Charisma checks.</td>
+					</tr>
+					<tr>
+						<td>31-40</td>
+						<td>The character regards something (usually the source of madness) with intense revulsion, as if affected by the antipathy effect of the
+							<a href="./spells.html?l=AntipathySympathy"><i>Antipathy/Sympathy</i></a> spell.</td>
+					</tr>
+					<tr>
+						<td>41-45</td>
+						<td>The character experiences a powerful delusion. Choose a potion. The character imagines that they are under its effects.</td>
+					</tr>
+					<tr>
+						<td>46-55</td>
+						<td>The character becomes attached to a "lucky charm," such as a person or an object, and has disadvantage on attack rolls, ability checks, and saving throws while more than 30 feet from it.</td>
+					</tr>
+					<tr>
+						<td>56-65</td>
+						<td>The character is <a href="./combat.html?f=Blinded">blinded</a> (25%) or <a href="./combat.html?f=Deafened">deafened</a> (75%).</td>
+					</tr>
+					<tr>
+						<td>66-75</td>
+						<td>The character experiences uncontrollable tremors or tics, which impose disadvantage on attack rolls, ability checks, and saving throws that involve Strength or Dexterity.</td>
+					</tr>
+					<tr>
+						<td>76-85</td>
+						<td>The character suffers from partial amnesia. The character knows who they are and retains racial traits and class features, but doesn't recognize other people or remember anything that
+							happened before the madness took effect.</td>
+					</tr>
+					<tr>
+						<td>86-90</td>
+						<td>Whenever the character takes damage, they must succeed on a DC15 Wisdom saving throw or be affected as though they failed a saving throw against the
+							<a href="./spells.html?l=Confusion"><i>Confusion</i></a> spell. The <a href="./spells.html?l=Confusion"><i>Confusion</i></a> effect lasts for 1 minute.</td>
+					</tr>
+					<tr>
+						<td>91-95</td>
+						<td>The character loses the ability to speak.</td>
+					</tr>
+					<tr>
+						<td>96-00</td>
+						<td>The character falls <a href="./combat.html?f=Unconscious">unconscious</a>. No amount of jostling or damage can wake the character.</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="dietable tritblrow">
+				<caption>Indefinite Madness</caption>
+				<thead>
+					<tr>
+						<td style="width:2.6em;">d100</td>
+						<td>Effect (lasts until cured)</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>01-15</td>
+						<td>"Being drunk keeps me sane."</td>
+					</tr>
+					<tr>
+						<td>16-25</td>
+						<td>"I keep whatever I find."</td>
+					</tr>
+					<tr>
+						<td>26-30</td>
+						<td>"I try to become more like someone else I know—adopting their style of dress, mannerisms, and name."</td>
+					</tr>
+					<tr>
+						<td>31-35</td>
+						<td>"I must bend the truth, exaggerate, or outright lie to be interesting to other people."</td>
+					</tr>
+					<tr>
+						<td>36-45</td>
+						<td>"Achieving my goal is the only thing of interest to me, and I'll ignore everything else to pursue it."</td>
+					</tr>
+					<tr>
+						<td>46-50</td>
+						<td>"I find it hard to care about anything that goes on around me."</td>
+					</tr>
+					<tr>
+						<td>51-55</td>
+						<td>"I don't like the way people judge me all the time."</td>
+					</tr>
+					<tr>
+						<td>56-70</td>
+						<td>"I am the smartest, wisest, strongest, fastest, and most beautiful person I know."</td>
+					</tr>
+					<tr>
+						<td>71-80</td>
+						<td>"I am convinced that powerful enemies are hunting me, and their agents are everywhere I go. I am sure they're watching me all the time."</td>
+					</tr>
+					<tr>
+						<td>81-85</td>
+						<td>"There's only one person I can trust. And only I can see this special friend."</td>
+					</tr>
+					<tr>
+						<td>86-95</td>
+						<td>"I can't take anything seriously. The more serious the situation, the funnier I find it."</td>
+					</tr>
+					<tr>
+						<td>96-00</td>
+						<td>"I've discovered that I really like killing people."</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p style="font-size:0.9em;"><i>Designed and painstakingly built by Storotso. Javascript &amp; additional help by RandomDucks &amp; Frigges.</i></p>
+	</div>
+	<div class="development">
+		<img src="https://images.ygoprodeck.com/images/cards_cropped/26118970.jpg">
+
+		<div class="spell"><!--  -->
+			<details>
+				<summary class="disease">
+					<h3 class="spellname"></h3>
+				</summary>
+				<p>
+					<b>Mode of Infection:</b> (DC).<br>
+					<b>Incubation Time:</b> <br>
+				</p>
+				<p>
+					desc
+				</p>
+				<p>
+					<b>Cure:</b> 
+				</p>
+			</details>
+		</div>
+
+		<table class="dietable">
+			<thead>
+				<tr>
+					<td>d6</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>  —  &#8226; (long vowel dash) &#8539; (1/8th) &#188; (1/4th) &#189; (1/2)</p>
+	</div>
+	<footer id="footer">
+			<menuButton id="menuButton" onClick="hidetab()"> >> Hide menu </menuButton>
+			<div id="menuTab">
+				<a href="./charactercreation.html">
+					<p style="font-size:88%;">Your Character</p>
+				</a>
+				<a href="./races.html">
+					<p>Races</p>
+				</a>
+				<a href="./classes.html">
+					<p>Classes</p>
+				</a>
+				<a href="./backgrounds.html">
+					<p>Backgrounds</p>
+				</a>
+				<a href="./items.html">
+					<p>Items</p>
+				</a>
+				<a href="./spells.html">
+					<p>Spell Lists</p>
+				</a>
+				<a href="./feats.html">
+					<p>Feats</p>
+				</a>
+				<a href="./combat.html">
+					<p class="toobignav">Combat &amp; Casting</p>
+				</a>
+				<a href="#top">
+					<p class="returnToTop">Return to top</p>
+				</a>
+				<a href="./other.html">
+					<p>Other Rules</p>
+				</a>
+				<a href="../dg/monsters.html">
+					<p>Monsters</p>
+				</a>
+			</div>
+	</footer>
+</body>
+<script>showrace(1)</script>
+<script>theOne()</script>
+</html>

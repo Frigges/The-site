@@ -1,0 +1,211 @@
+BACKGROUNDS
+ Failed Merchant is originally its own background but I decided to make it a guild artisan variant as the difference wasn't
+  very big. I also changed a few words to be less casual and modern.
+ The Legalese feature belonged to the plaintiff background from Acquisitions Incorporated, but that background is too specific
+  to get its own section. The feature fits the courtier really well however, so I just put it there instead.
+ Changed the sports on the athlete background slightly because the orignal has too many that are basically the same.
+ Some of the backgrounds and their features have been edited to be more generic, as to be applicable to a wider variety of
+  settings. If you're going for a specific setting such as Tyranny of Dragons or Ravnica, you're better off using those books.
+
+
+CHARACTER CREATION
+ The Ability score calculator is from Pathfinder 1st edition. Normal DnD 5e doesn't let you buy any score higher than 15, and
+ some other things are different too
+
+
+CLASSES
+ Classes don't have both starting wealth and equipment in RAW. Instead you pick one.
+ Draconic Bloodline Sorcerers don't normally get ancestries for the gem dragons, but I thought it was silly that they didn't
+ so I added them.
+ Skinwalkers and Abyssal Sorcerers are homebrew, as also noted in their description.
+ Evocation wizards aren't supposed to be able to empower non-wizard spells but there is absolutely no way the change matters
+  for the power level of a level 10 ability. Their abilities altering damage rolls in general were a little vague so I
+  changed them to reflect the designer's RAI as stated online.
+ Channel Divinity in RAW is 1 use > 2 uses at lv6 > 3 uses at lv18
+ Wild Magic surge in RAW asks the DM to decide every time you cast a lv1+ sorcerer spell, and you regaining Tides of Chaos is
+  also up to them. That is putting undue pressure on the DM, their decision should be whether to allow wild magic in their
+  campaign at all.
+ Old Gods Barbarian was overloaded. It used to also have expertise in Intimidation and the abilityt to heal using hit dice
+  when it started raging. Those abilities felt unnecessary, so they were removed. The damage die for unarmed strikes
+  and improvised weapons used to also be a flat d12, which was a little over the top.
+ It made more sense to me for Light Clerics to have Judgement as a domain spell than Guardian of Faith so I changed it.
+ Monks effectively have their damage dice shifted one level up from what they are in RAW 5e. This reflects the OneDnD version.
+
+
+COMBAT
+ I refer to unarmed strikes as weapon attacks as per the original printing of the PHB, as it makes more sense with how
+ monster bodyparts such as fists are classified as weapons. I also keep them as simple melee weapons, as you are absolutely
+ not born proficient as a fighter. This has an impact on a lot of abilites, some of which work with unarmed RAW and some of
+ which don't, all of which I may or may not have changed as I noticed them for brevity's sake.
+ Changed the wording on the damage rules so that the spells bit refers explicitly, rather than implicitly, to areas of effect.
+  In RAW, Magic Missile (and possibly other spells that I haven't caught) becomes an asinine yu-gi-oh tier rulings
+  abomination, where it works differently depending on your targets without saying as much in the spell description, and I am
+  vehemently opposed to things like that in DnD.
+ Crits normally do double damage dice instead of just double damage, see any copy of the PHB, but I prefer it this way. Bite
+ me.
+ Ignited and Soaked are homebrew conditions.
+ in RAW the Invisible condition is meant to confer its bonuses even if you are seen. Needless to say that is stupid so you're
+  welcome for this change.
+ Exhaustion rules here are from OneDnD. The RAW 5e rules are very different and unnecessarily complicated.
+
+ RAW bonus action spells are asinine and prevent you from even casting with your reaction that turn. I changed it so the
+ spirit of the rule (preventing regular explosive turns) remains intact while making sure this "particularly swift" spell
+ isn't just worse than an action spell by default.
+
+ Creatures going through difficult terrain don't provoke opportunity attacks when entering other creatures' reach in RAW,
+ but adding this rule adds a little more meaning to difficult terrain.
+
+
+FEATS
+ Gague Bloodlust and Controlled Killing Intent are homebrew feats based on anime memes
+ Master of Familiars is kind of a homebrew feat based on the mascot ones from Strixhaven
+ Polearm Master in RAW lets you make opportunity attacks against approaching creatures. As I made it baseline, I gave this
+  feat the ability to ignore cover instead.
+ Feats have overall have their exclusivity reduced, so more characters have access to them. This includes letting anyone
+  meet the prerequisites for Eldritch Invocations via the Eldritch Adept Feat.
+
+
+ITEMS
+ The Reach property of a weapon doesn't let you make opportunity attacks against approaching creatures in RAW.
+ Alchemist's fire usually works differently from the ignited condition but with such a rule in the game it'd be silly not to
+ use it in an obvious case like this.
+ Clothing, Jewelry, Magic Tattoos, Instruments, and Consumable are (for some reason) not categories in RAW. I added them for
+ ease of searching, as well as to make a few wondrous items make more sense
+ Hat of Vermin in RAW summons only bats, frogs, and rats.
+ Helm of Teleportation is rare in RAW but that's insane for how powerful it is.
+ Horn of Blasting in RAW deals fire damage when it explodes.
+
+
+MONSTERS
+ Changed from monstrosity to beast: (philosophy is if it aint got magic abilities or a divine lore origin, and acts like a
+ beast, it's a beast)
+  Amphisbaena
+  Carrion Crawler
+  Cave Fisher
+  Death Dog
+  Griffin
+  Purple Worm
+  Worg
+
+ There is pretty much no dinosaur I haven't changed, and most of them are homebrews I added for a campaign that needed a full
+  set of dinosaurian fauna.
+ Then there is a huge number of beasts that I had to add because apparently it was more important to wizards that pickle rick
+  got a statblock than turtles or hippos or swans
+
+ Homebrew
+  Crone
+  Draug
+  Stormwraith
+  Valkyriae
+
+ Monsters no longer come with a prepackaged average damage number because I hate it.
+
+ Rakshasa in RAW is only vulnerable to piercing from magic weapons *wielded by good creatures*, and its claw attacks aren't
+  magical
+
+
+SPELLS
+ A number of spells have had their names changed, mostly to avoid references to specific characters. I probably don't remember
+ all of them, but here are most of them:
+	Abi-Dalzim's Horrid Wilting = Horrid Wilting
+	Aganazzar's Scorcher = Scorch
+	Bigby's Hand = Archmage Hand
+	Drawmij's Instant Summons = Instant Summons
+	Evard's Black Tentacles = Grasping Tentacles
+	Find Traps = Sense Traps
+	Giant Insect = Giant Arthropod
+	Jim's Magic Missile = Arcane Arrows
+	Jim's Glowing Coin = Shiny Coin
+	Leomund's Secret Chest = Secret Chest
+	Leomund's Tiny Hut = Tiny Hut
+	Maximilian's Earthen Grasp = Earthen Grasp
+	Melf's Acid Arrow = Acid Arrow
+	Melf's Minute Meteors = Minute Meteors
+	Mordenkainen's Faithful Hound = Faithful Hound
+	Mordenkainen's Magnificient Mansion = Magnificient Mansion
+	Mordenkainen's Private Sanctum = Private Sanctum
+	Mordenkainen's Sword = Force Sword
+	Nystul's Magic Aura = Altered Aura
+	Otiluke's Freezing Sphere = Freezing Sphere
+	Otiluke's Resilient Sphere = Containment Sphere
+	Otto's Irresistible Dance = Irresistible Dance
+	Rary's Telepathic Bond = Telepathic Bond
+	Snilloc's Snowball Swarm = Snowball Swarm
+	Tasha's Caustic Brew = Caustic Brew
+	Tasha's Hideous Laughter = Hideous Laughter
+	Tenser's Floating Disk = Floating Disk
+	Tenser's Transformation = Warrior Soul
+
+ And these spells had their names changed either because of space concerns, or because of flavour reasons:
+	Last Rites -> Judgement
+	Summon The Thing with the Writhing Tail -> Summon Eldritch Cat
+	Vanish to the Space Between Worlds -> Step Outside
+	Banish to the Space Between Worlds -> Send Outside
+
+ The sorcerer spell list has been changed fairly substantially, and other classes have been given some extra options as well.
+
+ RAW True Strike only gives you the advantage. It is by far the worst spell in the game since it's worse in every way than
+  just attacking. The reworked version was, for flavour reasons, taken away from warlocks and sorcerers, and given to clerics.
+ The original 5e Raise dead doesn't inflict exhaustion, but since its penalties are identical to the effects of exhaustion in
+  this ruleset, I changed it to do so.
+ Acid Splash has had its damage dice increased from 1d6 to 1d8
+ Disguise and Alter Form are slightly upgraded versions of the RAW spells Disguise Self and Alter Self. The new versions can
+  target any willing creature, and be upcast.
+ Booming Blade and Green-Flame Blade RAW have a range of 5ft, but I want them to work with spears and the like so I changed
+  them.
+ Feather Fall in RAW is only a reaction and not castable as a ritual. I added the 1 Action cast time and Ritual to make it a
+  little easier to use, like in bg3
+ Jump isn't castable as a ritual in RAW
+ Darkvision in RAW is level 2, which is way too expensive for how uncompetitive it is
+ Pyrotechnics in RAW only targets nonmagical fire but that is gimping a niche af and kind of weak level 2 spell for at best
+  very dubious reasons.
+ The RAW version of Corrosive Blast doesn't specify worn or carried, so it would include equipment, such as spear shafts,
+  clothing, and spellbooks.
+ Fetid Blade is an evocation spell in RAW, but it doesn't particularly fit the description of one, so I changed it to better
+  match similar spells.
+ Blight in RAW has a range of 30ft and the standard 1 extra damage die per upcast level. Which is pretty bad for a single target
+  spell at its level. Judgement informed this upgraded version.
+
+ These Spells from  Acquisitions Incorporated are supposed to have a royalty component, see that book for details.
+  Gift of Gab
+  Shiny Coin (see changed names above)
+ 
+ These spells from the explorer's guide to wildemount aren't meant to be available to non-wizards, see that book for details
+  Dark Star
+  Fortune's Favor
+  Gift of Alacrity
+  Gravity Fissure
+  Gravity Sinkhole
+  Immovable Object
+  Magnify Gravity
+  Pulse Wave
+  Ravenous Void
+  Reality Break
+  Sapping Sting
+  Temporal Shunt
+  Tether Essence
+  Time Ravage
+  Wristpocket
+
+ Homebrew
+  Fish
+  Life Bolt
+  Life Transference
+  Arcane Arrows is a modified Jim's Magic Missile that removed the crit parts and the royalty component. see Acquisitions
+   Incorporated for what the original spell looks like.
+
+OTHER
+ Lycanthropy rules for players are wholly homebrew, loosely based on Loup garou lycanthropy from Van Richten's Guide to
+   Ravenloft 
+
+
+
+
+
+
+
+
+
+
+
+
